@@ -1,0 +1,25 @@
+{
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "htmlWhitespaceSensitivity": "strict",
+  "overrides": [
+    {
+      "files": "*.hbs",
+      "options": {
+        "tabWidth": 4
+      }
+    },
+    {
+      "files": ["*json"],
+      "options": {
+        "singleQuote": false
+      }
+    }
+  ],
+  "printWidth": 80,
+  "semi": true,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "tailwindConfig": "./tailwind.config.js",
+  "trailingComma": "all"
+}

@@ -1,0 +1,7 @@
+# Ignore all .hbs, .json files
+*.hbs
+*.json
+
+# default but add just in case
+node_modules
+public
