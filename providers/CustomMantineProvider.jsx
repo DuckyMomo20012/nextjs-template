@@ -293,10 +293,10 @@ const CustomMantineProvider = ({ children }) => {
           dark: blueGray,
         },
         fontFamily:
-          'ui-sans-serif, system-ui,-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji',
+          'Inter, ui-sans-serif, system-ui,-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji',
         headings: {
           fontFamily:
-            'ui-sans-serif, system-ui,-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji',
+            'Barlow, ui-sans-serif, system-ui,-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji',
         },
         lineHeight: 1,
         shadows: {
