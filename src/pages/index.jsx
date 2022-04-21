@@ -7,7 +7,7 @@ const HeroTitle = () => {
   return (
     <div className="dark:bg-dark-800 relative border bg-white">
       <Container className="pt-200px pb-120px <md:py-80px relative" size={700}>
-        <h1 className="text-62px leading-1.1 <md:(text-42px leading-1.2) dark:color-light-50 m-0 bg-transparent p-0 font-black">
+        <h1 className="animate-bounceInUp animate-animated animate-slow text-62px leading-1.1 <md:(text-42px leading-1.2) dark:color-light-50 m-0 bg-transparent p-0 font-mono font-black">
           A{' '}
           <Text
             component="span"
@@ -20,7 +20,10 @@ const HeroTitle = () => {
           React components and hooks library
         </h1>
 
-        <Text className="text-24px <md:text-18px mt-24px" color="dimmed">
+        <Text
+          className="text-24px <md:text-18px mt-24px animate-lightSpeedInRight animate-slow"
+          color="dimmed"
+        >
           Build fully functional accessible web applications with ease - Mantine
           includes more than 100 customizable components and hooks to cover you
           in any situation
@@ -42,7 +45,7 @@ const HeroTitle = () => {
             className="h-54px px-38px <md:(h-54px px-18px flex-1) border-dark-900 dark:(border-transparent bg-dark-600 hover:!bg-dark-600) border-2 bg-transparent hover:!bg-gray-50"
             color={theme.colorScheme === 'dark' ? 'gray' : 'dark'}
             component="a"
-            href="https://github.com/mantinedev/mantine"
+            href="https://github.com/DuckyMomo20012/nextjs-template"
             size="xl"
             variant="outline"
           >
