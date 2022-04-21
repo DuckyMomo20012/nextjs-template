@@ -1,7 +1,7 @@
 {
   "env": {
     "browser": true,
-    "es2021": true,
+    "es2022": true,
     "node": true
   },
   "extends": [
@@ -13,8 +13,10 @@
     "plugin:react-hooks/recommended",
     "plugin:react/jsx-runtime"
   ],
+  "parser": "@babel/eslint-parser",
   "parserOptions": {
     "ecmaFeatures": {
+      "ecmaVersion": 2022,
       "jsx": true
     },
     "sourceType": "module"

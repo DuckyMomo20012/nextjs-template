@@ -7,7 +7,7 @@ const HeroTitle = () => {
   return (
     <div className="dark:bg-dark-800 relative border bg-white">
       <Container className="pt-200px pb-120px <md:py-80px relative" size={700}>
-        <h1 className="animate-bounceInUp animate-animated animate-slow text-62px leading-1.1 <md:(text-42px leading-1.2) dark:color-light-50 m-0 bg-transparent p-0 font-mono font-black">
+        <h1 className="lg:(animate-bounceInUp animate-animated animate-slow) text-62px leading-1.1 <md:(text-42px leading-1.2) dark:color-light-50 m-0 bg-transparent p-0 font-mono font-black">
           A{' '}
           <Text
             component="span"
@@ -21,7 +21,7 @@ const HeroTitle = () => {
         </h1>
 
         <Text
-          className="text-24px <md:text-18px mt-24px animate-lightSpeedInRight animate-slow"
+          className="text-24px <md:text-18px mt-24px lg:(animate-lightSpeedInRight animate-slow)"
           color="dimmed"
         >
           Build fully functional accessible web applications with ease - Mantine
