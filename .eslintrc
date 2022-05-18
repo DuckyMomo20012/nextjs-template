@@ -15,10 +15,14 @@
   ],
   "parser": "@babel/eslint-parser",
   "parserOptions": {
+    "babelOptions": {
+      "presets": ["@babel/preset-react"]
+    },
     "ecmaFeatures": {
       "ecmaVersion": 2022,
       "jsx": true
     },
+    "requireConfigFile": false,
     "sourceType": "module"
   },
   "plugins": ["react", "import"],
@@ -35,6 +39,7 @@
         "object": true
       }
     ],
+    "no-param-reassign": ["off"],
     "prettier/prettier": [
       "error",
       {

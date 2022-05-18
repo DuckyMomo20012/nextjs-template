@@ -3,17 +3,17 @@
     "jsx": "preserve",
     "baseUrl": "src",
     "paths": {
-      "@api/*": ["api/*"],
       "@constant/*": ["constants/*"],
       "@context/*": ["context/*"],
-      "@element/*": ["components/elements/*"],
       "@hook/*": ["hooks/*"],
+      "@store/*": ["store/*"],
+      "@util/*": ["utils/*"],
+      "@element/*": ["components/elements/*"],
       "@layout/*": ["components/layouts/*"],
-      "@lib/*": ["../lib/*"],
       "@module/*": ["components/modules/*"],
-      "@provider/*": ["../providers/*"],
       "@template/*": ["components/templates/*"],
-      "@util/*": ["utils/*"]
+      "@lib/*": ["../lib/*"],
+      "@provider/*": ["../providers/*"]
     }
   }
 }
