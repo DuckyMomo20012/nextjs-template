@@ -1,12 +1,33 @@
 import 'windi.css';
 
-import { CustomMantineProvider } from '@provider/CustomMantineProvider.jsx';
+import {
+  AuthGuard,
+  CustomMantineProvider,
+  CustomQueryClientProvider,
+  CustomReduxProvider,
+} from '@provider/index.js';
 
-function MyApp({ Component, pageProps }) {
+import NextNProgress from 'nextjs-progressbar';
+import { SessionProvider } from 'next-auth/react';
+
+function MyApp({ Component, pageProps: { session, ...pageProps } }) {
+  const getLayout = Component.getLayout || ((page) => page);
   return (
-    <CustomMantineProvider>
-      <Component {...pageProps} />
-    </CustomMantineProvider>
+    <CustomReduxProvider>
+      <SessionProvider session={session}>
+        <CustomQueryClientProvider>
+          <CustomMantineProvider>
+            <NextNProgress />
+            {/* Guarding pages */}
+            {Component.auth ? (
+              <AuthGuard>{getLayout(<Component {...pageProps} />)}</AuthGuard>
+            ) : (
+              getLayout(<Component {...pageProps} />)
+            )}
+          </CustomMantineProvider>
+        </CustomQueryClientProvider>
+      </SessionProvider>
+    </CustomReduxProvider>
   );
 }
 

@@ -1,0 +1,67 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Course {
+  id          String       @id @default(auto()) @map("_id") @db.ObjectId
+  idCourse    String       @unique @db.String
+  idMajor     String       @unique @db.String
+  nameCourse  String       @db.String
+  pointCredit Int?         @db.Int
+  major       Major        @relation("CoursetoMajor", fields: [idMajor], references: [idMajor])
+  transcript  Transcript[]
+
+}
+
+model Major {
+  id        String    @id @default(auto()) @map("_id") @db.ObjectId
+  idMajor   String    @unique @db.String
+  idStaff   String?   @unique @db.String
+  nameMajor String    @db.String
+  staffs    Staff?    @relation(fields: [idStaff], references: [idStaff])
+  courses   Course[]  @relation("CoursetoMajor")
+  students  Student[]
+
+}
+
+model Staff {
+  id          String  @id @default(auto()) @map("_id") @db.ObjectId
+  email       String? @db.String
+  idStaff     String  @unique @db.String
+  keyPublic   String? @db.String
+  name        String  @db.String
+  nameCompany String? @db.String
+  password    Bytes   @db.BinData
+  salary      Bytes?  @db.BinData
+  majors      Major[]
+
+}
+
+model Student {
+  id          String       @id @default(auto()) @map("_id") @db.ObjectId
+  address     String?      @db.String
+  dob         DateTime?    @db.Date
+  idStudent   String       @unique @db.String
+  idMajor     String?      @unique @db.String
+  name        String       @db.String
+  nameCompany String?      @db.String
+  password    Bytes?       @db.BinData
+  major       Major?       @relation(fields: [idMajor], references: [idMajor])
+  transcript  Transcript[] @relation("TranscripttoStudent")
+
+}
+
+model Transcript {
+  id        String  @id @default(auto()) @map("_id") @db.ObjectId
+  idCourse  String  @unique @db.String
+  idStudent String  @unique @db.String
+  mark      Bytes?  @db.BinData
+  course    Course  @relation(fields: [idCourse], references: [idCourse])
+  student   Student @relation("TranscripttoStudent", fields: [idStudent], references: [idStudent])
+
+}
