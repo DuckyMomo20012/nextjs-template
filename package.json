@@ -29,8 +29,8 @@
     "windicss-webpack-plugin": "1.7.3"
   },
   "devDependencies": {
-    "@babel/core": "7.18.0",
-    "@babel/eslint-parser": "7.17.0",
+    "@babel/core": "7.18.2",
+    "@babel/eslint-parser": "7.18.2",
     "@babel/preset-react": "7.17.12",
     "@windicss/plugin-animations": "1.0.9",
     "eslint": "8.16.0",
