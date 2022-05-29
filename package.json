@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@iconify/react": "3.2.2",
-    "@mantine/core": "4.2.6",
+    "@mantine/core": "4.2.7",
     "@mantine/hooks": "4.2.6",
     "@mantine/next": "4.2.6",
     "@prisma/client": "3.14.0",
