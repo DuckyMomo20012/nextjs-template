@@ -5,7 +5,7 @@ import {
   CustomMantineProvider,
   CustomQueryClientProvider,
   CustomReduxProvider,
-} from '@provider/index.js';
+} from '@/context/index.js';
 
 import NextNProgress from 'nextjs-progressbar';
 import { SessionProvider } from 'next-auth/react';
