@@ -25,7 +25,6 @@
     "react-hook-form": "7.31.3",
     "react-query": "3.39.1",
     "react-redux": "8.0.2",
-    "react-table": "7.8.0",
     "windicss-webpack-plugin": "1.7.3"
   },
   "devDependencies": {
