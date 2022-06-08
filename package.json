@@ -13,7 +13,7 @@
     "@mantine/core": "4.2.8",
     "@mantine/hooks": "4.2.8",
     "@mantine/next": "4.2.8",
-    "@prisma/client": "3.14.0",
+    "@prisma/client": "3.15.0",
     "@reduxjs/toolkit": "1.8.2",
     "axios": "0.27.2",
     "hash-wasm": "4.9.0",
@@ -43,7 +43,7 @@
     "eslint-plugin-react-hooks": "4.5.0",
     "prettier": "2.6.2",
     "prettier-plugin-tailwindcss": "0.1.11",
-    "prisma": "3.14.0",
+    "prisma": "3.15.0",
     "windicss": "3.5.4"
   }
 }
