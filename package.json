@@ -28,9 +28,9 @@
     "windicss-webpack-plugin": "1.7.3"
   },
   "devDependencies": {
-    "@babel/core": "7.18.2",
+    "@babel/core": "7.18.6",
     "@babel/eslint-parser": "7.18.2",
-    "@babel/preset-react": "7.17.12",
+    "@babel/preset-react": "7.18.6",
     "@windicss/plugin-animations": "1.0.9",
     "eslint": "8.17.0",
     "eslint-config-airbnb-base": "15.0.0",
