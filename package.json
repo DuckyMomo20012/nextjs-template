@@ -41,7 +41,7 @@
     "eslint-plugin-prettier": "4.0.0",
     "eslint-plugin-react": "7.30.0",
     "eslint-plugin-react-hooks": "4.5.0",
-    "prettier": "2.6.2",
+    "prettier": "2.7.1",
     "prettier-plugin-tailwindcss": "0.1.11",
     "prisma": "3.15.2",
     "windicss": "3.5.4"
