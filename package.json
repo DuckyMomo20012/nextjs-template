@@ -12,7 +12,7 @@
     "@iconify/react": "3.2.2",
     "@mantine/core": "4.2.11",
     "@mantine/hooks": "4.2.11",
-    "@mantine/next": "4.2.8",
+    "@mantine/next": "4.2.11",
     "@prisma/client": "3.15.2",
     "@reduxjs/toolkit": "1.8.2",
     "axios": "0.27.2",
