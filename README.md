@@ -1,133 +1,327 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
 
-<table>
-    <tbody>
-        <tr>
-            <th> Tech Stack </th>
-            <th> Package </th>
-            <th> Version (package.json) </th>
-        </tr>
-        <tr>
-            <td> JavaScript Library </td>
-            <td> React </td>
-            <td> <img alt="GitHub package.json dependency version (prod)" src="https://img.shields.io/github/package-json/dependency-version/DuckyMomo20012/nextjs-template/react?color=B9C3FF&style=flat-square"> </td>
-        </tr>
-        <tr>
-            <td> Framework </td>
-            <td> NextJS </td>
-            <td> <img alt="GitHub package.json dependency version (prod)" src="https://img.shields.io/github/package-json/dependency-version/DuckyMomo20012/nextjs-template/next-auth?color=B9C3FF&style=flat-square"> </td>
-        </tr>
-        <tr>
-            <td> Authentication </td>
-            <td> Next-Auth </td>
-            <td> <img alt="GitHub package.json dependency version (prod)" src="https://img.shields.io/github/package-json/dependency-version/DuckyMomo20012/nextjs-template/next?color=B9C3FF&style=flat-square"> </td>
-        </tr>
-        <tr>
-            <td> ORM </td>
-            <td> Prisma </td>
-            <td> <img alt="GitHub package.json dependency version (dev dep on branch)" src="https://img.shields.io/github/package-json/dependency-version/DuckyMomo20012/nextjs-template/dev/prisma?color=B9C3FF&style=flat-square"> </td>
-        </tr>
-        <tr>
-            <td> State Management </td>
-            <td> Redux-toolkit </td>
-            <td> <img alt="GitHub package.json dependency version (prod)" src="https://img.shields.io/github/package-json/dependency-version/DuckyMomo20012/nextjs-template/@reduxjs/toolkit?color=B9C3FF&style=flat-square"> </td>
-        </tr>
-        <tr>
-            <td> Data fetching </td>
-            <td> React-query </td>
-            <td> <img alt="GitHub package.json dependency version (prod)" src="https://img.shields.io/github/package-json/dependency-version/DuckyMomo20012/nextjs-template/react-query?color=B9C3FF&style=flat-square"> </td>
-        </tr>
-        <tr>
-            <td> Component Styling </td>
-            <td> WindiCSS </td>
-            <td> <img alt="GitHub package.json dependency version (dev dep on branch)" src="https://img.shields.io/github/package-json/dependency-version/DuckyMomo20012/nextjs-template/dev/windicss?color=B9C3FF&style=flat-square"> </td>
-        </tr>
-        <tr>
-            <td> UI Components Library </td>
-            <td> Mantine </td>
-            <td> <img alt="GitHub package.json dependency version (prod)" src="https://img.shields.io/github/package-json/dependency-version/DuckyMomo20012/nextjs-template/@mantine/core?color=B9C3FF&style=flat-square"> </td>
-        </tr>
-        <tr>
-            <td> Lint tool </td>
-            <td> ESLint </td>
-            <td> <img alt="GitHub package.json dependency version (dev dep on branch)" src="https://img.shields.io/github/package-json/dependency-version/DuckyMomo20012/nextjs-template/dev/eslint?color=B9C3FF&style=flat-square"> </td>
-        </tr>
-        <tr>
-            <td> Formatter </td>
-            <td> Prettier </td>
-            <td> <img alt="GitHub package.json dependency version (dev dep on branch)" src="https://img.shields.io/github/package-json/dependency-version/DuckyMomo20012/nextjs-template/dev/prettier?color=B9C3FF&style=flat-square"> </td>
-        </tr>
-        <tr>
-            <td> Icons </td>
-            <td> Iconify <br/> (@iconify/react) </td>
-            <td> <img alt="GitHub package.json dependency version (prod)" src="https://img.shields.io/github/package-json/dependency-version/DuckyMomo20012/nextjs-template/@iconify/react?color=B9C3FF&style=flat-square"> </td>
-        </tr>
-    </tbody>
-</table>
+  <h1>NextJS Template</h1>
 
-## Getting Started
+  <p>
+    A simple NextJS template
+  </p>
 
-First, install dependencies:
+<!-- Badges -->
+<p>
+  <a href="https://github.com/DuckyMomo20012/nextjs-template/graphs/contributors">
+    <img src="https://img.shields.io/github/contributors/DuckyMomo20012/nextjs-template" alt="contributors" />
+  </a>
+  <a href="">
+    <img src="https://img.shields.io/github/last-commit/DuckyMomo20012/nextjs-template" alt="last update" />
+  </a>
+  <a href="https://github.com/DuckyMomo20012/nextjs-template/network/members">
+    <img src="https://img.shields.io/github/forks/DuckyMomo20012/nextjs-template" alt="forks" />
+  </a>
+  <a href="https://github.com/DuckyMomo20012/nextjs-template/stargazers">
+    <img src="https://img.shields.io/github/stars/DuckyMomo20012/nextjs-template" alt="stars" />
+  </a>
+  <a href="https://github.com/DuckyMomo20012/nextjs-template/issues/">
+    <img src="https://img.shields.io/github/issues/DuckyMomo20012/nextjs-template" alt="open issues" />
+  </a>
+  <a href="https://github.com/DuckyMomo20012/nextjs-template/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/DuckyMomo20012/nextjs-template.svg" alt="license" />
+  </a>
+</p>
+
+<h4>
+    <a href="https://github.com/DuckyMomo20012/nextjs-template/">View Demo</a>
+  <span> · </span>
+    <a href="https://github.com/DuckyMomo20012/nextjs-template">Documentation</a>
+  <span> · </span>
+    <a href="https://github.com/DuckyMomo20012/nextjs-template/issues/">Report Bug</a>
+  <span> · </span>
+    <a href="https://github.com/DuckyMomo20012/nextjs-template/issues/">Request Feature</a>
+  </h4>
+</div>
+
+<br />
+
+<!-- Table of Contents -->
+
+# :notebook_with_decorative_cover: Table of Contents
+
+- [About the Project](#star2-about-the-project)
+  - [Screenshots](#camera-screenshots)
+  - [Tech Stack](#space_invader-tech-stack)
+  - [Features](#dart-features)
+  - [Color Reference](#art-color-reference)
+  - [Environment Variables](#key-environment-variables)
+- [Getting Started](#toolbox-getting-started)
+  - [Prerequisites](#bangbang-prerequisites)
+  - [Installation](#gear-installation)
+  - [Running Tests](#test_tube-running-tests)
+  - [Run Locally](#running-run-locally)
+  - [Deployment](#triangular_flag_on_post-deployment)
+- [Usage](#eyes-usage)
+- [Roadmap](#compass-roadmap)
+- [Contributing](#wave-contributing)
+  - [Code of Conduct](#scroll-code-of-conduct)
+- [FAQ](#grey_question-faq)
+- [License](#warning-license)
+- [Contact](#handshake-contact)
+- [Acknowledgements](#gem-acknowledgements)
+
+<!-- About the Project -->
+
+## :star2: About the Project
+
+<!-- Screenshots -->
+
+### :camera: Screenshots
+
+<div align="center">
+  <img src="https://placehold.co/600x400?text=Your+Screenshot+here" alt="screenshot" />
+</div>
+
+<!-- TechStack -->
+
+### :space_invader: Tech Stack
+
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="https://www.javascript.com/">Javascript</a></li>
+    <li><a href="https://reactjs.org/">React.js</a></li>
+    <li><a href="https://nextjs.org/">NextJS</a></li>
+    <li><a href="https://redux-toolkit.js.org/">Redux Toolkit</a></li>
+    <li><a href="https://react-query.tanstack.com/">React Query</a></li>
+    <li><a href="https://windicss.org/">WindiCSS</a></li>
+    <li><a href="https://mantine.dev/">Mantine</a></li>
+    <li><a href="https://storybook.js.org/">Storybook</a></li>
+    <li><a href="https://eslint.org/">ESLint</a></li>
+    <li><a href="https://prettier.io/">Prettier</a></li>
+    <li><a href="https://iconify.design/">Iconify</a></li>
+  </ul>
+</details>
+
+<details>
+  <summary>Server</summary>
+  <ul>
+    <li><a href="https://www.typescriptlang.org/">Typescript</a></li>
+    <li><a href="https://expressjs.com/">Express.js</a></li>
+    <li><a href="https://go.dev/">Golang</a></li>
+    <li><a href="https://nestjs.com/">Nest.js</a></li>
+    <li><a href="https://socket.io/">SocketIO</a></li>
+    <li><a href="https://www.prisma.io/">Prisma</a></li>
+    <li><a href="https://www.apollographql.com/">Apollo</a></li>
+    <li><a href="https://graphql.org/">GraphQL</a></li>
+  </ul>
+</details>
+
+<details>
+<summary>Database</summary>
+  <ul>
+    <li><a href="https://www.mysql.com/">MySQL</a></li>
+    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+    <li><a href="https://redis.io/">Redis</a></li>
+    <li><a href="https://neo4j.com/">Neo4j</a></li>
+    <li><a href="https://www.mongodb.com/">MongoDB</a></li>
+  </ul>
+</details>
+
+<details>
+<summary>DevOps</summary>
+  <ul>
+    <li><a href="https://www.docker.com/">Docker</a></li>
+    <li><a href="https://www.jenkins.io/">Jenkins</a></li>
+    <li><a href="https://circleci.com/">CircleCLI</a></li>
+  </ul>
+</details>
+
+<!-- Features -->
+
+### :dart: Features
+
+- Feature 1
+- Feature 2
+- Feature 3
+
+<!-- Color Reference -->
+
+### :art: Color Reference
+
+| Color           | Hex                                                             |
+| --------------- | --------------------------------------------------------------- |
+| Primary Color   | ![#222831](http://via.placeholder.com/10/222831?text=+) #222831 |
+| Secondary Color | ![#393E46](http://via.placeholder.com/10/393E46?text=+) #393E46 |
+| Accent Color    | ![#00ADB5](http://via.placeholder.com/10/00ADB5?text=+) #00ADB5 |
+| Text Color      | ![#EEEEEE](http://via.placeholder.com/10/EEEEEE?text=+) #EEEEEE |
+
+<!-- Env Variables -->
+
+### :key: Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file
+
+`DATABASE_URL`: An URI to connect to your database.
+
+`NEXTAUTH_SECRET`: Used to encrypt the NextAuth.js JWT, and to hash email
+verification tokens.
+
+`NEXTAUTH_URL`: When deploying to production, set the `NEXTAUTH_URL` environment
+variable to the canonical URL of your site.
+
+> NOTE: Doesn't need this when deploying to vercel.
+
+E.g:
+
+```
+DATABASE_URL="mongodb+srv://<username>:<password>@student-dashboard.hkttz.mongodb.net/test"
+
+NEXTAUTH_SECRET="my-secret-key"
+NEXTAUTH_URL="http://localhost:3000/"
+```
+
+You can also checkout file `.env.example` to see all required environment
+variables.
+
+<!-- Getting Started -->
+
+## :toolbox: Getting Started
+
+<!-- Prerequisites -->
+
+### :bangbang: Prerequisites
+
+This project uses [Yarn](https://yarnpkg.com/) as package manager
 
 ```bash
-pnpm install
+npm install --global yarn
 ```
 
-Then run the development server:
+<!-- Installation -->
+
+### :gear: Installation
+
+Install nextjs-template with npm
 
 ```bash
-pnpm run dev
+yarn install nextjs-template
+cd nextjs-template
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<!-- Running Tests -->
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+### :test_tube: Running Tests
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are
-treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead
-of React pages.
+To run tests, run the following command
 
-## Folder Architecture:
-
-```
-.
-├── components
-│   ├── elements
-│   ├── layouts
-│   └── modules
-├── constants
-├── context
-├── hooks
-├── pages
-│   └── api
-├── store
-│   └── slice
-└── utils
+```bash
+yarn test
 ```
 
-- `elements`: Basic building blocks.
-- `layouts`: Wrap your pages with default layout.
-- `modules`: Modules are built out of multiple `elements`.
-- `constants`: Global constants.
-- `context`: React Context providers.
-- `hooks`: Custom hooks.
-- `pages`: Your page routes.
-- `pages/api`: Your apis.
-- `store`: Store your Redux store.
-- `store/slice`: Store your Redux slices.
-- `utils`: Your reusable functions.
+<!-- Run Locally -->
 
-## Learn More
+### :running: Run Locally
 
-To learn more about Next.js, take a look at the following resources:
+Clone the project
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+git clone https://github.com/DuckyMomo20012/nextjs-template.git
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Go to the project directory
 
-## Deploy on Vercel
+```bash
+cd nextjs-template
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Install dependencies
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```bash
+yarn install
+```
+
+Start the server
+
+```bash
+yarn dev
+```
+
+<!-- Deployment -->
+
+### :triangular_flag_on_post: Deployment
+
+To deploy this project run
+
+```bash
+yarn deploy
+```
+
+<!-- Usage -->
+
+## :eyes: Usage
+
+Use this space to tell a little more about your project and how it can be used. Show additional screenshots, code samples, demos or link to other resources.
+
+```javascript
+import Component from 'nextjs-template';
+
+function App() {
+  return <Component />;
+}
+```
+
+<!-- Roadmap -->
+
+## :compass: Roadmap
+
+- [x] Todo 1
+- [ ] Todo 2
+
+<!-- Contributing -->
+
+## :wave: Contributing
+
+<a href="https://github.com/DuckyMomo20012/nextjs-template/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=DuckyMomo20012/nextjs-template" />
+</a>
+
+Contributions are always welcome!
+
+<!-- Code of Conduct -->
+
+### :scroll: Code of Conduct
+
+Please read the [Code of Conduct](https://github.com/DuckyMomo20012/nextjs-template/blob/main/CODE_OF_CONDUCT.md)
+
+<!-- FAQ -->
+
+## :grey_question: FAQ
+
+- Question 1
+
+  - Answer 1
+
+- Question 2
+
+  - Answer 2
+
+<!-- License -->
+
+## :warning: License
+
+Distributed under MIT license. See [LICENSE](https://github.com/DuckyMomo20012/nextjs-template/blob/main/LICENSE) for more information.
+
+<!-- Contact -->
+
+## :handshake: Contact
+
+Duong Vinh - [@duckymomo20012](https://twitter.com/duckymomo20012) -
+tienvinh.duong4@gmail.com
+
+Project Link: [https://github.com/DuckyMomo20012/nextjs-template](https://github.com/DuckyMomo20012/nextjs-template)
+
+<!-- Acknowledgments -->
+
+## :gem: Acknowledgements
+
+Here are useful resources and libraries that we have used in our projects.
+
+- [Awesome Readme Template](https://github.com/Louis3797/awesome-readme-template):
+  A detailed template to bootstrap your README file quickly.
