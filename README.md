@@ -137,9 +137,9 @@
 
 ### :dart: Features
 
-- Feature 1
-- Feature 2
-- Feature 3
+- Feature 1.
+- Feature 2.
+- Feature 3.
 
 <!-- Color Reference -->
 
@@ -156,7 +156,8 @@
 
 ### :key: Environment Variables
 
-To run this project, you will need to add the following environment variables to your .env file
+To run this project, you will need to add the following environment variables to
+your .env file.
 
 `DATABASE_URL`: An URI to connect to your database.
 
@@ -166,12 +167,12 @@ verification tokens.
 `NEXTAUTH_URL`: When deploying to production, set the `NEXTAUTH_URL` environment
 variable to the canonical URL of your site.
 
-> NOTE: Doesn't need this when deploying to vercel.
+> NOTE: Doesn't need `NEXTAUTH_URL` when deploying to vercel.
 
 E.g:
 
 ```
-DATABASE_URL="mongodb+srv://<username>:<password>@student-dashboard.hkttz.mongodb.net/test"
+DATABASE_URL="mongodb+srv://{username}:{password}@student-dashboard.hkttz.mongodb.net/test"
 
 NEXTAUTH_SECRET="my-secret-key"
 NEXTAUTH_URL="http://localhost:3000/"
@@ -188,7 +189,7 @@ variables.
 
 ### :bangbang: Prerequisites
 
-This project uses [Yarn](https://yarnpkg.com/) as package manager
+This project uses [Yarn](https://yarnpkg.com/) as package manager:
 
 ```bash
 npm install --global yarn
@@ -198,7 +199,7 @@ npm install --global yarn
 
 ### :gear: Installation
 
-Install nextjs-template with npm
+Install nextjs-template with yarn:
 
 ```bash
 yarn install nextjs-template
@@ -209,7 +210,7 @@ cd nextjs-template
 
 ### :test_tube: Running Tests
 
-To run tests, run the following command
+To run tests, run the following command:
 
 ```bash
 yarn test
@@ -219,25 +220,25 @@ yarn test
 
 ### :running: Run Locally
 
-Clone the project
+Clone the project:
 
 ```bash
 git clone https://github.com/DuckyMomo20012/nextjs-template.git
 ```
 
-Go to the project directory
+Go to the project directory:
 
 ```bash
 cd nextjs-template
 ```
 
-Install dependencies
+Install dependencies:
 
 ```bash
 yarn install
 ```
 
-Start the server
+Start the server:
 
 ```bash
 yarn dev
@@ -247,7 +248,7 @@ yarn dev
 
 ### :triangular_flag_on_post: Deployment
 
-To deploy this project run
+To deploy this project run:
 
 ```bash
 yarn deploy
@@ -257,7 +258,8 @@ yarn deploy
 
 ## :eyes: Usage
 
-Use this space to tell a little more about your project and how it can be used. Show additional screenshots, code samples, demos or link to other resources.
+Use this space to tell a little more about your project and how it can be used.
+Show additional screenshots, code samples, demos, or links to other resources.
 
 ```javascript
 import Component from 'nextjs-template';
@@ -271,8 +273,8 @@ function App() {
 
 ## :compass: Roadmap
 
-- [x] Todo 1
-- [ ] Todo 2
+- [x] Todo 1.
+- [ ] Todo 2.
 
 <!-- Contributing -->
 
@@ -288,7 +290,7 @@ Contributions are always welcome!
 
 ### :scroll: Code of Conduct
 
-Please read the [Code of Conduct](https://github.com/DuckyMomo20012/nextjs-template/blob/main/CODE_OF_CONDUCT.md)
+Please read the [Code of Conduct](https://github.com/DuckyMomo20012/nextjs-template/blob/main/CODE_OF_CONDUCT.md).
 
 <!-- FAQ -->
 
@@ -296,17 +298,19 @@ Please read the [Code of Conduct](https://github.com/DuckyMomo20012/nextjs-templ
 
 - Question 1
 
-  - Answer 1
+  - Answer 1.
 
 - Question 2
 
-  - Answer 2
+  - Answer 2.
 
 <!-- License -->
 
 ## :warning: License
 
-Distributed under MIT license. See [LICENSE](https://github.com/DuckyMomo20012/nextjs-template/blob/main/LICENSE) for more information.
+Distributed under MIT license. See
+[LICENSE](https://github.com/DuckyMomo20012/nextjs-template/blob/main/LICENSE)
+for more information.
 
 <!-- Contact -->
 
@@ -315,13 +319,13 @@ Distributed under MIT license. See [LICENSE](https://github.com/DuckyMomo20012/n
 Duong Vinh - [@duckymomo20012](https://twitter.com/duckymomo20012) -
 tienvinh.duong4@gmail.com
 
-Project Link: [https://github.com/DuckyMomo20012/nextjs-template](https://github.com/DuckyMomo20012/nextjs-template)
+Project Link: [https://github.com/DuckyMomo20012/nextjs-template](https://github.com/DuckyMomo20012/nextjs-template).
 
 <!-- Acknowledgments -->
 
 ## :gem: Acknowledgements
 
-Here are useful resources and libraries that we have used in our projects.
+Here are useful resources and libraries that we have used in our projects:
 
 - [Awesome Readme Template](https://github.com/Louis3797/awesome-readme-template):
   A detailed template to bootstrap your README file quickly.
