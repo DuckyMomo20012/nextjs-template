@@ -59,7 +59,7 @@ const HeroTitle = () => {
             className="h-54px px-38px <md:(h-54px px-18px flex-1) border-dark-900 dark:(border-transparent bg-dark-600 hover:!bg-dark-600) border-2 bg-transparent hover:!bg-gray-100"
             color={theme.colorScheme === 'dark' ? 'gray' : 'dark'}
             component="a"
-            href="https://github.com/DuckyMomo20012/student-dashboard-nextjs"
+            href="https://github.com/DuckyMomo20012/nextjs-template"
             size="xl"
             variant="outline"
           >
