@@ -10,7 +10,5 @@ module.exports = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  nextConfig: {
-    reactStrictMode: true,
-  },
+  reactStrictMode: true,
 };
