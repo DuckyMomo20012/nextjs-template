@@ -4,12 +4,6 @@
   "htmlWhitespaceSensitivity": "strict",
   "overrides": [
     {
-      "files": "*.hbs",
-      "options": {
-        "tabWidth": 4
-      }
-    },
-    {
       "files": ["*json"],
       "options": {
         "singleQuote": false

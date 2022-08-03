@@ -1,5 +1,4 @@
-# Ignore all .hbs, .json files
-*.hbs
+# Ignore all .json files
 *.json
 
 # default but add just in case
