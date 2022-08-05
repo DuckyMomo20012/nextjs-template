@@ -23,7 +23,7 @@
   <a href="https://github.com/DuckyMomo20012/nextjs-template/issues/">
     <img src="https://img.shields.io/github/issues/DuckyMomo20012/nextjs-template" alt="open issues" />
   </a>
-  <a href="https://github.com/DuckyMomo20012/nextjs-template/blob/master/LICENSE">
+  <a href="https://github.com/DuckyMomo20012/nextjs-template/blob/main/LICENSE">
     <img src="https://img.shields.io/github/license/DuckyMomo20012/nextjs-template.svg" alt="license" />
   </a>
 </p>
@@ -166,7 +166,7 @@ verification tokens.
 `NEXTAUTH_URL`: When deploying to production, set the `NEXTAUTH_URL` environment
 variable to the canonical URL of your site.
 
-> NOTE: Doesn't need `NEXTAUTH_URL` when deploying to vercel.
+> **Note**: Doesn't have to set `NEXTAUTH_URL` when deploying to vercel.
 
 E.g:
 
