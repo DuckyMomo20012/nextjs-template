@@ -156,25 +156,29 @@
 ### :key: Environment Variables
 
 To run this project, you will need to add the following environment variables to
-your .env file.
+your `.env` file:
 
-`DATABASE_URL`: An URI to connect to your database.
+- **NextAuth configs:**
 
-`NEXTAUTH_SECRET`: Used to encrypt the NextAuth.js JWT, and to hash email
-verification tokens.
+  `NEXTAUTH_SECRET`: Used to encrypt the NextAuth.js JWT, and to hash email
+  verification tokens.
 
-`NEXTAUTH_URL`: When deploying to production, set the `NEXTAUTH_URL` environment
-variable to the canonical URL of your site.
+  `NEXTAUTH_URL`: When deploying to production, set the `NEXTAUTH_URL` environment
+  variable to the canonical URL of your site.
 
-> **Note**: Doesn't have to set `NEXTAUTH_URL` when deploying to vercel.
+  > **Note**: Doesn't have to set `NEXTAUTH_URL` when deploying to vercel.
+
+- **Database configs:**
+
+  `DATABASE_URL`: An URI to connect to your database.
 
 E.g:
 
 ```
-DATABASE_URL="mongodb+srv://{username}:{password}@student-dashboard.hkttz.mongodb.net/test"
-
 NEXTAUTH_SECRET="my-secret-key"
 NEXTAUTH_URL="http://localhost:3000/"
+
+DATABASE_URL="mongodb+srv://{username}:{password}@student-dashboard.hkttz.mongodb.net/test"
 ```
 
 You can also checkout file `.env.example` to see all required environment
