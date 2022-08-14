@@ -22,7 +22,7 @@
     "axios": "0.27.2",
     "hash-wasm": "4.9.0",
     "next": "12.2.5",
-    "next-auth": "4.10.2",
+    "next-auth": "4.10.3",
     "nextjs-progressbar": "0.0.14",
     "react": "18.2.0",
     "react-dom": "18.2.0",
