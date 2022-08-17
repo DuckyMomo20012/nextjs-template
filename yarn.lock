@@ -555,50 +555,50 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
-"@mantine/core@5.1.5":
-  version "5.1.5"
-  resolved "https://registry.yarnpkg.com/@mantine/core/-/core-5.1.5.tgz#6d428c80ce878cf72f8471cc730413d940abb03a"
-  integrity sha512-3WHNn/wW89yFkYb7VqNr+1DFq95unRhV/ggnoKSlVvXX0+4T63fIvCY5kGsuHXConeyupWxTBhQAadH0rerwzQ==
+"@mantine/core@5.1.6":
+  version "5.1.6"
+  resolved "https://registry.yarnpkg.com/@mantine/core/-/core-5.1.6.tgz#98c984bf08ceeb8684a8dc7146034c85e35de9f7"
+  integrity sha512-ZG/ccTc+LcxcUahxMu4m3hOkAss8LetETFbZ5zsDotJTvij2lzMzNcuPebLeyxNt714VEWIXNzIUotNtGXDSGg==
   dependencies:
     "@floating-ui/react-dom-interactions" "0.6.6"
-    "@mantine/styles" "5.1.5"
-    "@mantine/utils" "5.1.5"
+    "@mantine/styles" "5.1.6"
+    "@mantine/utils" "5.1.6"
     "@radix-ui/react-scroll-area" "1.0.0"
     react-textarea-autosize "8.3.4"
 
-"@mantine/hooks@5.1.5":
-  version "5.1.5"
-  resolved "https://registry.yarnpkg.com/@mantine/hooks/-/hooks-5.1.5.tgz#b6fae9ef96bcd4acb16419782293b80a5f5be0f6"
-  integrity sha512-R2/NaGoRTOCWj9jLA0lNp+tuCaKF64gpjqYgxlDXp5VAyO1R0zTfMK8OSWJLcr2OTzVzjmakOwF2OZg8Am/r0w==
+"@mantine/hooks@5.1.6":
+  version "5.1.6"
+  resolved "https://registry.yarnpkg.com/@mantine/hooks/-/hooks-5.1.6.tgz#07d4850d3444526268a749c965ce64eea8cb7583"
+  integrity sha512-wD+Cx9W00YQchudIvkiEy52e/UCB0EhTkJs2fr2JbTlfKCWfWSilE/CPbLz6NWmK58bbyB/qjdKUDwXV6qyasw==
 
-"@mantine/next@5.1.5":
-  version "5.1.5"
-  resolved "https://registry.yarnpkg.com/@mantine/next/-/next-5.1.5.tgz#2205e7cd7eb0e61f9de78f423d6ec4c747e46bfd"
-  integrity sha512-tD/R50MqlOI3UKIpOkcUBSBWk+wykezbAn7M9rF1l+mDovxEpFv4gBL/WMooOF29Hw0fLUY3aVGLSnVSpQ8tRw==
+"@mantine/next@5.1.6":
+  version "5.1.6"
+  resolved "https://registry.yarnpkg.com/@mantine/next/-/next-5.1.6.tgz#fecc2090fec65bd133b58ed07cef4154cb634e47"
+  integrity sha512-Uf9dPssBCUaErI2kIhN3bDLjCWA9M2L6/JSv+4ik+hyKgVIYNvdWIwPZQTr5C9o5kANAl30OovvQMNbR5NPK5A==
   dependencies:
-    "@mantine/ssr" "5.1.5"
-    "@mantine/styles" "5.1.5"
+    "@mantine/ssr" "5.1.6"
+    "@mantine/styles" "5.1.6"
 
-"@mantine/ssr@5.1.5":
-  version "5.1.5"
-  resolved "https://registry.yarnpkg.com/@mantine/ssr/-/ssr-5.1.5.tgz#49667efd5335643ebf56434ad672d50ee336da6c"
-  integrity sha512-QAeBJR88IC/8jc+I8dJcCf2r+tLYlzoZcxYG/dpmULCjQkeabQ5r6mWlDYI5qlyTcr/b/qT54b2q5UcLBI/Atg==
+"@mantine/ssr@5.1.6":
+  version "5.1.6"
+  resolved "https://registry.yarnpkg.com/@mantine/ssr/-/ssr-5.1.6.tgz#573e45b199357c57be837b6edc394500268d188a"
+  integrity sha512-MXCUvq+/kcgSWxbcr73Gx7dum6B6Nrp3zT/MpLfWUixZPtsXOMGgPnssdvTvd2GTs8kJWnEGK0XyNwLf3kom2A==
   dependencies:
-    "@mantine/styles" "5.1.5"
+    "@mantine/styles" "5.1.6"
     html-react-parser "1.4.12"
 
-"@mantine/styles@5.1.5":
-  version "5.1.5"
-  resolved "https://registry.yarnpkg.com/@mantine/styles/-/styles-5.1.5.tgz#63495aa2803a28bb48888cb152a56d2b5c214369"
-  integrity sha512-kW7fWw+ZCzCPFgIc0MgVLCg73ySEewgO9q/dBxU+ZyU+7QN9h8PHQNV1XbgGQm1acFWfKDaM8eTJRdwXw0en1Q==
+"@mantine/styles@5.1.6":
+  version "5.1.6"
+  resolved "https://registry.yarnpkg.com/@mantine/styles/-/styles-5.1.6.tgz#cfb4a33d4c38ffb499d51cd0af35abd436ebe831"
+  integrity sha512-7d112DIHauP+X0JaVh0uzlpVndWqw/muaz77C5hLlA8yP7gVuRWOhEqJDuTnZzNtj/utIJJDAyVM2+DHFqtQtg==
   dependencies:
     clsx "1.1.1"
     csstype "3.0.9"
 
-"@mantine/utils@5.1.5":
-  version "5.1.5"
-  resolved "https://registry.yarnpkg.com/@mantine/utils/-/utils-5.1.5.tgz#416541d304538d2ce4c2c1e3ea494bfd1ec3dd6f"
-  integrity sha512-c8pJE/mM4dAdjLfQCmFC4V9VNF0rTpiS46nxBoUzGShHkr7NTLOfkzws3hYzYFNvJ2MvNMQu//QOXZrnrAPRTw==
+"@mantine/utils@5.1.6":
+  version "5.1.6"
+  resolved "https://registry.yarnpkg.com/@mantine/utils/-/utils-5.1.6.tgz#992cd1e8850467533aa88dc5fd933650674abf5e"
+  integrity sha512-y7va2keQ+TPwn2j668r889NhQWO0OhSvaxT5P8n2iBaTyPg+Xp5Jm2IE5UjI+OrZErrgmQq1sxbfg6v5vdK+0A==
 
 "@next/env@12.2.5":
   version "12.2.5"
@@ -844,19 +844,19 @@
   resolved "https://registry.yarnpkg.com/@tanstack/query-core/-/query-core-4.0.10.tgz#cae6f818006616dc72c95c863592f5f68b47548a"
   integrity sha512-9LsABpZXkWZHi4P1ozRETEDXQocLAxVzQaIhganxbNuz/uA3PsCAJxJTiQrknG5htLMzOF5MqM9G10e6DCxV1A==
 
-"@tanstack/react-query-devtools@4.0.10":
-  version "4.0.10"
-  resolved "https://registry.yarnpkg.com/@tanstack/react-query-devtools/-/react-query-devtools-4.0.10.tgz#d1b3e5b1917f1c22bcee5830ef7af1ccfc4879f4"
-  integrity sha512-3J7LLYQjfjTI0DbPo0bA+M3l4kdvYSWAqihpeG1u93WVyZj0OEFviUv+4cK7+k2AVgQJAPMZ5xvtewKxOOFVrw==
+"@tanstack/react-query-devtools@4.2.1":
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-query-devtools/-/react-query-devtools-4.2.1.tgz#decee3d1d174b253fa303d5baaa478fb0e2c0e63"
+  integrity sha512-k7Ch3qvs8U74aRMMRvNisxcxZFTzk8FDdvpQKXxSZ8fsD4ZwpM0MoUSqKsCXbfTvUI7MJiGxavy1YlvImPNO+Q==
   dependencies:
     "@tanstack/match-sorter-utils" "^8.0.0-alpha.82"
     "@types/use-sync-external-store" "^0.0.3"
     use-sync-external-store "^1.2.0"
 
-"@tanstack/react-query@4.1.3":
-  version "4.1.3"
-  resolved "https://registry.yarnpkg.com/@tanstack/react-query/-/react-query-4.1.3.tgz#ebe5b668e321ba63a21ef369b5d263e2466c0e14"
-  integrity sha512-BHI/dV3LOuVOZAaifM6u680Wi5rmiHu4aD3WkvrQT/9fYhHDhTzMdJO8l2Xh0UR7JhM8e9O3f89SJhD3T8Ejgw==
+"@tanstack/react-query@4.2.1":
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-query/-/react-query-4.2.1.tgz#1f00f03573b35a353e62fa64f904bbb0286a1808"
+  integrity sha512-w02oTOYpoxoBzD/onAGRQNeLAvggLn7WZjS811cT05WAE/4Q3br0PTp388M7tnmyYGbgOOhFq0MkhH0wIfAKqA==
   dependencies:
     "@tanstack/query-core" "^4.0.0-beta.1"
     "@types/use-sync-external-store" "^0.0.3"
@@ -2834,10 +2834,10 @@ react-dom@18.2.0:
     loose-envify "^1.1.0"
     scheduler "^0.23.0"
 
-react-hook-form@7.34.1:
-  version "7.34.1"
-  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.34.1.tgz#06cb216daf706bf9ae4969747115afae0d09410d"
-  integrity sha512-tH7TaZgAURMhjzVE2M/EFmxHz2HdaPMAVs9FXTweNW551VlhXSuVcpcYlkiMZf2zHQiTztupVFpBHJFTma+N7w==
+react-hook-form@7.34.2:
+  version "7.34.2"
+  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.34.2.tgz#9ac6d1a309a7c4aaa369d1269357a70e9e9bf4de"
+  integrity sha512-1lYWbEqr0GW7HHUjMScXMidGvV0BE2RJV3ap2BL7G0EJirkqpccTaawbsvBO8GZaB3JjCeFBEbnEWI1P8ZoLRQ==
 
 react-is@^16.13.1, react-is@^16.7.0:
   version "16.13.1"
