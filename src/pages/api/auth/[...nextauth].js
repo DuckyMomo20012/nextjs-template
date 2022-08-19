@@ -7,7 +7,7 @@ async function getOneUser(userMail) {
   const user = {
     email: 'tienvinh@gmail.com',
     name: 'Dương Tiến Vinh',
-    password: '7110eda4d09e062aa5e4a390b0a572ac0d2c0220',
+    password: '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', // 1234
   };
   return { ...user, password: user.password.toString('hex') };
 }

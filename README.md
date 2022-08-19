@@ -179,7 +179,7 @@ E.g:
 NEXTAUTH_SECRET="my-secret-key"
 NEXTAUTH_URL="http://localhost:3000/"
 
-DATABASE_URL="mongodb+srv://{username}:{password}@student-dashboard.hkttz.mongodb.net/test"
+DATABASE_URL="mongodb+srv://{username}:{password}@test-project.ta7w03z.mongodb.net/test"
 ```
 
 You can also check out the file `.env.example` to see all required environment
