@@ -72,8 +72,8 @@ const Login = () => {
         </Link>
       </Text>
       <Text align="center" color="dimmed" mt={5} size="sm">
-        <Code color="red">username:</Code> tienvinh@gmail.com,{' '}
-        <Code color="red">password:</Code> 1234
+        <Code color="blue">username:</Code> tienvinh@gmail.com,{' '}
+        <Code color="blue">password:</Code> 1234
       </Text>
 
       <Paper

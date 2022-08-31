@@ -28,7 +28,7 @@ const HeroTitle = () => {
           A{' '}
           <Text
             component="span"
-            gradient={{ from: 'rose', to: 'fuchsia' }}
+            gradient={{ from: 'blue', to: 'fuchsia' }}
             inherit
             variant="gradient"
           >
@@ -47,7 +47,7 @@ const HeroTitle = () => {
           <Link href="/auth/login">
             <Button
               className="h-54px px-38px <md:(h-54px px-18px flex-1)"
-              gradient={{ from: 'rose', to: 'fuchsia' }}
+              gradient={{ from: 'blue', to: 'fuchsia' }}
               size="xl"
               variant="gradient"
             >

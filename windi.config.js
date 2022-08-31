@@ -32,9 +32,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        white: '#FAFAFA',
-        black: '#333',
-        primary: colors.rose,
+        primary: colors.blue,
       },
       fontFamily: {
         sans: ['Inter', 'ui-sans-serif', 'system-ui'],
