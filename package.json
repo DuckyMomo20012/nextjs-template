@@ -28,7 +28,7 @@
     "react-dom": "18.2.0",
     "react-hook-form": "7.38.0",
     "react-redux": "8.0.4",
-    "windicss-webpack-plugin": "1.7.6"
+    "windicss-webpack-plugin": "1.7.7"
   },
   "devDependencies": {
     "@babel/core": "7.19.6",
