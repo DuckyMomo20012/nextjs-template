@@ -12,7 +12,7 @@
     "@emotion/react": "11.10.4",
     "@emotion/server": "11.10.0",
     "@iconify/react": "4.0.0",
-    "@mantine/core": "5.6.0",
+    "@mantine/core": "5.6.1",
     "@mantine/hooks": "5.6.0",
     "@mantine/next": "5.6.0",
     "@prisma/client": "4.5.0",
