@@ -32,7 +32,6 @@ specifiers:
   next-auth: 4.14.0
   nextjs-progressbar: 0.0.16
   prettier: 2.7.1
-  prettier-plugin-tailwindcss: 0.1.13
   react: 18.2.0
   react-dom: 18.2.0
   react-hook-form: 7.38.0
@@ -79,7 +78,6 @@ devDependencies:
   husky: 8.0.3
   lint-staged: 13.1.0
   prettier: 2.7.1
-  prettier-plugin-tailwindcss: 0.1.13_prettier@2.7.1
   windicss: 3.5.6
 
 packages:
@@ -3869,15 +3867,6 @@ packages:
     engines: {node: '>=6.0.0'}
     dependencies:
       fast-diff: 1.2.0
-    dev: true
-
-  /prettier-plugin-tailwindcss/0.1.13_prettier@2.7.1:
-    resolution: {integrity: sha512-/EKQURUrxLu66CMUg4+1LwGdxnz8of7IDvrSLqEtDqhLH61SAlNNUSr90UTvZaemujgl3OH/VHg+fyGltrNixw==}
-    engines: {node: '>=12.17.0'}
-    peerDependencies:
-      prettier: '>=2.2.0'
-    dependencies:
-      prettier: 2.7.1
     dev: true
 
   /prettier/2.7.1:

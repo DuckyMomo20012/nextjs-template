@@ -1,6 +1,0 @@
-# Ignore all .json files
-*.json
-
-# default but add just in case
-node_modules
-public
