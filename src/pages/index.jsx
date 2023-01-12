@@ -1,3 +1,4 @@
+import { Icon } from '@iconify/react';
 import {
   Box,
   Button,
@@ -10,7 +11,6 @@ import {
   useMantineTheme,
 } from '@mantine/core';
 
-import { Icon } from '@iconify/react';
 import Link from 'next/link';
 
 const HeroTitle = () => {

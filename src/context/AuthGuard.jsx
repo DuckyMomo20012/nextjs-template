@@ -1,3 +1,4 @@
+import { Icon } from '@iconify/react';
 import {
   Center,
   Group,
@@ -7,16 +8,14 @@ import {
   Text,
   ThemeIcon,
 } from '@mantine/core';
-import { useEffect, useState } from 'react';
-
-import { Icon } from '@iconify/react';
-import { useRouter } from 'next/router';
 import { useSession } from 'next-auth/react';
+import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
 
 const AuthGuard = ({ children }) => {
   const [opened, setOpened] = useState(false);
   const router = useRouter();
-  const { data: session, status } = useSession({
+  const { status } = useSession({
     // Set this to true will redirect directly
     // required: true,
     // onUnauthenticated() {

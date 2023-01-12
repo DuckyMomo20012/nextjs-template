@@ -1,3 +1,4 @@
+import { Icon } from '@iconify/react';
 import {
   Anchor,
   Button,
@@ -14,12 +15,11 @@ import {
   Title,
 } from '@mantine/core';
 import { signIn, useSession } from 'next-auth/react';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 
-import { Icon } from '@iconify/react';
-import Link from 'next/link';
 import { useForm } from 'react-hook-form';
-import { useRouter } from 'next/router';
 
 const Login = () => {
   const router = useRouter();
