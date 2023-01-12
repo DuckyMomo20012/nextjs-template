@@ -168,18 +168,12 @@ your `.env` file:
 
   > **Note**: Doesn't have to set `NEXTAUTH_URL` when deploying to vercel.
 
-- **Database configs:**
-
-  `DATABASE_URL`: An URI to connect to your database.
-
 E.g:
 
 ```
 # .env
 NEXTAUTH_SECRET="my-secret-key"
 NEXTAUTH_URL="http://localhost:3000/"
-
-DATABASE_URL="mongodb+srv://{username}:{password}@test-project.ta7w03z.mongodb.net/test"
 ```
 
 You can also check out the file `.env.example` to see all required environment
