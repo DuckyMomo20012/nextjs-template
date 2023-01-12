@@ -2,13 +2,14 @@ import CredentialsProvider from 'next-auth/providers/credentials';
 import NextAuth from 'next-auth';
 import { sha1 } from 'hash-wasm';
 
-async function getOneUser(userMail) {
+function getOneUser() {
   const user = {
     email: 'tienvinh@gmail.com',
     name: 'Dương Tiến Vinh',
     password: '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', // 1234
   };
-  return { ...user, password: user.password.toString('hex') };
+
+  return Promise.resolve({ ...user, password: user.password.toString('hex') });
 }
 
 export default NextAuth({
