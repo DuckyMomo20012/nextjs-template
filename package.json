@@ -15,7 +15,6 @@
     "@mantine/core": "5.6.0",
     "@mantine/hooks": "5.6.0",
     "@mantine/next": "5.6.0",
-    "@prisma/client": "4.5.0",
     "@reduxjs/toolkit": "1.8.6",
     "@tanstack/react-query": "4.12.0",
     "@tanstack/react-query-devtools": "4.12.0",
@@ -46,7 +45,6 @@
     "eslint-plugin-react-hooks": "4.6.0",
     "prettier": "2.7.1",
     "prettier-plugin-tailwindcss": "0.1.13",
-    "prisma": "4.5.0",
     "windicss": "3.5.6"
   }
 }

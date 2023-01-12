@@ -1,6 +1,5 @@
 import CredentialsProvider from 'next-auth/providers/credentials';
 import NextAuth from 'next-auth';
-import prisma from '@lib/prisma.js';
 import { sha1 } from 'hash-wasm';
 
 async function getOneUser(userMail) {
