@@ -1,6 +1,6 @@
-import CredentialsProvider from 'next-auth/providers/credentials';
-import NextAuth from 'next-auth';
 import { sha1 } from 'hash-wasm';
+import NextAuth from 'next-auth';
+import CredentialsProvider from 'next-auth/providers/credentials';
 
 function getOneUser() {
   const user = {
@@ -27,7 +27,7 @@ export default NextAuth({
           type: 'password',
         },
       },
-      async authorize(credentials, req) {
+      async authorize(credentials) {
         // Inputs from login form
         const { email, password } = credentials;
         const hashPassword = await sha1(password);
@@ -43,10 +43,11 @@ export default NextAuth({
     signIn: '/auth/login',
   },
   events: {
-    async signIn(message) {
+    signIn(message) {
       const {
         user: { name },
       } = message;
+      // eslint-disable-next-line no-console
       console.log(`User: ${name} signed in`);
     },
   },
