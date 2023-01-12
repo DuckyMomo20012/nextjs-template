@@ -36,9 +36,9 @@ export default {
       },
       fontFamily: {
         sans: ['Inter', 'ui-sans-serif', 'system-ui'],
-        serif: ['Roboto Slab', 'ui-serif', 'Georgia'],
+        serif: ['Merriweather', 'ui-serif', 'Georgia'],
         mono: ['Space Mono', 'ui-monospace', 'SFMono-Regular'],
-        heading: ['Barlow'],
+        heading: ['Quicksand'],
       },
     },
   },

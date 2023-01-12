@@ -20,7 +20,7 @@ export default class _Document extends Document {
           rel="preconnect"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=Barlow&family=Inter&family=Roboto+Slab&family=Space+Mono&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Quicksand&family=Inter&family=Merriweather&family=Space+Mono&display=swap"
           rel="stylesheet"
         />
         <body>
