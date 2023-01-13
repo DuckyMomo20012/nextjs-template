@@ -235,7 +235,7 @@ const HomePage = () => {
               with plugins
             </Title>
             <Group
-              className="children:(animate-infinite animate-duration-3000)"
+              className="children:(animated animate-loop animate-duration-3000)"
               position="center"
             >
               <Badge className="animate-tada" color="yellow">

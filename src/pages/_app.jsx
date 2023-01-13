@@ -3,6 +3,7 @@ import 'windi.css';
 
 import { SessionProvider } from 'next-auth/react';
 import NextNProgress from 'nextjs-progressbar';
+import { AppShell } from '@/components/layouts/AppShell';
 import {
   AuthGuard,
   MantineProvider,
@@ -19,11 +20,13 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
           <MantineProvider>
             <NextNProgress />
             {/* Guarding pages */}
-            {Component.auth ? (
-              <AuthGuard>{getLayout(<Component {...pageProps} />)}</AuthGuard>
-            ) : (
-              getLayout(<Component {...pageProps} />)
-            )}
+            <AppShell>
+              {Component.auth ? (
+                <AuthGuard>{getLayout(<Component {...pageProps} />)}</AuthGuard>
+              ) : (
+                getLayout(<Component {...pageProps} />)
+              )}
+            </AppShell>
           </MantineProvider>
         </QueryProvider>
       </SessionProvider>
