@@ -1,5 +1,9 @@
 <div align="center">
 
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://assets.vercel.com/image/upload/v1662130559/nextjs/Icon_dark_background.png">
+    <img src="https://assets.vercel.com/image/upload/v1662130559/nextjs/Icon_light_background.png" height="128">
+  </picture>
   <h1>NextJS Template</h1>
 
   <p>
@@ -74,7 +78,10 @@
 ### :camera: Screenshots
 
 <div align="center">
-  <img src="https://placehold.co/600x400?text=Your+Screenshot+here" alt="screenshot" />
+  <p>Light mode</p>
+  <img src="https://user-images.githubusercontent.com/64480713/212284537-dc04b334-a5a3-4d6f-b527-7bce7f036a51.png" alt="screenshot" />
+  <p>Dark mode</p>
+  <img src="https://user-images.githubusercontent.com/64480713/212284776-9a11f17e-2735-45e5-9a9b-5e17632bfa9c.png" alt="screenshot_dark_mode" />
 </div>
 
 <!-- TechStack -->
