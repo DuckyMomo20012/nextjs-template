@@ -1,15 +1,15 @@
-import CredentialsProvider from 'next-auth/providers/credentials';
-import NextAuth from 'next-auth';
-import prisma from '@lib/prisma.js';
 import { sha1 } from 'hash-wasm';
+import NextAuth from 'next-auth';
+import CredentialsProvider from 'next-auth/providers/credentials';
 
-async function getOneUser(userMail) {
+function getOneUser() {
   const user = {
     email: 'tienvinh@gmail.com',
     name: 'Dương Tiến Vinh',
     password: '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', // 1234
   };
-  return { ...user, password: user.password.toString('hex') };
+
+  return Promise.resolve({ ...user, password: user.password.toString('hex') });
 }
 
 export default NextAuth({
@@ -27,7 +27,7 @@ export default NextAuth({
           type: 'password',
         },
       },
-      async authorize(credentials, req) {
+      async authorize(credentials) {
         // Inputs from login form
         const { email, password } = credentials;
         const hashPassword = await sha1(password);
@@ -43,10 +43,11 @@ export default NextAuth({
     signIn: '/auth/login',
   },
   events: {
-    async signIn(message) {
+    signIn(message) {
       const {
         user: { name },
       } = message;
+      // eslint-disable-next-line no-console
       console.log(`User: ${name} signed in`);
     },
   },

@@ -168,18 +168,12 @@ your `.env` file:
 
   > **Note**: Doesn't have to set `NEXTAUTH_URL` when deploying to vercel.
 
-- **Database configs:**
-
-  `DATABASE_URL`: An URI to connect to your database.
-
 E.g:
 
 ```
 # .env
 NEXTAUTH_SECRET="my-secret-key"
 NEXTAUTH_URL="http://localhost:3000/"
-
-DATABASE_URL="mongodb+srv://{username}:{password}@test-project.ta7w03z.mongodb.net/test"
 ```
 
 You can also check out the file `.env.example` to see all required environment
@@ -193,10 +187,10 @@ variables.
 
 ### :bangbang: Prerequisites
 
-This project uses [Yarn](https://yarnpkg.com/) as package manager:
+This project uses [pnpm](https://pnpm.io/) as package manager:
 
 ```bash
-npm install --global yarn
+npm install --global pnpm
 ```
 
 <!-- Run Locally -->
@@ -218,13 +212,13 @@ cd nextjs-template
 Install dependencies:
 
 ```bash
-yarn
+pnpm install
 ```
 
 Start the server:
 
 ```bash
-yarn dev
+pnpm dev
 ```
 
 <!-- Running Tests -->
@@ -234,7 +228,7 @@ yarn dev
 To run tests, run the following command:
 
 ```bash
-yarn test
+pnpm test
 ```
 
 <!-- Deployment -->
@@ -244,7 +238,7 @@ yarn test
 To deploy this project run:
 
 ```bash
-yarn deploy
+pnpm deploy
 ```
 
 <!-- Usage -->

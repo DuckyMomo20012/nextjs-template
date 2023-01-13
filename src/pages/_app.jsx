@@ -1,33 +1,36 @@
+// eslint-disable-next-line import/no-unresolved
 import 'windi.css';
 
+import { SessionProvider } from 'next-auth/react';
+import NextNProgress from 'nextjs-progressbar';
+import { AppShell } from '@/components/layouts/AppShell';
 import {
   AuthGuard,
-  CustomMantineProvider,
-  CustomQueryClientProvider,
-  CustomReduxProvider,
+  MantineProvider,
+  QueryProvider,
+  ReduxProvider,
 } from '@/context/index.js';
-
-import NextNProgress from 'nextjs-progressbar';
-import { SessionProvider } from 'next-auth/react';
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   const getLayout = Component.getLayout || ((page) => page);
   return (
-    <CustomReduxProvider>
+    <ReduxProvider>
       <SessionProvider session={session}>
-        <CustomQueryClientProvider>
-          <CustomMantineProvider>
+        <QueryProvider>
+          <MantineProvider>
             <NextNProgress />
             {/* Guarding pages */}
-            {Component.auth ? (
-              <AuthGuard>{getLayout(<Component {...pageProps} />)}</AuthGuard>
-            ) : (
-              getLayout(<Component {...pageProps} />)
-            )}
-          </CustomMantineProvider>
-        </CustomQueryClientProvider>
+            <AppShell>
+              {Component.auth ? (
+                <AuthGuard>{getLayout(<Component {...pageProps} />)}</AuthGuard>
+              ) : (
+                getLayout(<Component {...pageProps} />)
+              )}
+            </AppShell>
+          </MantineProvider>
+        </QueryProvider>
       </SessionProvider>
-    </CustomReduxProvider>
+    </ReduxProvider>
   );
 }
 

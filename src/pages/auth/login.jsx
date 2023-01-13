@@ -1,3 +1,4 @@
+import { Icon } from '@iconify/react';
 import {
   Anchor,
   Button,
@@ -13,13 +14,12 @@ import {
   ThemeIcon,
   Title,
 } from '@mantine/core';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { signIn, useSession } from 'next-auth/react';
 import { useEffect, useState } from 'react';
 
-import { Icon } from '@iconify/react';
-import Link from 'next/link';
 import { useForm } from 'react-hook-form';
-import { useRouter } from 'next/router';
 
 const Login = () => {
   const router = useRouter();
@@ -111,27 +111,29 @@ const Login = () => {
       <Modal
         onClose={() => {
           setModalVisible(false);
-          if (user) {
+          if (!error && user) {
             router.push('/');
           }
         }}
         opened={modalVisible}
         withCloseButton={false}
       >
-        {user ? (
-          <Group>
-            <ThemeIcon color="green" radius="xl" size="xl" variant="light">
-              <Icon icon="ic:twotone-check-circle" width={24} />
-            </ThemeIcon>
-            <Text>You are logged in</Text>
-          </Group>
-        ) : (
+        {error ? (
           <Group>
             <ThemeIcon color="red" radius="xl" size="xl" variant="light">
               <Icon icon="ic:baseline-error-outline" width="24" />
             </ThemeIcon>
             <Text>Wrong credentials</Text>
           </Group>
+        ) : (
+          user && (
+            <Group>
+              <ThemeIcon color="green" radius="xl" size="xl" variant="light">
+                <Icon icon="ic:twotone-check-circle" width={24} />
+              </ThemeIcon>
+              <Text>You are logged in</Text>
+            </Group>
+          )
         )}
       </Modal>
     </Container>

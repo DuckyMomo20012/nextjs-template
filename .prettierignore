@@ -1,7 +1,4 @@
-# dependencies
-node_modules
+# Add files here to ignore them from prettier formatting
 
-# production
-public
-
-.history
+/dist
+/coverage
