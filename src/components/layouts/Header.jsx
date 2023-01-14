@@ -35,7 +35,11 @@ const Header = ({ setNavBarOpened }) => {
               underline={false}
             >
               <Box component="span">
-                <Image height={32} src="/favicon.ico" width={32} />
+                <Image
+                  height={32}
+                  src="https://assets.vercel.com/image/upload/v1662130559/nextjs/Icon_dark_background.png"
+                  width={32}
+                />
               </Box>
               <Text align="center" fw={700}>
                 NextJS Template

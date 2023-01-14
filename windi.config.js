@@ -22,7 +22,9 @@ export default {
   alias: {
     // ...
   },
-  attributify: true,
+  attributify: {
+    prefix: 'w:',
+  },
   darkMode: 'class',
   extract: {
     exclude: ['node_modules', '.git', '.next/**/*'],
