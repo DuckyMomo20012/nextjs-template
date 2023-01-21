@@ -4,8 +4,8 @@ import { Footer } from '@/components/layouts/Footer';
 import { Header } from '@/components/layouts/Header';
 import { Navbar } from '@/components/layouts/Navbar';
 
-const AppShell = ({ children }) => {
-  const [navBarOpened, setNavBarOpened] = useState(false);
+const AppShell = ({ children }: { children?: React.ReactNode }) => {
+  const [navBarOpened, setNavBarOpened] = useState<boolean>(false);
 
   return (
     <MantineAppShell

@@ -15,7 +15,7 @@ export default class _Document extends Document {
         <link href="/favicon.ico" rel="icon" />
         <link href="https://fonts.googleapis.com" rel="preconnect" />
         <link
-          crossOrigin="true"
+          crossOrigin=""
           href="https://fonts.gstatic.com"
           rel="preconnect"
         />

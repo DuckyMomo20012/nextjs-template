@@ -69,18 +69,41 @@ const HomePage = () => {
 
   return (
     <Stack align="center" py="xl">
-      <Group grow position="center" spacing="xl">
-        <Image
-          className="hover:filter"
-          fit="contain"
-          height={80}
-          src="/img/next.svg"
-          style={{ '--tw-drop-shadow': 'drop-shadow(0 0 2em #646cffaa)' }}
-        />
+      <Group className="w-full" position="center" spacing="xl">
+        <Stack align="center">
+          <Image
+            className="hover:filter"
+            fit="contain"
+            height={80}
+            src="https://assets.vercel.com/image/upload/v1662130559/nextjs/Icon_dark_background.png"
+            style={
+              {
+                '--tw-drop-shadow': 'drop-shadow(0 0 2em #000000aa)',
+              } as React.CSSProperties
+            }
+          />
+          <Title align="center" className="text-4xl">
+            NextJS
+          </Title>
+        </Stack>
+        <Icon height={36} icon="fluent-emoji-flat:plus" width={36} />
+        <Stack align="center">
+          <Image
+            className="hover:filter"
+            fit="contain"
+            height={80}
+            src="/img/typescript.svg"
+            style={
+              {
+                '--tw-drop-shadow': 'drop-shadow(0 0 2em #3178c6aa)',
+              } as React.CSSProperties
+            }
+          />
+          <Title align="center" className="text-4xl">
+            Typescript
+          </Title>
+        </Stack>
       </Group>
-      <Title align="center" className="text-4xl">
-        NextJS
-      </Title>
 
       <Title
         align="center"
@@ -263,10 +286,13 @@ const HomePage = () => {
               <Icon icon="fluent-emoji-flat:locked" inline /> Type-safe all the
               way with TypeScript
             </Title>
-            <Text align="center" color="yellow" transform="uppercase">
-              <Icon icon="fluent-emoji-flat:construction" inline /> Coming Soon{' '}
-              <Icon icon="fluent-emoji-flat:construction" inline />
-            </Text>
+            <Badge
+              className="before:(animated animate-pulse animate-loop animate-duration-1000)"
+              color="green"
+              variant="dot"
+            >
+              Enabled
+            </Badge>
           </Stack>
         </Box>
       </SimpleGrid>

@@ -12,28 +12,30 @@ import {
 } from '@mantine/core';
 import Link from 'next/link';
 
-const Header = ({ setNavBarOpened }) => {
+type HeaderProps = {
+  setNavBarOpened: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+const Header = ({ setNavBarOpened }: HeaderProps) => {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
   const dark = colorScheme === 'dark';
 
   return (
     <MantineHeader height={48} px={24}>
       <Group className="h-full" noWrap position="apart">
-        <Icon
-          className="block sm:hidden"
-          height={24}
-          icon="ic:baseline-menu"
-          onClick={() => {
-            setNavBarOpened((prevNavBarOpened) => !prevNavBarOpened);
-          }}
-        />
+        <ActionIcon size="lg" variant="subtle">
+          <Icon
+            className="block sm:hidden"
+            height={24}
+            icon="ic:baseline-menu"
+            onClick={() => {
+              setNavBarOpened((prevNavBarOpened) => !prevNavBarOpened);
+            }}
+          />
+        </ActionIcon>
         <Group className="!sm:flex !hidden !flex-grow" position="left">
           <Link href="/" passHref>
-            <Anchor
-              className="flex items-center gap-2"
-              spacing="xs"
-              underline={false}
-            >
+            <Anchor className="flex items-center gap-2" underline={false}>
               <Box component="span">
                 <Image
                   height={32}
