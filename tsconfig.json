@@ -12,14 +12,22 @@
     "moduleResolution": "Node",
     "resolveJsonModule": true,
     "noEmit": true,
-    "jsx": "react-jsx",
+    "jsx": "preserve",
     "outDir": "./dist/out-tsc",
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
     },
-    "noErrorTruncation": true
+    "noErrorTruncation": true,
+    "strict": false,
+    "incremental": true,
+    "isolatedModules": true
   },
   "include": ["src", "tests", "next-env.d.ts"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ],
+  "exclude": ["node_modules"]
 }
