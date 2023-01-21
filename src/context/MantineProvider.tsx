@@ -2,11 +2,14 @@ import {
   MantineProvider as BaseMantineProvider,
   ColorSchemeProvider,
   Global,
+  MantineTheme,
   DEFAULT_THEME as mantineDefaultTheme,
 } from '@mantine/core';
-import { useEffect, useState } from 'react';
+import type { ColorScheme, MantineThemeColors } from '@mantine/core';
+import React, { useEffect, useState } from 'react';
 import windiDefaultColors from 'windicss/colors';
 import windiDefaultTheme from 'windicss/defaultTheme';
+import type { DefaultColors } from 'windicss/types/config/colors';
 
 const convertBreakpoint = (breakpoint) => {
   const convertedBreakpoint = {};
@@ -17,9 +20,26 @@ const convertBreakpoint = (breakpoint) => {
   return convertedBreakpoint;
 };
 
+type ConvertedMantineColors = Omit<
+  {
+    [k in keyof DefaultColors]: MantineThemeColors[keyof MantineThemeColors];
+  },
+  | 'lightBlue'
+  | 'warmGray'
+  | 'trueGray'
+  | 'coolGray'
+  | 'blueGray'
+  | 'zink'
+  | 'inherit'
+  | 'transparent'
+  | 'current'
+  | 'black'
+  | 'white'
+>;
+
 // Override Mantine colors
-const convertColor = (windiColors) => {
-  const convertedColor = {};
+const convertColor = (windiColors: DefaultColors) => {
+  const convertedColor = {} as ConvertedMantineColors;
   Object.keys(windiColors).forEach((color) => {
     if (color === 'lightBlue') {
       color = 'sky';
@@ -54,15 +74,19 @@ const convertFontSize = (fontSize) => {
   return convertedFontSize;
 };
 
-const theme = {
+const theme: MantineTheme = {
+  ...mantineDefaultTheme,
   breakpoints: {
     ...mantineDefaultTheme.breakpoints,
     ...convertBreakpoint(windiDefaultTheme.screens), // WindiCSS
   },
-  colors: convertColor(windiDefaultColors),
+  colors: {
+    ...mantineDefaultTheme.colors,
+    ...convertColor(windiDefaultColors),
+  },
   defaultRadius: 'md',
-  black: windiDefaultColors.black,
-  white: windiDefaultColors.white,
+  black: windiDefaultColors.black as string,
+  white: windiDefaultColors.white as string,
   primaryColor: 'blue',
   fontSizes: {
     ...mantineDefaultTheme.fontSizes,
@@ -76,6 +100,7 @@ const theme = {
   fontFamily: `Inter,${mantineDefaultTheme.fontFamily}`,
   fontFamilyMonospace: `"Space Mono",${mantineDefaultTheme.fontFamilyMonospace}`,
   headings: {
+    ...mantineDefaultTheme.headings,
     fontFamily: `Quicksand,${mantineDefaultTheme.headings.fontFamily}`,
   },
   lineHeight: mantineDefaultTheme.lineHeight,
@@ -100,9 +125,9 @@ const MyGlobalStyles = () => {
   );
 };
 
-const MantineProvider = ({ children }) => {
-  const [colorScheme, setColorScheme] = useState('light');
-  const toggleColorScheme = (value) =>
+const MantineProvider = ({ children }: { children?: React.ReactNode }) => {
+  const [colorScheme, setColorScheme] = useState<ColorScheme>('light');
+  const toggleColorScheme = (value: ColorScheme) =>
     setColorScheme(value || (colorScheme === 'dark' ? 'light' : 'dark'));
 
   useEffect(() => {
