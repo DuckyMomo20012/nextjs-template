@@ -12,19 +12,17 @@ import { useRouter } from 'next/router';
 import { useSession } from 'next-auth/react';
 import { useEffect, useState } from 'react';
 
-const AuthGuard = ({ children }) => {
+const AuthGuard = ({ children }: { children?: React.ReactNode }) => {
   const [opened, setOpened] = useState(false);
   const router = useRouter();
-  const { status } = useSession({
-    // Set this to true will redirect directly
-    // required: true,
-    // onUnauthenticated() {
-    //   router.push('/auth/login');
-    // },
-  });
+  const { status } = useSession();
+  // Set this to true will redirect directly
+  // required: true,
+  // onUnauthenticated() {
+  //   router.push('/auth/login');
+  // },
 
   useEffect(() => {
-    // console.log('session', session);
     if (status !== 'loading') {
       setOpened(true);
     }
@@ -64,8 +62,11 @@ const AuthGuard = ({ children }) => {
       </>
     );
   }
+  if (status === 'authenticated') {
+    return <>{children}</>;
+  }
 
-  return children;
+  return <>{children}</>;
 };
 
 export { AuthGuard };

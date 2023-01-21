@@ -1,8 +1,8 @@
-const WindiCSSWebpackPlugin = require('windicss-webpack-plugin');
+import WindiCSSWebpackPlugin from 'windicss-webpack-plugin';
 
 /** @type {import('next').NextConfig} */
 
-module.exports = {
+export default {
   webpack: (config) => {
     config.plugins.push(new WindiCSSWebpackPlugin());
     return config;

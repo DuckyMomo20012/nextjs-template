@@ -11,7 +11,7 @@ const Footer = () => {
   const { colorScheme } = useMantineColorScheme();
   const dark = colorScheme === 'dark';
   return (
-    <MantineFooter className="!static">
+    <MantineFooter className="!static" height="auto">
       <Stack align="center" className="children:w-1/2 items-center">
         <Text align="center" className="w-full" size="sm">
           Made with{' '}
@@ -23,7 +23,7 @@ const Footer = () => {
           />{' '}
           by <Anchor href="https://github.com/DuckyMomo20012">Tien Vinh</Anchor>
           .{' '}
-          <Anchor href="https://github.com/DuckyMomo20012/nextjs-template/blob/main/LICENSE">
+          <Anchor href="https://github.com/DuckyMomo20012/react-template/blob/main/LICENSE">
             MIT
           </Anchor>{' '}
           License
