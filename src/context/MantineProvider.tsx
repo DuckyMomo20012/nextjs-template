@@ -6,7 +6,7 @@ import {
   DEFAULT_THEME as mantineDefaultTheme,
 } from '@mantine/core';
 import type { ColorScheme, MantineThemeColors } from '@mantine/core';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import windiDefaultColors from 'windicss/colors';
 import windiDefaultTheme from 'windicss/defaultTheme';
 import type { DefaultColors } from 'windicss/types/config/colors';
