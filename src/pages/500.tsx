@@ -10,11 +10,13 @@ import {
 
 function ServerError() {
   return (
-    <Center align="center" className="h-screen">
+    <Center className="h-screen">
       <Stack className="w-1/2">
         <Image alt="500" src="/img/500.svg" />
-        <Title order={1}>Something bad just happened...</Title>
-        <Text color="dimmed" size="lg">
+        <Title align="center" order={1}>
+          Something bad just happened...
+        </Title>
+        <Text align="center" color="dimmed" size="lg">
           Our servers could not handle your request. Don&apos;t worry, our
           development team was already notified. Try refreshing the page.
         </Text>

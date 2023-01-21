@@ -12,11 +12,13 @@ import Link from 'next/link';
 
 const NotFound = () => {
   return (
-    <Center align="center" className="h-screen">
+    <Center className="h-screen">
       <Stack className="w-1/2">
         <Image alt="404" src="/img/404.svg" />
-        <Title order={1}>You have found a secret place.</Title>
-        <Text color="dimmed" size="lg">
+        <Title align="center" order={1}>
+          You have found a secret place.
+        </Title>
+        <Text align="center" color="dimmed" size="lg">
           Unfortunately, this is only a 404 page. You may have mistyped the
           address, or the page has been moved to another URL.
         </Text>
