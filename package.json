@@ -1,11 +1,12 @@
 {
   "name": "nextjs-template",
   "version": "0.0.0",
+  "license": "MIT",
   "private": true,
   "type": "module",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "tsc && next build",
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky install"
@@ -29,19 +30,22 @@
     "react-dom": "18.2.0",
     "react-hook-form": "7.41.5",
     "react-redux": "8.0.5",
-    "windicss-webpack-plugin": "1.7.7"
+    "type-fest": "3.5.3"
   },
   "devDependencies": {
     "@babel/core": "7.20.12",
     "@commitlint/cli": "17.4.2",
     "@commitlint/config-conventional": "17.4.2",
     "@types/node": "18.11.18",
+    "@types/react": "18.0.27",
+    "@types/react-dom": "18.0.10",
     "@typescript-eslint/eslint-plugin": "5.48.1",
     "@typescript-eslint/parser": "5.48.1",
     "eslint": "8.31.0",
     "eslint-config-airbnb-base": "15.0.0",
     "eslint-config-next": "12.3.1",
     "eslint-config-prettier": "8.6.0",
+    "eslint-import-resolver-typescript": "3.5.3",
     "eslint-plugin-import": "2.27.4",
     "eslint-plugin-jsx-a11y": "6.7.1",
     "eslint-plugin-prettier": "4.2.1",
@@ -51,6 +55,7 @@
     "lint-staged": "13.1.0",
     "prettier": "2.8.2",
     "typescript": "4.9.4",
-    "windicss": "3.5.6"
+    "windicss": "3.5.6",
+    "windicss-webpack-plugin": "1.7.7"
   }
 }
