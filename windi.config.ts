@@ -1,9 +1,18 @@
 import { DEFAULT_THEME as mantineDefaultTheme } from '@mantine/core';
+import type { MantineThemeColors } from '@mantine/core';
 import windiDefaultColors from 'windicss/colors';
+import type { DefaultColors } from 'windicss/types/config/colors';
+
+type ConvertedWindiColors = {
+  [k in keyof MantineThemeColors]: DefaultColors[keyof DefaultColors];
+};
 
 // Don't override WindiCSS colors
-const convertColor = (mantineColors, windiColors) => {
-  const newColorPalette = {};
+const convertColor = (
+  mantineColors: MantineThemeColors,
+  windiColors: DefaultColors,
+) => {
+  const newColorPalette = {} as ConvertedWindiColors;
   Object.keys(mantineColors).forEach((colorName) => {
     if (windiColors[colorName] instanceof Object === false) {
       const newColor = {};
@@ -28,7 +37,7 @@ export default {
   darkMode: 'class',
   extract: {
     exclude: ['node_modules', '.git', '.next/**/*'],
-    include: ['**/*.{jsx,css}'],
+    include: ['**/*.{html,mdx,js,jsx,ts,tsx,css}'],
   },
   plugins: [],
   shortcuts: {
