@@ -26,7 +26,16 @@
   "plugins": ["react", "import", "prettier"],
   "rules": {
     "eqeqeq": "warn",
-    "import/extensions": "off",
+    "import/extensions": [
+      "warn",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
     "import/no-extraneous-dependencies": [
       "warn",
       {
@@ -58,15 +67,13 @@
       }
     ],
     "react/jsx-sort-props": "warn",
-    "react/prop-types": "off",
-    "require-await": "warn",
     "sort-imports": [
       "warn",
       {
         "ignoreDeclarationSort": true
       }
     ],
-    "spaced-comment": ["warn", "always"]
+    "spaced-comment": ["warn", "always", { "markers": ["/"] }]
   },
   "settings": {
     "react": {
