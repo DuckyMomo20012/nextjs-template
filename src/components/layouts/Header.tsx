@@ -34,25 +34,26 @@ const Header = ({ setNavBarOpened }: HeaderProps) => {
           />
         </ActionIcon>
         <Group className="!sm:flex !hidden !flex-grow" position="left">
-          <Link href="/" passHref>
-            <Anchor className="flex items-center gap-2" underline={false}>
-              <Box component="span">
-                <Image
-                  height={32}
-                  src="https://assets.vercel.com/image/upload/v1662130559/nextjs/Icon_dark_background.png"
-                  width={32}
-                />
-              </Box>
-              <Text align="center" fw={700}>
-                NextJS Template
-              </Text>
-            </Anchor>
-          </Link>
-          <Link href="/" passHref>
-            <Anchor fw={500} underline={false}>
-              Home
-            </Anchor>
-          </Link>
+          <Anchor
+            className="flex items-center gap-2"
+            component={Link}
+            href="/"
+            underline={false}
+          >
+            <Box component="span">
+              <Image
+                height={32}
+                src="https://assets.vercel.com/image/upload/v1662130559/nextjs/Icon_dark_background.png"
+                width={32}
+              />
+            </Box>
+            <Text align="center" fw={700}>
+              NextJS Template
+            </Text>
+          </Anchor>
+          <Anchor component={Link} fw={500} href="/" underline={false}>
+            Home
+          </Anchor>
         </Group>
         <Group>
           <Tooltip label={dark ? 'Light mode' : 'Dark mode'}>

@@ -67,9 +67,9 @@ const Login = () => {
       </Title>
       <Text align="center" color="dimmed" mt={5} size="sm">
         Do not have an account yet?{' '}
-        <Link href="/auth/register">
-          <Anchor size="sm">Create account</Anchor>
-        </Link>
+        <Anchor component={Link} href="/auth/register" size="sm">
+          Create account
+        </Anchor>
       </Text>
       <Text align="center" color="dimmed" mt={5} size="sm">
         <Code color="blue">username:</Code> tienvinh@gmail.com,{' '}
