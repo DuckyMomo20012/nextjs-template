@@ -1,6 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = {
+export type CounterState = {
+  value: number;
+};
+
+const initialState: CounterState = {
   value: 0,
 };
 

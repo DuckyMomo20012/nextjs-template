@@ -5,41 +5,26 @@ import {
   MantineTheme,
   DEFAULT_THEME as mantineDefaultTheme,
 } from '@mantine/core';
-import type { ColorScheme, MantineThemeColors } from '@mantine/core';
+import type { ColorScheme, MantineSizes } from '@mantine/core';
 import { useEffect, useState } from 'react';
 import windiDefaultColors from 'windicss/colors';
 import windiDefaultTheme from 'windicss/defaultTheme';
 import type { DefaultColors } from 'windicss/types/config/colors';
+import type { DefaultFontSize, ThemeType } from 'windicss/types/interfaces';
+import type { MantineThemeColors } from '@/types/MantineThemeColors';
 
-const convertBreakpoint = (breakpoint) => {
-  const convertedBreakpoint = {};
+const convertBreakpoint = (breakpoint: ThemeType): MantineSizes => {
+  const convertedBreakpoint = {} as MantineSizes;
   Object.keys(breakpoint).forEach((size) => {
     // NOTE: Have to remove 'px' from breakpoint and convert to number
-    convertedBreakpoint[size] = breakpoint[size].replace('px', '') * 1;
+    convertedBreakpoint[size] = +breakpoint[size].replace('px', '');
   });
   return convertedBreakpoint;
 };
 
-type ConvertedMantineColors = Omit<
-  {
-    [k in keyof DefaultColors]: MantineThemeColors[keyof MantineThemeColors];
-  },
-  | 'lightBlue'
-  | 'warmGray'
-  | 'trueGray'
-  | 'coolGray'
-  | 'blueGray'
-  | 'zink'
-  | 'inherit'
-  | 'transparent'
-  | 'current'
-  | 'black'
-  | 'white'
->;
-
 // Override Mantine colors
 const convertColor = (windiColors: DefaultColors) => {
-  const convertedColor = {} as ConvertedMantineColors;
+  const convertedColor = {} as MantineThemeColors;
   Object.keys(windiColors).forEach((color) => {
     if (color === 'lightBlue') {
       color = 'sky';
@@ -60,13 +45,15 @@ const convertColor = (windiColors: DefaultColors) => {
     }
   });
   // NOTE: WindiCSS dark color is too dark
-  convertedColor.dark = convertedColor.zinc;
+  convertedColor.dark = mantineDefaultTheme.colors.dark;
 
   return convertedColor;
 };
 
-const convertFontSize = (fontSize) => {
-  const convertedFontSize = {};
+const convertFontSize = (fontSize: {
+  [key: string]: DefaultFontSize;
+}): MantineSizes => {
+  const convertedFontSize = {} as MantineSizes;
   Object.keys(fontSize).forEach((size) => {
     // NOTE: Don't have to convert 'rem' to 'px'
     convertedFontSize[size] = fontSize[size][0];
@@ -88,6 +75,7 @@ const theme: MantineTheme = {
   black: windiDefaultColors.black as string,
   white: windiDefaultColors.white as string,
   primaryColor: 'blue',
+  primaryShade: 7,
   fontSizes: {
     ...mantineDefaultTheme.fontSizes,
     ...convertFontSize(windiDefaultTheme.fontSize),

@@ -19,9 +19,9 @@ const Register = () => {
       </Title>
       <Text align="center" color="dimmed" mt={5} size="sm">
         Already have an account?{' '}
-        <Link href="/auth/login">
-          <Anchor size="sm">Login</Anchor>
-        </Link>
+        <Anchor component={Link} href="/auth/login" size="sm">
+          Login
+        </Anchor>
       </Text>
 
       <Paper mt={30} p={30} radius="md" shadow="md" withBorder>

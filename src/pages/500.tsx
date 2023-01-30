@@ -7,12 +7,28 @@ import {
   Text,
   Title,
 } from '@mantine/core';
+import Head from 'next/head';
 
 function ServerError() {
   return (
-    <Center className="h-screen">
-      <Stack className="w-1/2">
-        <Image alt="500" src="/img/500.svg" />
+    <Center className="h-full">
+      <Head>
+        <title>Server Error</title>
+        <meta
+          content="Server Error - Something bad just happened..."
+          name="description"
+        ></meta>
+      </Head>
+      <Stack className="w-3/4 md:w-1/2 lg:w-1/3">
+        <Image
+          alt="500"
+          imageProps={{
+            style: {
+              aspectRatio: '5 / 4',
+            },
+          }}
+          src="https://http.cat/500"
+        />
         <Title align="center" order={1}>
           Something bad just happened...
         </Title>

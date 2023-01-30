@@ -7,14 +7,27 @@ import {
   Text,
   Title,
 } from '@mantine/core';
+import Head from 'next/head';
 
 import Link from 'next/link';
 
 const NotFound = () => {
   return (
-    <Center className="h-screen">
-      <Stack className="w-1/2">
-        <Image alt="404" src="/img/404.svg" />
+    <Center className="h-full">
+      <Head>
+        <title>404 - Not Found</title>
+        <meta content="404 - Not Found" name="description"></meta>
+      </Head>
+      <Stack className="w-3/4 md:w-1/2 lg:w-1/3">
+        <Image
+          alt="404"
+          imageProps={{
+            style: {
+              aspectRatio: '5 / 4',
+            },
+          }}
+          src="https://http.cat/404"
+        />
         <Title align="center" order={1}>
           You have found a secret place.
         </Title>
