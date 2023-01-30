@@ -78,6 +78,7 @@ const Navbar = ({ navBarOpened, setNavBarOpened }: NavbarProps) => {
                   underline={false}
                 >
                   <Image
+                    alt="logo"
                     height={32}
                     src="https://assets.vercel.com/image/upload/v1662130559/nextjs/Icon_dark_background.png"
                     width={32}

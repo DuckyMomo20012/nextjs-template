@@ -15,6 +15,7 @@ import {
   useMantineColorScheme,
   useMantineTheme,
 } from '@mantine/core';
+import Head from 'next/head';
 import { FeatureBox } from '@/components/elements/FeatureBox';
 
 const techStack = [
@@ -69,9 +70,17 @@ const HomePage = () => {
 
   return (
     <Stack align="center" py="xl">
+      <Head>
+        <title>NextJS + TS</title>
+        <meta
+          content="A simple starter template for NextJS + Typescript projects, with many useful features and tools pre-installed."
+          name="description"
+        ></meta>
+      </Head>
       <Group className="w-full" position="center" spacing="xl">
         <Stack align="center">
           <Image
+            alt="nextjs logo"
             className="hover:filter"
             fit="contain"
             height={80}
@@ -81,6 +90,7 @@ const HomePage = () => {
                 '--tw-drop-shadow': 'drop-shadow(0 0 2em #000000aa)',
               } as React.CSSProperties
             }
+            width={80}
           />
           <Title align="center" className="text-4xl">
             NextJS
@@ -89,6 +99,7 @@ const HomePage = () => {
         <Icon height={36} icon="fluent-emoji-flat:plus" width={36} />
         <Stack align="center">
           <Image
+            alt="typescript logo"
             className="hover:filter"
             fit="contain"
             height={80}
@@ -98,6 +109,7 @@ const HomePage = () => {
                 '--tw-drop-shadow': 'drop-shadow(0 0 2em #3178c6aa)',
               } as React.CSSProperties
             }
+            width={80}
           />
           <Title align="center" className="text-4xl">
             Typescript
@@ -150,6 +162,7 @@ const HomePage = () => {
                           variant="outline"
                         >
                           <Image
+                            alt={`${name.toLowerCase()} logo`}
                             fit="contain"
                             height={36}
                             src={logoSrc}
