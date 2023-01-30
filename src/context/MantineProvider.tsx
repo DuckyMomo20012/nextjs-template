@@ -5,16 +5,13 @@ import {
   MantineTheme,
   DEFAULT_THEME as mantineDefaultTheme,
 } from '@mantine/core';
-import type {
-  ColorScheme,
-  MantineSizes,
-  MantineThemeColors,
-} from '@mantine/core';
+import type { ColorScheme, MantineSizes } from '@mantine/core';
 import { useEffect, useState } from 'react';
 import windiDefaultColors from 'windicss/colors';
 import windiDefaultTheme from 'windicss/defaultTheme';
 import type { DefaultColors } from 'windicss/types/config/colors';
 import type { DefaultFontSize, ThemeType } from 'windicss/types/interfaces';
+import type { MantineThemeColors } from '@/types/MantineThemeColors';
 
 const convertBreakpoint = (breakpoint: ThemeType): MantineSizes => {
   const convertedBreakpoint = {} as MantineSizes;
@@ -25,26 +22,9 @@ const convertBreakpoint = (breakpoint: ThemeType): MantineSizes => {
   return convertedBreakpoint;
 };
 
-type ConvertedMantineColors = Omit<
-  {
-    [k in keyof DefaultColors]: MantineThemeColors[keyof MantineThemeColors];
-  },
-  | 'lightBlue'
-  | 'warmGray'
-  | 'trueGray'
-  | 'coolGray'
-  | 'blueGray'
-  | 'zink'
-  | 'inherit'
-  | 'transparent'
-  | 'current'
-  | 'black'
-  | 'white'
->;
-
 // Override Mantine colors
 const convertColor = (windiColors: DefaultColors) => {
-  const convertedColor = {} as ConvertedMantineColors;
+  const convertedColor = {} as MantineThemeColors;
   Object.keys(windiColors).forEach((color) => {
     if (color === 'lightBlue') {
       color = 'sky';
