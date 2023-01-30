@@ -19,7 +19,15 @@ const NotFound = () => {
         <meta content="404 - Not Found" name="description"></meta>
       </Head>
       <Stack className="w-3/4 md:w-1/2 lg:w-1/3">
-        <Image alt="404" src="https://http.cat/404" />
+        <Image
+          alt="404"
+          imageProps={{
+            style: {
+              aspectRatio: '5 / 4',
+            },
+          }}
+          src="https://http.cat/404"
+        />
         <Title align="center" order={1}>
           You have found a secret place.
         </Title>
