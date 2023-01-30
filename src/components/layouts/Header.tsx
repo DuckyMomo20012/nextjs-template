@@ -11,7 +11,7 @@ import {
 } from '@mantine/core';
 import { useElementSize } from '@mantine/hooks';
 import Link from 'next/link';
-import { useEffect, useLayoutEffect, useReducer, useState } from 'react';
+import { useEffect, useReducer, useState } from 'react';
 import {
   NavMenuList,
   NavMenuListCompact,
@@ -83,7 +83,7 @@ const Header = ({ setNavBarOpened }: HeaderProps) => {
     overflow: 'hidden',
   };
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     if (childrenWidth > containerWidth) {
       dispatch({
         type: 'hide',
