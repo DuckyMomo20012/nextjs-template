@@ -108,6 +108,7 @@ const Header = ({ setNavBarOpened }: HeaderProps) => {
     <MantineHeader height={48} px={24}>
       <Group className="h-full" noWrap position="apart">
         <ActionIcon
+          aria-label="Open navigation menu"
           className="sm:hidden"
           onClick={() => {
             setNavBarOpened((prevNavBarOpened) => !prevNavBarOpened);
@@ -159,6 +160,7 @@ const Header = ({ setNavBarOpened }: HeaderProps) => {
         <Group noWrap>
           <Tooltip label={dark ? 'Light mode' : 'Dark mode'}>
             <ActionIcon
+              aria-label="Toggle color scheme"
               className="sm:flex hidden"
               color="blue"
               data-test-id="color-scheme-toggle"
@@ -178,7 +180,12 @@ const Header = ({ setNavBarOpened }: HeaderProps) => {
               href="https://github.com/DuckyMomo20012/nextjs-template"
               target="_blank"
             >
-              <ActionIcon size="lg" variant="outline">
+              <ActionIcon
+                aria-label="GitHub link"
+                role="link"
+                size="lg"
+                variant="outline"
+              >
                 <Icon icon="ant-design:github-filled" width={24} />
               </ActionIcon>
             </Anchor>
