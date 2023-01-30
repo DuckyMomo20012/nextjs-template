@@ -81,6 +81,7 @@ const HomePage = () => {
                 '--tw-drop-shadow': 'drop-shadow(0 0 2em #000000aa)',
               } as React.CSSProperties
             }
+            width={80}
           />
           <Title align="center" className="text-4xl">
             NextJS
@@ -98,6 +99,7 @@ const HomePage = () => {
                 '--tw-drop-shadow': 'drop-shadow(0 0 2em #3178c6aa)',
               } as React.CSSProperties
             }
+            width={80}
           />
           <Title align="center" className="text-4xl">
             Typescript
