@@ -7,12 +7,17 @@ import {
   Text,
   Title,
 } from '@mantine/core';
+import Head from 'next/head';
 
 import Link from 'next/link';
 
 const NotFound = () => {
   return (
     <Center className="h-full">
+      <Head>
+        <title>404 - Not Found</title>
+        <meta content="404 - Not Found" name="description"></meta>
+      </Head>
       <Stack className="w-3/4 md:w-1/2 lg:w-1/3">
         <Image alt="404" src="https://http.cat/404" />
         <Title align="center" order={1}>
