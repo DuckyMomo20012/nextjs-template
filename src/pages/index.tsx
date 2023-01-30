@@ -72,6 +72,7 @@ const HomePage = () => {
       <Group className="w-full" position="center" spacing="xl">
         <Stack align="center">
           <Image
+            alt="nextjs logo"
             className="hover:filter"
             fit="contain"
             height={80}
@@ -90,6 +91,7 @@ const HomePage = () => {
         <Icon height={36} icon="fluent-emoji-flat:plus" width={36} />
         <Stack align="center">
           <Image
+            alt="typescript logo"
             className="hover:filter"
             fit="contain"
             height={80}
@@ -152,6 +154,7 @@ const HomePage = () => {
                           variant="outline"
                         >
                           <Image
+                            alt={`${name.toLowerCase()} logo`}
                             fit="contain"
                             height={36}
                             src={logoSrc}
