@@ -16,6 +16,7 @@ import {
   useMantineTheme,
 } from '@mantine/core';
 import Head from 'next/head';
+import { Counter } from '@/components/elements/Counter';
 import { FeatureBox } from '@/components/elements/FeatureBox';
 
 const techStack = [
@@ -345,18 +346,16 @@ const HomePage = () => {
             <Title align="center" order={3}>
               <Icon
                 height={22}
-                icon="fluent-emoji-flat:locked"
+                icon="fluent-emoji-flat:puzzle-piece"
                 inline
                 style={{
                   aspectRatio: '1 / 1',
                 }}
                 width={22}
               />{' '}
-              Type-safe all the way with TypeScript
+              Simple Redux integration
             </Title>
-            <Badge color="green" variant="dot">
-              Enabled
-            </Badge>
+            <Counter />
           </Stack>
         </FeatureBox>
       </SimpleGrid>
