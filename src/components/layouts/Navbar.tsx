@@ -89,6 +89,7 @@ const Navbar = ({ navBarOpened, setNavBarOpened }: NavbarProps) => {
                 </Anchor>
                 <Tooltip label={dark ? 'Light mode' : 'Dark mode'}>
                   <ActionIcon
+                    aria-label="Toggle color scheme"
                     color="blue"
                     onClick={() => toggleColorScheme()}
                     size="lg"
@@ -103,7 +104,11 @@ const Navbar = ({ navBarOpened, setNavBarOpened }: NavbarProps) => {
                   </ActionIcon>
                 </Tooltip>
               </Group>
-              <CloseButton onClick={() => setNavBarOpened(false)} size="xl" />
+              <CloseButton
+                aria-label="Close navigation menu"
+                onClick={() => setNavBarOpened(false)}
+                size="xl"
+              />
             </MantineNavbar.Section>
             <MantineNavbar.Section component={ScrollArea} grow>
               <NavLinkList
