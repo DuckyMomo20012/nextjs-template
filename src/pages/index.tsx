@@ -84,6 +84,11 @@ const HomePage = () => {
             className="hover:filter"
             fit="contain"
             height={80}
+            imageProps={{
+              style: {
+                aspectRatio: '1 / 1',
+              },
+            }}
             src="https://assets.vercel.com/image/upload/v1662130559/nextjs/Icon_dark_background.png"
             style={
               {
@@ -91,6 +96,7 @@ const HomePage = () => {
               } as React.CSSProperties
             }
             width={80}
+            withPlaceholder
           />
           <Title align="center" className="text-4xl">
             NextJS
@@ -103,6 +109,11 @@ const HomePage = () => {
             className="hover:filter"
             fit="contain"
             height={80}
+            imageProps={{
+              style: {
+                aspectRatio: '1 / 1',
+              },
+            }}
             src="/img/typescript.svg"
             style={
               {
@@ -110,6 +121,7 @@ const HomePage = () => {
               } as React.CSSProperties
             }
             width={80}
+            withPlaceholder
           />
           <Title align="center" className="text-4xl">
             Typescript
@@ -144,8 +156,16 @@ const HomePage = () => {
         >
           <Stack align="center">
             <Title align="center" order={3}>
-              <Icon icon="fluent-emoji-flat:high-voltage" inline /> Batteries
-              included
+              <Icon
+                height={22}
+                icon="fluent-emoji-flat:high-voltage"
+                inline
+                style={{
+                  aspectRatio: '1 / 1',
+                }}
+                width={22}
+              />{' '}
+              Batteries included
             </Title>
             <Group className="w-full" position="center" spacing="xl">
               {techStack.map(
@@ -165,6 +185,11 @@ const HomePage = () => {
                             alt={`${name.toLowerCase()} logo`}
                             fit="contain"
                             height={36}
+                            imageProps={{
+                              style: {
+                                aspectRatio: '1 / 1',
+                              },
+                            }}
                             src={logoSrc}
                             width={36}
                             withPlaceholder
@@ -183,8 +208,16 @@ const HomePage = () => {
         <FeatureBox color="rose">
           <Stack align="center">
             <Title align="center" order={3}>
-              <Icon icon="fluent-emoji-flat:sponge" inline /> Better code style
-              with
+              <Icon
+                height={22}
+                icon="fluent-emoji-flat:sponge"
+                inline
+                style={{
+                  aspectRatio: '1 / 1',
+                }}
+                width={22}
+              />{' '}
+              Better code style with
             </Title>
             <Group position="center">
               <Badge color="purple">ESlint</Badge>
@@ -200,8 +233,16 @@ const HomePage = () => {
         <FeatureBox color="pink">
           <Stack align="center">
             <Title align="center" order={3}>
-              <Icon icon="fluent-emoji-flat:dizzy" inline /> Move faster with
-              these awesome libraries
+              <Icon
+                height={22}
+                icon="fluent-emoji-flat:dizzy"
+                inline
+                style={{
+                  aspectRatio: '1 / 1',
+                }}
+                width={22}
+              />{' '}
+              Move faster with these awesome libraries
             </Title>
             <Group position="center">
               <Badge className="animate-tada" color="yellow">
@@ -223,8 +264,16 @@ const HomePage = () => {
         <FeatureBox color="teal">
           <Stack align="center">
             <Title align="center" order={3}>
-              <Icon icon="fluent-emoji-flat:artist-palette" inline /> Extended
-              WindiCSS color palette
+              <Icon
+                height={22}
+                icon="fluent-emoji-flat:artist-palette"
+                inline
+                style={{
+                  aspectRatio: '1 / 1',
+                }}
+                width={22}
+              />{' '}
+              Extended WindiCSS color palette
             </Title>
             <Group position="center">
               {Object.keys(theme.colors).map((color) => {
@@ -247,10 +296,15 @@ const HomePage = () => {
           <Stack align="center">
             <Title align="center" order={3}>
               <Icon
+                height={22}
                 icon={`fluent-emoji-flat:${
                   dark ? 'full-moon-face' : 'sun-with-face'
                 }`}
                 inline
+                style={{
+                  aspectRatio: '1 / 1',
+                }}
+                width={22}
               />{' '}
               Dark mode ready
             </Title>
@@ -267,7 +321,15 @@ const HomePage = () => {
         <FeatureBox color="sky">
           <Stack align="center">
             <Title align="center" order={3}>
-              <Icon icon="fluent-emoji-flat:input-latin-lowercase" inline />{' '}
+              <Icon
+                height={22}
+                icon="fluent-emoji-flat:input-latin-lowercase"
+                inline
+                style={{
+                  aspectRatio: '1 / 1',
+                }}
+                width={22}
+              />{' '}
               Pre-configured font pairing
             </Title>
             <Group position="center">
@@ -281,8 +343,16 @@ const HomePage = () => {
         <FeatureBox color="gray">
           <Stack align="center">
             <Title align="center" order={3}>
-              <Icon icon="fluent-emoji-flat:locked" inline /> Type-safe all the
-              way with TypeScript
+              <Icon
+                height={22}
+                icon="fluent-emoji-flat:locked"
+                inline
+                style={{
+                  aspectRatio: '1 / 1',
+                }}
+                width={22}
+              />{' '}
+              Type-safe all the way with TypeScript
             </Title>
             <Badge color="green" variant="dot">
               Enabled
