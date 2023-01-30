@@ -2,13 +2,11 @@ import { Icon } from '@iconify/react';
 import {
   ActionIcon,
   Anchor,
-  Box,
   Button,
   CloseButton,
   Divider,
   Group,
   Image,
-  NavLink as MantineNavLink,
   Navbar as MantineNavbar,
   ScrollArea,
   Text,
@@ -18,16 +16,9 @@ import {
 } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import { useEffect } from 'react';
-
-const paths = [
-  {
-    path: '/',
-    label: 'Home',
-    icon: 'ic:outline-home',
-  },
-];
+import { NavLinkList } from '@/components/elements/NavLinkList';
+import { navBarItems } from '@/components/layouts/navBarItems';
 
 type NavbarProps = {
   navBarOpened: boolean;
@@ -44,7 +35,6 @@ const Navbar = ({ navBarOpened, setNavBarOpened }: NavbarProps) => {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
   const dark = colorScheme === 'dark';
   const matches = useMediaQuery('(min-width: 640px)');
-  const router = useRouter();
 
   useEffect(() => {
     if (navBarOpened) {
@@ -62,7 +52,7 @@ const Navbar = ({ navBarOpened, setNavBarOpened }: NavbarProps) => {
 
   return (
     <Transition
-      duration={200}
+      duration={0}
       mounted={navBarOpened}
       timingFunction="ease-in-out"
       transition={slideRight}
@@ -87,13 +77,11 @@ const Navbar = ({ navBarOpened, setNavBarOpened }: NavbarProps) => {
                   href="/"
                   underline={false}
                 >
-                  <Box component="span">
-                    <Image
-                      height={32}
-                      src="https://assets.vercel.com/image/upload/v1662130559/nextjs/Icon_dark_background.png"
-                      width={32}
-                    />
-                  </Box>
+                  <Image
+                    height={32}
+                    src="https://assets.vercel.com/image/upload/v1662130559/nextjs/Icon_dark_background.png"
+                    width={32}
+                  />
                   <Text align="center" className="w-full truncate" fw={700}>
                     NextJS Template
                   </Text>
@@ -117,24 +105,12 @@ const Navbar = ({ navBarOpened, setNavBarOpened }: NavbarProps) => {
               <CloseButton onClick={() => setNavBarOpened(false)} size="xl" />
             </MantineNavbar.Section>
             <MantineNavbar.Section component={ScrollArea} grow>
-              {paths.map((path) => {
-                return (
-                  <Anchor
-                    component={Link}
-                    href={path.path}
-                    key={path.path}
-                    underline={false}
-                  >
-                    <MantineNavLink
-                      active={router.pathname === path.path}
-                      fw={500}
-                      icon={<Icon height={24} icon={path.icon} />}
-                      label={path.label}
-                      onClick={() => setNavBarOpened(false)}
-                    />
-                  </Anchor>
-                );
-              })}
+              <NavLinkList
+                count={0}
+                handleClick={() => setNavBarOpened(false)}
+                level={2}
+                paths={navBarItems}
+              />
             </MantineNavbar.Section>
             <Divider />
             <MantineNavbar.Section p="sm">
