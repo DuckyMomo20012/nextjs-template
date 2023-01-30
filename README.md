@@ -79,9 +79,9 @@
 
 <div align="center">
   <p>Light mode</p>
-  <img src="https://user-images.githubusercontent.com/64480713/213895662-4f347c5e-5863-4e81-a0a7-c9da7dbfde2d.png" alt="screenshot" />
+  <img src="https://user-images.githubusercontent.com/64480713/215514184-6bd4017d-6ef1-4c76-b8ee-6cf399b19845.png" alt="screenshot" />
   <p>Dark mode</p>
-  <img src="https://user-images.githubusercontent.com/64480713/213895664-e1897c48-cd33-41ec-8bf1-4e6f9de8b14e.png" alt="screenshot_dark_mode" />
+  <img src="https://user-images.githubusercontent.com/64480713/215514191-9be45946-0168-4cd9-9c81-88344bd5307f.png" alt="screenshot_dark_mode" />
 </div>
 
 <!-- TechStack -->
