@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "tsc && next build",
-    "start": "next start",
+    "preview": "next start -p 4000",
     "lint": "next lint",
     "prepare": "husky install"
   },
