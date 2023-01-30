@@ -5,17 +5,22 @@ import {
   MantineTheme,
   DEFAULT_THEME as mantineDefaultTheme,
 } from '@mantine/core';
-import type { ColorScheme, MantineThemeColors } from '@mantine/core';
+import type {
+  ColorScheme,
+  MantineSizes,
+  MantineThemeColors,
+} from '@mantine/core';
 import { useEffect, useState } from 'react';
 import windiDefaultColors from 'windicss/colors';
 import windiDefaultTheme from 'windicss/defaultTheme';
 import type { DefaultColors } from 'windicss/types/config/colors';
+import type { DefaultFontSize, ThemeType } from 'windicss/types/interfaces';
 
-const convertBreakpoint = (breakpoint) => {
-  const convertedBreakpoint = {};
+const convertBreakpoint = (breakpoint: ThemeType): MantineSizes => {
+  const convertedBreakpoint = {} as MantineSizes;
   Object.keys(breakpoint).forEach((size) => {
     // NOTE: Have to remove 'px' from breakpoint and convert to number
-    convertedBreakpoint[size] = breakpoint[size].replace('px', '') * 1;
+    convertedBreakpoint[size] = +breakpoint[size].replace('px', '');
   });
   return convertedBreakpoint;
 };
@@ -65,8 +70,10 @@ const convertColor = (windiColors: DefaultColors) => {
   return convertedColor;
 };
 
-const convertFontSize = (fontSize) => {
-  const convertedFontSize = {};
+const convertFontSize = (fontSize: {
+  [key: string]: DefaultFontSize;
+}): MantineSizes => {
+  const convertedFontSize = {} as MantineSizes;
   Object.keys(fontSize).forEach((size) => {
     // NOTE: Don't have to convert 'rem' to 'px'
     convertedFontSize[size] = fontSize[size][0];
