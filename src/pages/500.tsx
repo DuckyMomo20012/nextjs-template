@@ -10,9 +10,9 @@ import {
 
 function ServerError() {
   return (
-    <Center className="h-screen">
-      <Stack className="w-1/2">
-        <Image alt="500" src="/img/500.svg" />
+    <Center className="h-full">
+      <Stack className="w-3/4 md:w-1/2 lg:w-1/3">
+        <Image alt="500" src="https://http.cat/500" />
         <Title align="center" order={1}>
           Something bad just happened...
         </Title>
