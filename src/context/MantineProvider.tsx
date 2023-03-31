@@ -1,11 +1,12 @@
+import type { ColorScheme, MantineSizes } from '@mantine/core';
 import {
   MantineProvider as BaseMantineProvider,
   ColorSchemeProvider,
   Global,
   MantineTheme,
   DEFAULT_THEME as mantineDefaultTheme,
+  rem,
 } from '@mantine/core';
-import type { ColorScheme, MantineSizes } from '@mantine/core';
 import { useEffect, useState } from 'react';
 import windiDefaultColors from 'windicss/colors';
 import windiDefaultTheme from 'windicss/defaultTheme';
@@ -16,8 +17,8 @@ import type { MantineThemeColors } from '@/types/MantineThemeColors';
 const convertBreakpoint = (breakpoint: ThemeType): MantineSizes => {
   const convertedBreakpoint = {} as MantineSizes;
   Object.keys(breakpoint).forEach((size) => {
-    // NOTE: Have to remove 'px' from breakpoint and convert to number
-    convertedBreakpoint[size] = +breakpoint[size].replace('px', '');
+    // NOTE: Have to convert 'px' to 'rem'
+    convertedBreakpoint[size] = rem(breakpoint[size]);
   });
   return convertedBreakpoint;
 };
