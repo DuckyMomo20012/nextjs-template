@@ -1,19 +1,84 @@
 {
+  "[cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools",
+    "editor.tabSize": 2
+  },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.tabSize": 2
   },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    },
+    "editor.defaultFormatter": "ms-python.python",
+    "editor.tabSize": 4,
+    "editor.formatOnType": true
+  },
+  "[xml]": {
+    "editor.defaultFormatter": null
+  },
+  "C_Cpp.clang_format_style": "LLVM",
+  // Code Spell Checker Extension
+  "cSpell.enableFiletypes": ["!dockercompose"],
+  "cSpell.language": "en",
+  //
+  "diffEditor.ignoreTrimWhitespace": false,
   "editor.bracketPairColorization.enabled": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true,
     "source.sortImports": false
   },
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.detectIndentation": false,
+  "editor.fontFamily": "JetBrains Mono",
+  "editor.fontLigatures": "JetBrains Mono",
+  "editor.formatOnSave": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.inlineSuggest.enabled": true,
+  "editor.insertSpaces": true,
+  "editor.linkedEditing": true,
+  "editor.mouseWheelZoom": true,
   "editor.quickSuggestions": {
     "strings": true
   },
+  "editor.renderLineHighlight": "gutter",
+  "editor.smoothScrolling": true,
+  "editor.stickyScroll.enabled": true,
+  "editor.suggest.insertMode": "insert",
+  "editor.suggest.preview": true,
+  "editor.suggestSelection": "first",
   "editor.wordWrap": "on",
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": true,
+  "extensions.ignoreRecommendations": true,
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
+  "git.autofetch": true,
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": true,
+    "plaintext": true,
+    "markdown": true
+  },
+  // Highlight Matching Tag
+  "highlight-matching-tag.highlightSelfClosing": true,
+  "highlight-matching-tag.showPath": false,
+  //
+  "html.autoClosingTags": true,
   "javascript.autoClosingTags": true,
   "javascript.preferences.importModuleSpecifier": "relative",
   "javascript.preferences.importModuleSpecifierEnding": "index",
@@ -23,7 +88,196 @@
   "javascript.suggest.paths": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "javascript.validate.enable": true,
+  "markdown.updateLinksOnFileMove.enabled": "always",
+  "markdown.validate.enabled": true,
+  "notebook.cellToolbarLocation": {
+    "default": "right",
+    "jupyter-notebook": "left"
+  },
+  "notebook.lineNumbers": "on",
+  "prettier.proseWrap": "always",
+  "python.formatting.provider": "black",
+  "python.linting.flake8Enabled": true,
+  "python.linting.mypyEnabled": true,
+  "isort.args": ["--profile", "black"],
+  // Rewrap Extension
   "rewrap.autoWrap.enabled": true,
   "rewrap.autoWrap.notification": "text",
-  "rewrap.wrappingColumn": 80
+  "rewrap.wrappingColumn": 80,
+  //
+  // statusbar-commands Extension
+  "statusbar_command.commands": [
+    {
+      "alignment": "left",
+      "color": "#EA76CB",
+      "command": "editor.action.fontZoomReset",
+      "id": "reset-zoom",
+      "name": "Reset Font Zoom",
+      "priority": -1,
+      "text": "$(refresh)",
+      "tooltip": "Reset font zoom"
+    },
+    {
+      "alignment": "left",
+      "color": "#E64553",
+      "command": "workbench.action.openSettingsJson",
+      "id": "open-settings",
+      "name": "Open settings.json",
+      "priority": -2,
+      "text": "$(gear)",
+      "tooltip": "Open settings.json"
+    },
+    {
+      "alignment": "left",
+      "color": "#FE640B",
+      "command": "workbench.action.toggleSplitEditorInGroup",
+      "id": "split-group",
+      "name": "Split (Group)",
+      "priority": -3,
+      "text": "$(split-horizontal)",
+      "tooltip": "Split an editor without creating a new group"
+    },
+    {
+      "alignment": "left",
+      "color": "#DF8E1D",
+      "command": "sortJsObjectKeys.sortJsObjectKeys",
+      "id": "sort-object-keys",
+      "name": "Sort JS object keys (Extension)",
+      "priority": -5,
+      "text": "$(arrow-down)$(json)",
+      "tooltip": "Sort JS object keys (ascending)"
+    },
+    {
+      "alignment": "left",
+      "color": "#179299",
+      "command": "editor.action.sortLinesAscending",
+      "id": "sort-line-ascending",
+      "name": "Sort Lines Ascending",
+      "priority": -6,
+      "text": "$(arrow-down)$(list-selection)",
+      "tooltip": "Sort Lines Ascending"
+    },
+    {
+      "alignment": "left",
+      "color": "#04A5E5",
+      "command": "editor.emmet.action.removeTag",
+      "filterLanguageId": "html|javascriptreact|typescriptreact|markdown",
+      "id": "remove-tag",
+      "name": "Remove HTML Tag (Emmet)",
+      "priority": -8,
+      "text": "$(trash)$(code)",
+      "tooltip": "Remove HTML tag"
+    },
+    {
+      "alignment": "left",
+      "color": "#1E66F5",
+      "command": "extension.htmlTagWrap",
+      "filterLanguageId": "html|javascriptreact|typescriptreact|markdown",
+      "id": "htmlwrap",
+      "name": "HTML Tag Wrap (Extension)",
+      "priority": -9,
+      "text": "$(add)$(code)",
+      "tooltip": "Wraps selection in HTML tag"
+    },
+    {
+      "alignment": "left",
+      "color": "#7287FD",
+      "command": "editor.emmet.action.splitJoinTag",
+      "filterLanguageId": "html|javascriptreact|typescriptreact|markdown",
+      "id": "split-join-tag",
+      "name": "Split/Join HTML Tag (Emmet)",
+      "priority": -10,
+      "text": "$(merge)$(code)",
+      "tooltip": "Split/Join HTML tag"
+    }
+  ],
+  //
+  "terminal.integrated.copyOnSelection": true,
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.defaultProfile.windows": "Command Prompt",
+  "terminal.integrated.shellIntegration.decorationsEnabled": "both",
+  "terminal.integrated.shellIntegration.enabled": true,
+  "terminal.integrated.smoothScrolling": true,
+  // TODO Highlight Extension
+  "todohighlight.defaultStyle": {
+    "backgroundColor": "#7DAEA3",
+    "before": {
+      "contentText": "",
+      "fontStyle": "normal"
+    },
+    "borderRadius": "5px",
+    "color": "black",
+    "cursor": "text",
+    "isWholeLine": false,
+    "overviewRulerColor": "#7DAEA3"
+  },
+  "todohighlight.exclude": [
+    "**/node_modules/**",
+    "**/bower_components/**",
+    "**/dist/**",
+    "**/build/**",
+    "**/.vscode/**",
+    "**/.github/**",
+    "**/_output/**",
+    "**/*.min.*",
+    "**/*.map",
+    "**/.next/**"
+  ],
+  "todohighlight.isCaseSensitive": true,
+  "todohighlight.isEnable": true,
+  "todohighlight.keywords": [
+    "DONE:",
+    {
+      "backgroundColor": "#E66533",
+      "color": "black",
+      "overviewRulerColor": "#E66533",
+      "text": "BUG:"
+    },
+    {
+      "backgroundColor": "#DF769B",
+      "color": "black",
+      "overviewRulerColor": "#DF769B",
+      "text": "FIXME:"
+    },
+    {
+      "backgroundColor": "#E4B781",
+      "color": "black",
+      "overviewRulerColor": "#E4B781",
+      "text": "NOTE:"
+    },
+    {
+      "backgroundColor": "#49E9A6",
+      "color": "black",
+      "overviewRulerColor": "#49E9A6",
+      "text": "TODO:"
+    },
+    {
+      "backgroundColor": "#49ACE9",
+      "color": "black",
+      "overviewRulerColor": "#49ACE9",
+      "text": "REVIEW:"
+    }
+  ],
+  //
+  "typescript.autoClosingTags": true,
+  "vsicons.dontShowNewVersionMessage": true,
+  // WindiCSS IntelliSense Extension
+  "windicss.enableCodeFolding": false,
+  "windicss.foldByLength": true,
+  "windicss.foldLength": 80,
+  "windicss.sortOnSave": false,
+  //
+  "window.commandCenter": true,
+  "window.dialogStyle": "custom",
+  "window.menuBarVisibility": "compact",
+  "window.titleBarStyle": "custom",
+  "workbench.colorTheme": "Catppuccin Frappé",
+  "workbench.editor.historyBasedLanguageDetection": true,
+  "workbench.editor.scrollToSwitchTabs": true,
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.layoutControl.enabled": true,
+  "workbench.layoutControl.type": "both",
+  "workbench.list.smoothScrolling": true,
+  "workbench.localHistory.maxFileEntries": 50,
+  "workbench.localHistory.mergeWindow": 60
 }

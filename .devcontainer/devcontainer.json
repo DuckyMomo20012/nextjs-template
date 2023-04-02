@@ -17,16 +17,30 @@
       "settings": {},
       // Add the IDs of extensions you want installed when the container is created.
       "extensions": [
+        "aliariff.auto-add-brackets",
         "formulahendry.auto-rename-tag",
-        "esbenp.prettier-vscode",
-        "stkb.rewrap",
-        "voorjaar.windicss-intellisense",
-        "eamodio.gitlens",
-        "dbaeumer.vscode-eslint",
-        "usernamehw.errorlens",
-        "mikestead.dotenv",
+        "chunsen.bracket-select",
+        "pustelto.bracketeer",
+        "streetsidesoftware.code-spell-checker",
         "naumovs.color-highlight",
-        "streetsidesoftware.code-spell-checker"
+        "mikestead.dotenv",
+        "EditorConfig.EditorConfig",
+        "usernamehw.errorlens",
+        "dbaeumer.vscode-eslint",
+        "github.copilot",
+        "eamodio.gitlens",
+        "vincaslt.highlight-matching-tag",
+        "kisstkondoros.vscode-gutter-preview",
+        "esbenp.prettier-vscode",
+        "bmalehorn.print-it",
+        "stkb.rewrap",
+        "zengxingxin.sort-js-object-keys",
+        "albert.TabOut",
+        "wayou.vscode-todo-highlight",
+        "pflannery.vscode-versionlens",
+        "vscode-icons-team.vscode-icons",
+        "Orta.vscode-twoslash-queries",
+        "voorjaar.windicss-intellisense"
       ]
     }
   }
