@@ -77,7 +77,6 @@ const HomePage = () => {
           <Stack align="center">
             <Image
               alt="nextjs logo"
-              className="hover:filter"
               fit="contain"
               height={80}
               imageProps={{
@@ -86,11 +85,6 @@ const HomePage = () => {
                 },
               }}
               src="https://assets.vercel.com/image/upload/v1662130559/nextjs/Icon_dark_background.png"
-              style={
-                {
-                  '--tw-drop-shadow': 'drop-shadow(0 0 2em #000000aa)',
-                } as React.CSSProperties
-              }
               width={80}
               withPlaceholder
             />
@@ -101,7 +95,6 @@ const HomePage = () => {
           <Stack align="center">
             <Image
               alt="typescript logo"
-              className="hover:filter"
               fit="contain"
               height={80}
               imageProps={{
@@ -110,11 +103,6 @@ const HomePage = () => {
                 },
               }}
               src="/img/typescript.svg"
-              style={
-                {
-                  '--tw-drop-shadow': 'drop-shadow(0 0 2em #3178c6aa)',
-                } as React.CSSProperties
-              }
               width={80}
               withPlaceholder
             />
@@ -125,16 +113,7 @@ const HomePage = () => {
         </Group>
 
         <Stack align="center">
-          <Title
-            align="center"
-            gradient={{
-              from: dark ? 'white' : 'purple',
-              to: dark ? 'pink' : 'cyan',
-              deg: 45,
-            }}
-            order={2}
-            variant="gradient"
-          >
+          <Title align="center" order={2}>
             Features
           </Title>
 
