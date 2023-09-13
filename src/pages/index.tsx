@@ -2,6 +2,7 @@ import { Icon } from '@iconify/react';
 import {
   ActionIcon,
   Badge,
+  Box,
   Button,
   Code,
   ColorSwatch,
@@ -17,7 +18,6 @@ import {
 } from '@mantine/core';
 import Head from 'next/head';
 import { Counter } from '@/components/elements/Counter';
-import { FeatureBox } from '@/components/elements/FeatureBox';
 
 const techStack = [
   {
@@ -151,10 +151,7 @@ const HomePage = () => {
         className="w-2/3 lg:auto-cols-min xl:auto-rows-fr"
         cols={1}
       >
-        <FeatureBox
-          color="indigo"
-          outerClassName="col-span-1 md:col-span-2 lg:col-span-3"
-        >
+        <Box className="border-3 rounded-lg border-indigo-300 col-span-1 md:col-span-2 lg:col-span-3 p-5">
           <Stack align="center">
             <Title align="center" order={3}>
               <Icon
@@ -204,9 +201,9 @@ const HomePage = () => {
               )}
             </Group>
           </Stack>
-        </FeatureBox>
+        </Box>
 
-        <FeatureBox color="rose">
+        <Box className="border-3 rounded-lg border-rose-300 p-5">
           <Stack align="center">
             <Title align="center" order={3}>
               <Icon
@@ -229,9 +226,9 @@ const HomePage = () => {
               <Badge color="zinc">Editorconfig</Badge>
             </Group>
           </Stack>
-        </FeatureBox>
+        </Box>
 
-        <FeatureBox color="pink">
+        <Box className="border-3 rounded-lg border-pink-300 p-5">
           <Stack align="center">
             <Title align="center" order={3}>
               <Icon
@@ -260,9 +257,9 @@ const HomePage = () => {
               </Badge>
             </Group>
           </Stack>
-        </FeatureBox>
+        </Box>
 
-        <FeatureBox color="teal">
+        <Box className="border-3 rounded-lg border-teal-300 p-5">
           <Stack align="center">
             <Title align="center" order={3}>
               <Icon
@@ -291,9 +288,9 @@ const HomePage = () => {
               })}
             </Group>
           </Stack>
-        </FeatureBox>
+        </Box>
 
-        <FeatureBox color="amber">
+        <Box className="border-3 rounded-lg border-amber-300 p-5">
           <Stack align="center">
             <Title align="center" order={3}>
               <Icon
@@ -317,9 +314,9 @@ const HomePage = () => {
               Toggle dark mode
             </Button>
           </Stack>
-        </FeatureBox>
+        </Box>
 
-        <FeatureBox color="sky">
+        <Box className="border-3 rounded-lg border-sky-300 p-5">
           <Stack align="center">
             <Title align="center" order={3}>
               <Icon
@@ -339,9 +336,9 @@ const HomePage = () => {
               <Code color="violet">Mono: Space Mono</Code>
             </Group>
           </Stack>
-        </FeatureBox>
+        </Box>
 
-        <FeatureBox color="gray">
+        <Box className="border-3 rounded-lg border-gray-300 p-5">
           <Stack align="center">
             <Title align="center" order={3}>
               <Icon
@@ -357,7 +354,7 @@ const HomePage = () => {
             </Title>
             <Counter />
           </Stack>
-        </FeatureBox>
+        </Box>
       </SimpleGrid>
     </Stack>
   );
