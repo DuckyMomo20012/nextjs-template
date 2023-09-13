@@ -6,7 +6,6 @@ import type { AppProps } from 'next/app';
 import { Session } from 'next-auth';
 import { SessionProvider } from 'next-auth/react';
 import NextNProgress from 'nextjs-progressbar';
-import { AppShell } from '@/components/layouts/AppShell';
 import {
   AuthGuard,
   MantineProvider,
@@ -37,13 +36,11 @@ function MyApp({
           <MantineProvider>
             <NextNProgress />
             {/* Guarding pages */}
-            <AppShell>
-              {Component.auth ? (
-                <AuthGuard>{getLayout(<Component {...pageProps} />)}</AuthGuard>
-              ) : (
-                getLayout(<Component {...pageProps} />)
-              )}
-            </AppShell>
+            {Component.auth ? (
+              <AuthGuard>{getLayout(<Component {...pageProps} />)}</AuthGuard>
+            ) : (
+              getLayout(<Component {...pageProps} />)
+            )}
           </MantineProvider>
         </QueryProvider>
       </SessionProvider>
