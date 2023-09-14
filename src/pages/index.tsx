@@ -72,7 +72,7 @@ const HomePage = () => {
           name="description"
         ></meta>
       </Head>
-      <Stack align="center" className="h-screen justify-center" py="xl">
+      <Stack align="center" className="h-screen justify-center" spacing="xl">
         <Group className="w-full" position="center" spacing="xl">
           <Stack align="center">
             <Image
@@ -112,146 +112,142 @@ const HomePage = () => {
           </Stack>
         </Group>
 
-        <Stack align="center">
-          <Title align="center" order={2}>
-            Features
-          </Title>
+        <SimpleGrid
+          breakpoints={[
+            { minWidth: 'md', cols: 2 },
+            { minWidth: 'lg', cols: 3 },
+          ]}
+          className="w-2/3 lg:auto-cols-min xl:auto-rows-fr"
+          cols={1}
+          spacing="xl"
+          verticalSpacing="xl"
+        >
+          <Box className="border-3 rounded-lg border-indigo-300 col-span-1 md:col-span-2 lg:col-span-3 p-5">
+            <Stack align="center">
+              <Title align="center" order={3}>
+                <Icon
+                  height={22}
+                  icon="fluent-emoji-flat:high-voltage"
+                  inline
+                  style={{
+                    aspectRatio: '1 / 1',
+                  }}
+                  width={22}
+                />{' '}
+                Batteries included
+              </Title>
+              <Group className="w-full" position="center" spacing="xl">
+                {techStack.map(
+                  ({ name, color, docLink, description, logoSrc }) => {
+                    return (
+                      <Stack align="center" key={name}>
+                        <Tooltip.Floating color={color} label={description}>
+                          <ActionIcon
+                            color={color}
+                            component="a"
+                            href={docLink || '#'}
+                            size={64}
+                            target="_blank"
+                            variant="outline"
+                          >
+                            <Image
+                              alt={`${name.toLowerCase()} logo`}
+                              fit="contain"
+                              height={36}
+                              imageProps={{
+                                style: {
+                                  aspectRatio: '1 / 1',
+                                },
+                              }}
+                              src={logoSrc}
+                              width={36}
+                              withPlaceholder
+                            />
+                          </ActionIcon>
+                        </Tooltip.Floating>
+                        <Badge color={color}>{name}</Badge>
+                      </Stack>
+                    );
+                  },
+                )}
+              </Group>
+            </Stack>
+          </Box>
 
-          <SimpleGrid
-            breakpoints={[
-              { minWidth: 'md', cols: 2 },
-              { minWidth: 'lg', cols: 3 },
-            ]}
-            className="w-2/3 lg:auto-cols-min xl:auto-rows-fr"
-            cols={1}
-          >
-            <Box className="border-3 rounded-lg border-indigo-300 col-span-1 md:col-span-2 lg:col-span-3 p-5">
-              <Stack align="center">
-                <Title align="center" order={3}>
-                  <Icon
-                    height={22}
-                    icon="fluent-emoji-flat:high-voltage"
-                    inline
-                    style={{
-                      aspectRatio: '1 / 1',
-                    }}
-                    width={22}
-                  />{' '}
-                  Batteries included
-                </Title>
-                <Group className="w-full" position="center" spacing="xl">
-                  {techStack.map(
-                    ({ name, color, docLink, description, logoSrc }) => {
-                      return (
-                        <Stack align="center" key={name}>
-                          <Tooltip.Floating color={color} label={description}>
-                            <ActionIcon
-                              color={color}
-                              component="a"
-                              href={docLink || '#'}
-                              size={64}
-                              target="_blank"
-                              variant="outline"
-                            >
-                              <Image
-                                alt={`${name.toLowerCase()} logo`}
-                                fit="contain"
-                                height={36}
-                                imageProps={{
-                                  style: {
-                                    aspectRatio: '1 / 1',
-                                  },
-                                }}
-                                src={logoSrc}
-                                width={36}
-                                withPlaceholder
-                              />
-                            </ActionIcon>
-                          </Tooltip.Floating>
-                          <Badge color={color}>{name}</Badge>
-                        </Stack>
-                      );
-                    },
-                  )}
-                </Group>
-              </Stack>
-            </Box>
+          <Box className="border-3 rounded-lg border-rose-300 p-5">
+            <Stack align="center">
+              <Title align="center" order={3}>
+                <Icon
+                  height={22}
+                  icon="fluent-emoji-flat:sponge"
+                  inline
+                  style={{
+                    aspectRatio: '1 / 1',
+                  }}
+                  width={22}
+                />{' '}
+                Better code style with
+              </Title>
+              <Group position="center">
+                <Badge color="purple">ESlint</Badge>
+                <Badge color="fuchsia">Prettier</Badge>
+                <Badge color="slate">Husky</Badge>
+                <Badge color="indigo">Commitlint</Badge>
+                <Badge color="teal">Lint-staged</Badge>
+                <Badge color="zinc">Editorconfig</Badge>
+              </Group>
+            </Stack>
+          </Box>
 
-            <Box className="border-3 rounded-lg border-rose-300 p-5">
-              <Stack align="center">
-                <Title align="center" order={3}>
-                  <Icon
-                    height={22}
-                    icon="fluent-emoji-flat:sponge"
-                    inline
-                    style={{
-                      aspectRatio: '1 / 1',
-                    }}
-                    width={22}
-                  />{' '}
-                  Better code style with
-                </Title>
-                <Group position="center">
-                  <Badge color="purple">ESlint</Badge>
-                  <Badge color="fuchsia">Prettier</Badge>
-                  <Badge color="slate">Husky</Badge>
-                  <Badge color="indigo">Commitlint</Badge>
-                  <Badge color="teal">Lint-staged</Badge>
-                  <Badge color="zinc">Editorconfig</Badge>
-                </Group>
-              </Stack>
-            </Box>
+          <Box className="border-3 rounded-lg border-pink-300 p-5">
+            <Stack align="center">
+              <Title align="center" order={3}>
+                <Icon
+                  height={22}
+                  icon="fluent-emoji-flat:dizzy"
+                  inline
+                  style={{
+                    aspectRatio: '1 / 1',
+                  }}
+                  width={22}
+                />{' '}
+                Move faster with these awesome libraries
+              </Title>
+              <Group position="center">
+                <Badge color="yellow">Axios</Badge>
+                <Badge color="lime">Clsx</Badge>
+                <Badge color="rose">Type-fest</Badge>
+                <Badge color="cyan">Zod</Badge>
+              </Group>
+            </Stack>
+          </Box>
 
-            <Box className="border-3 rounded-lg border-pink-300 p-5">
-              <Stack align="center">
-                <Title align="center" order={3}>
-                  <Icon
-                    height={22}
-                    icon="fluent-emoji-flat:dizzy"
-                    inline
-                    style={{
-                      aspectRatio: '1 / 1',
-                    }}
-                    width={22}
-                  />{' '}
-                  Move faster with these awesome libraries
-                </Title>
-                <Group position="center">
-                  <Badge color="yellow">Axios</Badge>
-                  <Badge color="lime">Clsx</Badge>
-                  <Badge color="rose">Type-fest</Badge>
-                  <Badge color="cyan">Zod</Badge>
-                </Group>
-              </Stack>
-            </Box>
-
-            <Box className="border-3 rounded-lg border-amber-300 p-5">
-              <Stack align="center">
-                <Title align="center" order={3}>
-                  <Icon
-                    height={22}
-                    icon={`fluent-emoji-flat:${
-                      dark ? 'full-moon-face' : 'sun-with-face'
-                    }`}
-                    inline
-                    style={{
-                      aspectRatio: '1 / 1',
-                    }}
-                    width={22}
-                  />{' '}
-                  Dark mode ready
-                </Title>
-                <Button
-                  data-test-id="demo-color-scheme-toggle"
-                  onClick={() => toggleColorScheme()}
-                  variant="light"
-                >
-                  Toggle dark mode
-                </Button>
-              </Stack>
-            </Box>
-          </SimpleGrid>
-        </Stack>
+          <Box className="border-3 rounded-lg border-amber-300 p-5">
+            <Stack align="center">
+              <Title align="center" order={3}>
+                <Icon
+                  height={22}
+                  icon={`fluent-emoji-flat:${
+                    dark ? 'full-moon-face' : 'sun-with-face'
+                  }`}
+                  inline
+                  style={{
+                    aspectRatio: '1 / 1',
+                  }}
+                  width={22}
+                />{' '}
+                Dark mode ready
+              </Title>
+              <Button
+                data-test-id="demo-color-scheme-toggle"
+                onClick={() => toggleColorScheme()}
+                variant="light"
+              >
+                Toggle dark mode
+              </Button>
+            </Stack>
+          </Box>
+        </SimpleGrid>
       </Stack>
     </>
   );
