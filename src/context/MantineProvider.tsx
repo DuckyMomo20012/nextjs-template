@@ -86,12 +86,6 @@ const theme: MantineTheme = {
     // NOTE: WindiCSS border radius messed up with Mantine
     // ...windiDefaultTheme.borderRadius,
   },
-  fontFamily: `Inter,${mantineDefaultTheme.fontFamily}`,
-  fontFamilyMonospace: `"Space Mono",${mantineDefaultTheme.fontFamilyMonospace}`,
-  headings: {
-    ...mantineDefaultTheme.headings,
-    fontFamily: `Quicksand,${mantineDefaultTheme.headings.fontFamily}`,
-  },
   lineHeight: mantineDefaultTheme.lineHeight,
   loader: 'oval',
   shadows: {

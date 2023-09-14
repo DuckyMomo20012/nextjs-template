@@ -52,12 +52,6 @@ export default {
         primary: windiDefaultColors.blue,
         ...convertColor(mantineDefaultTheme.colors, windiDefaultColors),
       },
-      fontFamily: {
-        sans: ['Inter', 'ui-sans-serif', 'system-ui'],
-        serif: ['Merriweather', 'ui-serif', 'Georgia'],
-        mono: ['Space Mono', 'ui-monospace', 'SFMono-Regular'],
-        heading: ['Quicksand'],
-      },
     },
   },
 };
