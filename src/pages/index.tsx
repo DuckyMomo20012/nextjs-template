@@ -122,16 +122,14 @@ const HomePage = () => {
           spacing="xl"
           verticalSpacing="xl"
         >
-          <Box className="border-3 rounded-lg border-indigo-300 col-span-1 md:col-span-2 lg:col-span-3 p-5">
+          <Box className="border-4 rounded-lg border-indigo-300 col-span-1 md:col-span-2 lg:col-span-3 p-5">
             <Stack align="center">
               <Title align="center" order={3}>
                 <Icon
+                  className="aspect-square inline"
                   height={22}
                   icon="fluent-emoji-flat:high-voltage"
                   inline
-                  style={{
-                    aspectRatio: '1 / 1',
-                  }}
                   width={22}
                 />{' '}
                 Batteries included
@@ -174,16 +172,14 @@ const HomePage = () => {
             </Stack>
           </Box>
 
-          <Box className="border-3 rounded-lg border-rose-300 p-5">
+          <Box className="border-4 rounded-lg border-rose-300 p-5">
             <Stack align="center">
               <Title align="center" order={3}>
                 <Icon
+                  className="aspect-square inline"
                   height={22}
                   icon="fluent-emoji-flat:sponge"
                   inline
-                  style={{
-                    aspectRatio: '1 / 1',
-                  }}
                   width={22}
                 />{' '}
                 Better code style with
@@ -199,16 +195,14 @@ const HomePage = () => {
             </Stack>
           </Box>
 
-          <Box className="border-3 rounded-lg border-pink-300 p-5">
+          <Box className="border-4 rounded-lg border-pink-300 p-5">
             <Stack align="center">
               <Title align="center" order={3}>
                 <Icon
+                  className="aspect-square inline"
                   height={22}
                   icon="fluent-emoji-flat:dizzy"
                   inline
-                  style={{
-                    aspectRatio: '1 / 1',
-                  }}
                   width={22}
                 />{' '}
                 Move faster with these awesome libraries
@@ -222,18 +216,16 @@ const HomePage = () => {
             </Stack>
           </Box>
 
-          <Box className="border-3 rounded-lg border-amber-300 p-5">
+          <Box className="border-4 rounded-lg border-amber-300 p-5">
             <Stack align="center">
               <Title align="center" order={3}>
                 <Icon
+                  className="aspect-square inline"
                   height={22}
                   icon={`fluent-emoji-flat:${
                     dark ? 'full-moon-face' : 'sun-with-face'
                   }`}
                   inline
-                  style={{
-                    aspectRatio: '1 / 1',
-                  }}
                   width={22}
                 />{' '}
                 Dark mode ready

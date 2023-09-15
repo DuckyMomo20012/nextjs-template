@@ -11,7 +11,7 @@ import Head from 'next/head';
 
 function ServerError() {
   return (
-    <Center className="h-full">
+    <Center className="h-screen">
       <Head>
         <title>Server Error</title>
         <meta

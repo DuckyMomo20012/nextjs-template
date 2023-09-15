@@ -13,7 +13,7 @@ import Link from 'next/link';
 
 const NotFound = () => {
   return (
-    <Center className="h-full">
+    <Center className="h-screen">
       <Head>
         <title>404 - Not Found</title>
         <meta content="404 - Not Found" name="description"></meta>
