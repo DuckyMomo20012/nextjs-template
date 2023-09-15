@@ -14,9 +14,7 @@ import Link from 'next/link';
 const Register = () => {
   return (
     <Container my={40} size={420}>
-      <Title align="center" className="font-black">
-        Welcome to our website!
-      </Title>
+      <Title align="center">Welcome to our website!</Title>
       <Text align="center" color="dimmed" mt={5} size="sm">
         Already have an account?{' '}
         <Anchor component={Link} href="/auth/login" size="sm">

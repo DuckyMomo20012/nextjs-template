@@ -62,9 +62,7 @@ const Login = () => {
 
   return (
     <Container my={40} size={420}>
-      <Title align="center" className="font-black">
-        Welcome back!
-      </Title>
+      <Title align="center">Welcome back!</Title>
       <Text align="center" color="dimmed" mt={5} size="sm">
         Do not have an account yet?{' '}
         <Anchor component={Link} href="/auth/register" size="sm">

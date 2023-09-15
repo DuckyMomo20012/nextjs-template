@@ -1,4 +1,4 @@
-import type { ColorScheme, MantineSizes } from '@mantine/core';
+import type { ColorScheme } from '@mantine/core';
 import {
   MantineProvider as BaseMantineProvider,
   ColorSchemeProvider,
@@ -8,14 +8,11 @@ import {
   rem,
 } from '@mantine/core';
 import { useEffect, useState } from 'react';
-import windiDefaultColors from 'windicss/colors';
-import windiDefaultTheme from 'windicss/defaultTheme';
-import type { DefaultColors } from 'windicss/types/config/colors';
-import type { DefaultFontSize, ThemeType } from 'windicss/types/interfaces';
-import type { MantineThemeColors } from '@/types/MantineThemeColors';
+import twDefaultColors from 'tailwindcss/colors';
+import twDefaultTheme from 'tailwindcss/defaultTheme';
 
-const convertBreakpoint = (breakpoint: ThemeType): MantineSizes => {
-  const convertedBreakpoint = {} as MantineSizes;
+const convertBreakpoint = (breakpoint) => {
+  const convertedBreakpoint = {};
   Object.keys(breakpoint).forEach((size) => {
     // NOTE: Have to convert 'px' to 'rem'
     convertedBreakpoint[size] = rem(breakpoint[size]);
@@ -24,9 +21,9 @@ const convertBreakpoint = (breakpoint: ThemeType): MantineSizes => {
 };
 
 // Override Mantine colors
-const convertColor = (windiColors: DefaultColors) => {
-  const convertedColor = {} as MantineThemeColors;
-  Object.keys(windiColors).forEach((color) => {
+const convertColor = (twColors) => {
+  const convertedColor = {};
+  Object.keys(twColors).forEach((color) => {
     if (color === 'lightBlue') {
       color = 'sky';
     } else if (color === 'warmGray') {
@@ -41,20 +38,16 @@ const convertColor = (windiColors: DefaultColors) => {
       color = 'zinc';
     }
 
-    if (windiColors[color] instanceof Object) {
-      convertedColor[color] = Object.values(windiColors[color]);
+    if (twColors[color] instanceof Object) {
+      convertedColor[color] = Object.values(twColors[color]);
     }
   });
-  // NOTE: WindiCSS dark color is too dark
-  convertedColor.dark = mantineDefaultTheme.colors.dark;
 
   return convertedColor;
 };
 
-const convertFontSize = (fontSize: {
-  [key: string]: DefaultFontSize;
-}): MantineSizes => {
-  const convertedFontSize = {} as MantineSizes;
+const convertFontSize = (fontSize) => {
+  const convertedFontSize = {};
   Object.keys(fontSize).forEach((size) => {
     // NOTE: Don't have to convert 'rem' to 'px'
     convertedFontSize[size] = fontSize[size][0];
@@ -66,31 +59,31 @@ const theme: MantineTheme = {
   ...mantineDefaultTheme,
   breakpoints: {
     ...mantineDefaultTheme.breakpoints,
-    ...convertBreakpoint(windiDefaultTheme.screens), // WindiCSS
+    ...convertBreakpoint(twDefaultTheme.screens), // TailwindCSS
   },
   colors: {
     ...mantineDefaultTheme.colors,
-    ...convertColor(windiDefaultColors),
+    ...convertColor(twDefaultColors),
   },
   defaultRadius: 'md',
-  black: windiDefaultColors.black as string,
-  white: windiDefaultColors.white as string,
+  black: twDefaultColors.black as string,
+  white: twDefaultColors.white as string,
   primaryColor: 'blue',
   primaryShade: 7,
   fontSizes: {
     ...mantineDefaultTheme.fontSizes,
-    ...convertFontSize(windiDefaultTheme.fontSize),
+    ...convertFontSize(twDefaultTheme.fontSize),
   },
   radius: {
     ...mantineDefaultTheme.radius,
-    // NOTE: WindiCSS border radius messed up with Mantine
-    // ...windiDefaultTheme.borderRadius,
+    // NOTE: TailwindCSS border radius messed up with Mantine
+    // ...twDefaultTheme.borderRadius,
   },
   lineHeight: mantineDefaultTheme.lineHeight,
   loader: 'oval',
   shadows: {
     ...mantineDefaultTheme.shadows,
-    ...windiDefaultTheme.boxShadow,
+    ...twDefaultTheme.boxShadow,
   },
 };
 
