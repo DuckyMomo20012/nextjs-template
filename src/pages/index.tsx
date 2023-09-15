@@ -51,11 +51,11 @@ const techStack = [
     logoSrc: '/img/mantine.svg',
   },
   {
-    name: 'WindiCSS',
+    name: 'TailwindCSS',
     color: 'sky',
-    docLink: 'https://windicss.org/',
+    docLink: 'https://tailwindcss.com/',
     description: 'CSS framework',
-    logoSrc: '/img/windicss.svg',
+    logoSrc: '/img/tailwindcss.svg',
   },
 ];
 
