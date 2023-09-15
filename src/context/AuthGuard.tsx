@@ -30,9 +30,9 @@ const AuthGuard = ({ children }: { children?: React.ReactNode }) => {
 
   if (status === 'loading') {
     return (
-      <Center className="h-full w-full">
+      <Center className="h-screen w-screen">
         <Stack>
-          <Text>Loading user...</Text>
+          <Text>Checking user...</Text>
           <Center>
             <Loader className="h-48px w-48px" />
           </Center>
