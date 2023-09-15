@@ -19,13 +19,23 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.tabSize": 2
   },
+  "[markdown]": {
+    "editor.tabSize": 2
+  },
   "[python]": {
     "editor.codeActionsOnSave": {
       "source.organizeImports": true
     },
-    "editor.defaultFormatter": "ms-python.python",
-    "editor.tabSize": 4,
-    "editor.formatOnType": true
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4
+  },
+  "[terraform-vars]": {
+    "editor.tabSize": 2
+  },
+  "[terraform]": {
+    "editor.defaultFormatter": "hashicorp.terraform",
+    "editor.tabSize": 2
   },
   "[xml]": {
     "editor.defaultFormatter": null
@@ -35,6 +45,8 @@
   "cSpell.enableFiletypes": ["!dockercompose"],
   "cSpell.language": "en",
   //
+  "diffEditor.diffAlgorithm": "advanced",
+  "diffEditor.experimental.showMoves": true,
   "diffEditor.ignoreTrimWhitespace": false,
   "editor.bracketPairColorization.enabled": true,
   "editor.codeActionsOnSave": {
@@ -56,29 +68,37 @@
     "strings": true
   },
   "editor.renderLineHighlight": "gutter",
+  "editor.renderWhitespace": "none",
   "editor.smoothScrolling": true,
   "editor.stickyScroll.enabled": true,
   "editor.suggest.insertMode": "insert",
   "editor.suggest.preview": true,
   "editor.suggestSelection": "first",
+  "editor.unicodeHighlight.ambiguousCharacters": false,
+  "editor.unicodeHighlight.invisibleCharacters": false,
+  "editor.unicodeHighlight.nonBasicASCII": false,
   "editor.wordWrap": "on",
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.expand": true,
   "extensions.ignoreRecommendations": true,
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   "git.autofetch": true,
   "github.copilot.enable": {
     "*": true,
-    "yaml": true,
+    "markdown": true,
     "plaintext": true,
-    "markdown": true
+    "yaml": true
   },
   // Highlight Matching Tag
   "highlight-matching-tag.highlightSelfClosing": true,
   "highlight-matching-tag.showPath": false,
   //
   "html.autoClosingTags": true,
+  "isort.args": ["--profile", "black"],
   "javascript.autoClosingTags": true,
   "javascript.preferences.importModuleSpecifier": "relative",
   "javascript.preferences.importModuleSpecifierEnding": "index",
@@ -96,10 +116,12 @@
   },
   "notebook.lineNumbers": "on",
   "prettier.proseWrap": "always",
-  "python.formatting.provider": "black",
+  "python.analysis.autoImportCompletions": true,
+  "python.analysis.fixAll": ["source.unusedImports"],
+  "python.formatting.provider": "none",
   "python.linting.flake8Enabled": true,
   "python.linting.mypyEnabled": true,
-  "isort.args": ["--profile", "black"],
+  "redhat.telemetry.enabled": false,
   // Rewrap Extension
   "rewrap.autoWrap.enabled": true,
   "rewrap.autoWrap.notification": "text",
@@ -261,13 +283,6 @@
   //
   "typescript.autoClosingTags": true,
   "vsicons.dontShowNewVersionMessage": true,
-  // WindiCSS IntelliSense Extension
-  "windicss.enableCodeFolding": false,
-  "windicss.foldByLength": true,
-  "windicss.foldLength": 80,
-  "windicss.sortOnSave": false,
-  //
-  "window.commandCenter": true,
   "window.dialogStyle": "custom",
   "window.menuBarVisibility": "compact",
   "window.titleBarStyle": "custom",
@@ -275,8 +290,6 @@
   "workbench.editor.historyBasedLanguageDetection": true,
   "workbench.editor.scrollToSwitchTabs": true,
   "workbench.iconTheme": "vscode-icons",
-  "workbench.layoutControl.enabled": true,
-  "workbench.layoutControl.type": "both",
   "workbench.list.smoothScrolling": true,
   "workbench.localHistory.maxFileEntries": 50,
   "workbench.localHistory.mergeWindow": 60
