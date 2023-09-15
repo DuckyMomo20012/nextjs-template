@@ -96,7 +96,7 @@
     <li><a href="https://nextjs.org/">NextJS</a></li>
     <li><a href="https://redux-toolkit.js.org/">Redux Toolkit</a></li>
     <li><a href="https://react-query.tanstack.com/">React Query</a></li>
-    <li><a href="https://windicss.org/">WindiCSS</a></li>
+    <li><a href="https://tailwindcss.com/">TailwindCSS</a></li>
     <li><a href="https://mantine.dev/">Mantine</a></li>
     <li><a href="https://storybook.js.org/">Storybook</a></li>
     <li><a href="https://eslint.org/">ESLint</a></li>
