@@ -43,6 +43,7 @@
     "@types/react-dom": "18.2.7",
     "@typescript-eslint/eslint-plugin": "6.6.0",
     "@typescript-eslint/parser": "6.6.0",
+    "autoprefixer": "10.4.15",
     "eslint": "8.49.0",
     "eslint-config-airbnb-base": "15.0.0",
     "eslint-config-next": "13.4.19",
@@ -55,9 +56,9 @@
     "eslint-plugin-react-hooks": "4.6.0",
     "husky": "8.0.3",
     "lint-staged": "14.0.1",
+    "postcss": "8.4.29",
     "prettier": "3.0.3",
-    "typescript": "5.2.2",
-    "windicss": "3.5.6",
-    "windicss-webpack-plugin": "1.7.8"
+    "tailwindcss": "3.3.3",
+    "typescript": "5.2.2"
   }
 }
