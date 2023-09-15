@@ -52,7 +52,7 @@ const techStack = [
   },
   {
     name: 'TailwindCSS',
-    color: 'sky',
+    color: 'cyan',
     docLink: 'https://tailwindcss.com/',
     description: 'CSS framework',
     logoSrc: '/img/tailwindcss.svg',
@@ -185,9 +185,9 @@ const HomePage = () => {
                 Better code style with
               </Title>
               <Group position="center">
-                <Badge color="purple">ESlint</Badge>
-                <Badge color="fuchsia">Prettier</Badge>
-                <Badge color="slate">Husky</Badge>
+                <Badge color="orange">ESlint</Badge>
+                <Badge color="red">Prettier</Badge>
+                <Badge color="gray">Husky</Badge>
                 <Badge color="indigo">Commitlint</Badge>
                 <Badge color="teal">Lint-staged</Badge>
                 <Badge color="zinc">Editorconfig</Badge>
