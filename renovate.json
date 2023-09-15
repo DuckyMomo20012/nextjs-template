@@ -1,16 +1,11 @@
 {
-  "extends": [
-    "config:base",
-    "schedule:earlyMondays"
-  ],
+  "extends": ["config:base", "schedule:monthly"],
   "groupName": "all dependencies",
   "separateMajorMinor": false,
   "groupSlug": "all",
   "packageRules": [
     {
-      "matchPackagePatterns": [
-        "*"
-      ],
+      "matchPackagePatterns": ["*"],
       "groupName": "all dependencies",
       "groupSlug": "all"
     }
