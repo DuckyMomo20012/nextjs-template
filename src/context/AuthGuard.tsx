@@ -34,7 +34,7 @@ const AuthGuard = ({ children }: { children?: React.ReactNode }) => {
         <Stack>
           <Text>Checking user...</Text>
           <Center>
-            <Loader className="h-48px w-48px" />
+            <Loader className="h-12 w-12" />
           </Center>
         </Stack>
       </Center>
