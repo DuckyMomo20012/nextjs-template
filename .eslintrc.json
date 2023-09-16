@@ -67,6 +67,12 @@
       }
     ],
     "react/jsx-sort-props": "warn",
+    "react/prop-types": [
+      "error",
+      {
+        "ignore": ["className"]
+      }
+    ],
     "sort-imports": [
       "warn",
       {
