@@ -1,18 +1,17 @@
 import { Icon } from '@iconify/react';
-import {
-  ActionIcon,
-  Badge,
-  Box,
-  Button,
-  Group,
-  Image,
-  SimpleGrid,
-  Stack,
-  Title,
-  Tooltip,
-  useMantineColorScheme,
-} from '@mantine/core';
 import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
+
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from '@/components/ui/tooltip';
 
 const techStack = [
   {
@@ -60,8 +59,8 @@ const techStack = [
 ];
 
 const HomePage = () => {
-  const { colorScheme, toggleColorScheme } = useMantineColorScheme();
-  const dark = colorScheme === 'dark';
+  // const { colorScheme, toggleColorScheme } = useMantineColorScheme();
+  // const dark = colorScheme === 'dark';
 
   return (
     <>
@@ -72,59 +71,34 @@ const HomePage = () => {
           name="description"
         ></meta>
       </Head>
-      <Stack align="center" className="h-screen justify-center" spacing="xl">
-        <Group className="w-full" position="center" spacing="xl">
-          <Stack align="center">
+      <div className="flex h-screen flex-col items-center justify-center gap-4">
+        <div className="flex w-full justify-center gap-4">
+          <div className="flex flex-col items-center gap-4">
             <Image
               alt="nextjs logo"
-              fit="contain"
+              className="aspect-square object-contain"
               height={80}
-              imageProps={{
-                style: {
-                  aspectRatio: '1 / 1',
-                },
-              }}
-              src="https://assets.vercel.com/image/upload/v1662130559/nextjs/Icon_dark_background.png"
+              src="/img/nextjs.svg"
               width={80}
-              withPlaceholder
             />
-            <Title align="center" className="text-4xl">
-              NextJS
-            </Title>
-          </Stack>
-          <Stack align="center">
+            <h1 className="text-4xl">NextJS</h1>
+          </div>
+          <div className="flex flex-col items-center gap-4">
             <Image
               alt="typescript logo"
-              fit="contain"
+              className="aspect-square object-contain"
               height={80}
-              imageProps={{
-                style: {
-                  aspectRatio: '1 / 1',
-                },
-              }}
               src="/img/typescript.svg"
               width={80}
-              withPlaceholder
             />
-            <Title align="center" className="text-4xl">
-              Typescript
-            </Title>
-          </Stack>
-        </Group>
+            <h1 className="text-4xl">Typescript</h1>
+          </div>
+        </div>
 
-        <SimpleGrid
-          breakpoints={[
-            { minWidth: 'md', cols: 2 },
-            { minWidth: 'lg', cols: 3 },
-          ]}
-          className="w-2/3 lg:auto-cols-min xl:auto-rows-fr"
-          cols={1}
-          spacing="xl"
-          verticalSpacing="xl"
-        >
-          <Box className="col-span-1 rounded-lg border-4 border-indigo-300 p-5 md:col-span-2 lg:col-span-3">
-            <Stack align="center">
-              <Title align="center" order={3}>
+        <div className="grid w-2/3 grid-cols-1 gap-4 md:grid-cols-2 lg:auto-cols-min lg:grid-cols-3 xl:auto-rows-fr">
+          <Card className="col-span-1 md:col-span-2 lg:col-span-3">
+            <CardHeader>
+              <CardTitle>
                 <Icon
                   className="inline aspect-square"
                   height={22}
@@ -133,48 +107,53 @@ const HomePage = () => {
                   width={22}
                 />{' '}
                 Batteries included
-              </Title>
-              <Group className="w-full" position="center" spacing="xl">
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="flex flex-wrap justify-center gap-4">
                 {techStack.map(
                   ({ name, color, docLink, description, logoSrc }) => {
                     return (
-                      <Stack align="center" key={name}>
-                        <Tooltip.Floating color={color} label={description}>
-                          <ActionIcon
-                            color={color}
-                            component="a"
-                            href={docLink || '#'}
-                            size={64}
-                            target="_blank"
-                            variant="outline"
-                          >
-                            <Image
-                              alt={`${name.toLowerCase()} logo`}
-                              fit="contain"
-                              height={36}
-                              imageProps={{
-                                style: {
-                                  aspectRatio: '1 / 1',
-                                },
-                              }}
-                              src={logoSrc}
-                              width={36}
-                              withPlaceholder
-                            />
-                          </ActionIcon>
-                        </Tooltip.Floating>
+                      <div
+                        className="flex flex-col items-center gap-4"
+                        key={name}
+                      >
+                        <TooltipProvider delayDuration={100}>
+                          <Tooltip>
+                            <TooltipTrigger>
+                              <Button
+                                asChild
+                                className="h-16 w-16"
+                                variant="outline"
+                              >
+                                <Link href={docLink || '#'} target="_blank">
+                                  <Image
+                                    alt={`${name.toLowerCase()} logo`}
+                                    className="aspect-square object-contain"
+                                    height={36}
+                                    src={logoSrc}
+                                    width={36}
+                                  />
+                                </Link>
+                              </Button>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                              <p>{description}</p>
+                            </TooltipContent>
+                          </Tooltip>
+                        </TooltipProvider>
                         <Badge color={color}>{name}</Badge>
-                      </Stack>
+                      </div>
                     );
                   },
                 )}
-              </Group>
-            </Stack>
-          </Box>
+              </div>
+            </CardContent>
+          </Card>
 
-          <Box className="rounded-lg border-4 border-rose-300 p-5">
-            <Stack align="center">
-              <Title align="center" order={3}>
+          <Card>
+            <CardHeader>
+              <CardTitle>
                 <Icon
                   className="inline aspect-square"
                   height={22}
@@ -183,21 +162,23 @@ const HomePage = () => {
                   width={22}
                 />{' '}
                 Better code style with
-              </Title>
-              <Group position="center">
-                <Badge color="orange">ESlint</Badge>
-                <Badge color="red">Prettier</Badge>
-                <Badge color="gray">Husky</Badge>
-                <Badge color="indigo">Commitlint</Badge>
-                <Badge color="teal">Lint-staged</Badge>
-                <Badge color="zinc">Editorconfig</Badge>
-              </Group>
-            </Stack>
-          </Box>
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Badge>ESlint</Badge>
+                <Badge>Prettier</Badge>
+                <Badge>Husky</Badge>
+                <Badge>Commitlint</Badge>
+                <Badge>Lint-staged</Badge>
+                <Badge>Editorconfig</Badge>
+              </div>
+            </CardContent>
+          </Card>
 
-          <Box className="rounded-lg border-4 border-pink-300 p-5">
-            <Stack align="center">
-              <Title align="center" order={3}>
+          <Card>
+            <CardHeader>
+              <CardTitle>
                 <Icon
                   className="inline aspect-square"
                   height={22}
@@ -206,19 +187,21 @@ const HomePage = () => {
                   width={22}
                 />{' '}
                 Move faster with these awesome libraries
-              </Title>
-              <Group position="center">
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="flex flex-wrap justify-center gap-4">
                 <Badge color="yellow">Axios</Badge>
                 <Badge color="lime">Clsx</Badge>
                 <Badge color="rose">Type-fest</Badge>
                 <Badge color="cyan">Zod</Badge>
-              </Group>
-            </Stack>
-          </Box>
+              </div>
+            </CardContent>
+          </Card>
 
-          <Box className="rounded-lg border-4 border-amber-300 p-5">
-            <Stack align="center">
-              <Title align="center" order={3}>
+          {/* <Card>
+            <CardHeader>
+              <CardTitle>
                 <Icon
                   className="inline aspect-square"
                   height={22}
@@ -229,18 +212,22 @@ const HomePage = () => {
                   width={22}
                 />{' '}
                 Dark mode ready
-              </Title>
-              <Button
-                data-test-id="demo-color-scheme-toggle"
-                onClick={() => toggleColorScheme()}
-                variant="light"
-              >
-                Toggle dark mode
-              </Button>
-            </Stack>
-          </Box>
-        </SimpleGrid>
-      </Stack>
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="flex justify-center">
+                <Button
+                  data-test-id="demo-color-scheme-toggle"
+                  onClick={() => toggleColorScheme()}
+                  variant="secondary"
+                >
+                  Toggle dark mode
+                </Button>
+              </div>
+            </CardContent>
+          </Card> */}
+        </div>
+      </div>
     </>
   );
 };
