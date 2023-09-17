@@ -5,12 +5,7 @@ import type { AppProps } from 'next/app';
 import { Session } from 'next-auth';
 import { SessionProvider } from 'next-auth/react';
 import NextNProgress from 'nextjs-progressbar';
-import {
-  AuthGuard,
-  MantineProvider,
-  QueryProvider,
-  ReduxProvider,
-} from '@/context/index';
+import { AuthGuard, QueryProvider, ReduxProvider } from '@/context/index';
 
 type CustomProps = {
   session?: Session;
@@ -32,15 +27,13 @@ function MyApp({
     <ReduxProvider>
       <SessionProvider session={session}>
         <QueryProvider>
-          <MantineProvider>
-            <NextNProgress />
-            {/* Guarding pages */}
-            {Component.auth ? (
-              <AuthGuard>{getLayout(<Component {...pageProps} />)}</AuthGuard>
-            ) : (
-              getLayout(<Component {...pageProps} />)
-            )}
-          </MantineProvider>
+          <NextNProgress />
+          {/* Guarding pages */}
+          {Component.auth ? (
+            <AuthGuard>{getLayout(<Component {...pageProps} />)}</AuthGuard>
+          ) : (
+            getLayout(<Component {...pageProps} />)
+          )}
         </QueryProvider>
       </SessionProvider>
     </ReduxProvider>
