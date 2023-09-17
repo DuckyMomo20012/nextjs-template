@@ -1,9 +1,6 @@
 import { Icon } from '@iconify/react';
 import {
-  Anchor,
   Button,
-  Code,
-  Container,
   Group,
   LoadingOverlay,
   Modal,
@@ -12,7 +9,6 @@ import {
   Text,
   TextInput,
   ThemeIcon,
-  Title,
 } from '@mantine/core';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -20,6 +16,7 @@ import { signIn, useSession } from 'next-auth/react';
 import { useEffect, useState } from 'react';
 
 import { useForm } from 'react-hook-form';
+import { Code } from '@/components/ui/code';
 
 const Login = () => {
   const router = useRouter();
@@ -61,18 +58,20 @@ const Login = () => {
   };
 
   return (
-    <Container my={40} size={420}>
-      <Title align="center">Welcome back!</Title>
-      <Text align="center" color="dimmed" mt={5} size="sm">
+    <div className="mx-auto my-4 max-w-sm">
+      <h1 className="text-center">Welcome back!</h1>
+      <p className="text-center text-sm">
         Do not have an account yet?{' '}
-        <Anchor component={Link} href="/auth/register" size="sm">
+        <Link className="font-medium underline" href="/auth/register">
           Create account
-        </Anchor>
-      </Text>
-      <Text align="center" color="dimmed" mt={5} size="sm">
-        <Code color="blue">username:</Code> tienvinh@gmail.com,{' '}
-        <Code color="blue">password:</Code> 1234
-      </Text>
+        </Link>
+      </p>
+      <p className="mt-4 text-center text-sm text-muted-foreground">
+        <Code variant="outline">username:</Code> tienvinh@gmail.com,{' '}
+        <Code variant="solid">password:</Code> 1234
+        <Code variant="soft">password:</Code> 1234
+        <Code variant="ghost">password:</Code> 1234
+      </p>
 
       <Paper
         className="relative"
@@ -134,7 +133,7 @@ const Login = () => {
           )
         )}
       </Modal>
-    </Container>
+    </div>
   );
 };
 
