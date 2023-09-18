@@ -31,5 +31,8 @@ export default {
       },
     },
   },
+  corePlugins: {
+    preflight: false,
+  },
   plugins: [],
 } satisfies Config;

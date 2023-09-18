@@ -1,3 +1,4 @@
+import '@mantine/core/styles.css';
 import '@/styles/globals.css';
 
 import type { NextComponentType } from 'next';
