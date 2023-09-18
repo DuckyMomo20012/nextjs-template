@@ -5,7 +5,6 @@ import {
   Box,
   Button,
   Group,
-  Image,
   SimpleGrid,
   Stack,
   Title,
@@ -13,6 +12,7 @@ import {
   useMantineColorScheme,
 } from '@mantine/core';
 import Head from 'next/head';
+import Image from 'next/image';
 
 const techStack = [
   {
@@ -77,16 +77,10 @@ const HomePage = () => {
           <Stack align="center">
             <Image
               alt="nextjs logo"
-              fit="contain"
+              className="object-content aspect-square"
               height={80}
-              imageProps={{
-                style: {
-                  aspectRatio: '1 / 1',
-                },
-              }}
-              src="https://assets.vercel.com/image/upload/v1662130559/nextjs/Icon_dark_background.png"
+              src="/img/nextjs.svg"
               width={80}
-              withPlaceholder
             />
             <Title align="center" className="text-4xl">
               NextJS
@@ -95,16 +89,10 @@ const HomePage = () => {
           <Stack align="center">
             <Image
               alt="typescript logo"
-              fit="contain"
+              className="object-content aspect-square"
               height={80}
-              imageProps={{
-                style: {
-                  aspectRatio: '1 / 1',
-                },
-              }}
               src="/img/typescript.svg"
               width={80}
-              withPlaceholder
             />
             <Title align="center" className="text-4xl">
               Typescript
@@ -150,16 +138,10 @@ const HomePage = () => {
                           >
                             <Image
                               alt={`${name.toLowerCase()} logo`}
-                              fit="contain"
+                              className="object-content aspect-square"
                               height={36}
-                              imageProps={{
-                                style: {
-                                  aspectRatio: '1 / 1',
-                                },
-                              }}
                               src={logoSrc}
                               width={36}
-                              withPlaceholder
                             />
                           </ActionIcon>
                         </Tooltip.Floating>
