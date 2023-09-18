@@ -72,8 +72,8 @@ const HomePage = () => {
           name="description"
         ></meta>
       </Head>
-      <Stack align="center" className="h-screen justify-center" spacing="xl">
-        <Group className="w-full" position="center" spacing="xl">
+      <Stack align="center" className="h-screen justify-center" gap="xl">
+        <Group className="w-full" gap="xl" justify="center">
           <Stack align="center">
             <Image
               alt="nextjs logo"
@@ -82,9 +82,7 @@ const HomePage = () => {
               src="/img/nextjs.svg"
               width={80}
             />
-            <Title align="center" className="text-4xl">
-              NextJS
-            </Title>
+            <Title className="text-center text-4xl">NextJS</Title>
           </Stack>
           <Stack align="center">
             <Image
@@ -94,25 +92,19 @@ const HomePage = () => {
               src="/img/typescript.svg"
               width={80}
             />
-            <Title align="center" className="text-4xl">
-              Typescript
-            </Title>
+            <Title className="text-center text-4xl">Typescript</Title>
           </Stack>
         </Group>
 
         <SimpleGrid
-          breakpoints={[
-            { minWidth: 'md', cols: 2 },
-            { minWidth: 'lg', cols: 3 },
-          ]}
-          className="w-2/3 lg:auto-cols-min xl:auto-rows-fr"
-          cols={1}
+          className="w-2/3"
+          cols={{ base: 1, md: 2, lg: 3 }}
           spacing="xl"
           verticalSpacing="xl"
         >
-          <Box className="col-span-1 rounded-lg border-4 border-indigo-300 p-5 md:col-span-2 lg:col-span-3">
+          <Box className="col-span-1 rounded-lg border-4 border-solid border-indigo-300 p-5 md:col-span-2 lg:col-span-3">
             <Stack align="center">
-              <Title align="center" order={3}>
+              <Title className="text-center" order={3}>
                 <Icon
                   className="inline aspect-square"
                   height={22}
@@ -122,7 +114,7 @@ const HomePage = () => {
                 />{' '}
                 Batteries included
               </Title>
-              <Group className="w-full" position="center" spacing="xl">
+              <Group className="w-full" gap="xl" justify="center">
                 {techStack.map(
                   ({ name, color, docLink, description, logoSrc }) => {
                     return (
@@ -154,9 +146,9 @@ const HomePage = () => {
             </Stack>
           </Box>
 
-          <Box className="rounded-lg border-4 border-rose-300 p-5">
+          <Box className="rounded-lg border-4 border-solid border-rose-300 p-5">
             <Stack align="center">
-              <Title align="center" order={3}>
+              <Title className="text-center" order={3}>
                 <Icon
                   className="inline aspect-square"
                   height={22}
@@ -166,7 +158,7 @@ const HomePage = () => {
                 />{' '}
                 Better code style with
               </Title>
-              <Group position="center">
+              <Group justify="center">
                 <Badge color="orange">ESlint</Badge>
                 <Badge color="red">Prettier</Badge>
                 <Badge color="gray">Husky</Badge>
@@ -177,9 +169,9 @@ const HomePage = () => {
             </Stack>
           </Box>
 
-          <Box className="rounded-lg border-4 border-pink-300 p-5">
+          <Box className="rounded-lg border-4 border-solid border-pink-300 p-5">
             <Stack align="center">
-              <Title align="center" order={3}>
+              <Title className="text-center" order={3}>
                 <Icon
                   className="inline aspect-square"
                   height={22}
@@ -189,18 +181,18 @@ const HomePage = () => {
                 />{' '}
                 Move faster with these awesome libraries
               </Title>
-              <Group position="center">
+              <Group justify="center">
                 <Badge color="yellow">Axios</Badge>
                 <Badge color="lime">Clsx</Badge>
-                <Badge color="rose">Type-fest</Badge>
+                <Badge color="red">Type-fest</Badge>
                 <Badge color="cyan">Zod</Badge>
               </Group>
             </Stack>
           </Box>
 
-          <Box className="rounded-lg border-4 border-amber-300 p-5">
+          <Box className="rounded-lg border-4 border-solid border-amber-300 p-5">
             <Stack align="center">
-              <Title align="center" order={3}>
+              <Title className="text-center" order={3}>
                 <Icon
                   className="inline aspect-square"
                   height={22}

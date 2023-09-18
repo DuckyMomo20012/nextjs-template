@@ -62,14 +62,14 @@ const Login = () => {
 
   return (
     <Container my={40} size={420}>
-      <Title align="center">Welcome back!</Title>
-      <Text align="center" color="dimmed" mt={5} size="sm">
+      <Title className="text-center">Welcome back!</Title>
+      <Text c="dimmed" className="text-center" mt={5} size="sm">
         Do not have an account yet?{' '}
         <Anchor component={Link} href="/auth/register" size="sm">
           Create account
         </Anchor>
       </Text>
-      <Text align="center" color="dimmed" mt={5} size="sm">
+      <Text c="dimmed" className="text-center" mt={5} size="sm">
         <Code color="blue">username:</Code> tienvinh@gmail.com,{' '}
         <Code color="blue">password:</Code> 1234
       </Text>
