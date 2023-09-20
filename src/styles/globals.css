@@ -1,3 +1,72 @@
+@import '@mantine/core/styles.css';
+
+:root {
+  --mantine-line-height: 1.5;
+  /* Ref: https://systemfontstack.com/ */
+  --mantine-font-family: -apple-system, BlinkMacSystemFont, Avenir Next, Avenir,
+    Segoe UI, Helvetica Neue, Helvetica, Cantarell, Ubuntu, Roboto, Noto, Arial,
+    sans-serif;
+  --mantine-font-family-monospace: Menlo, Consolas, Monaco, Liberation Mono,
+    Lucida Console, monospace;
+  --mantine-font-family-heading: Iowan Old Style, Apple Garamond, Baskerville,
+    Times New Roman, Droid Serif, Times, Source Serif Pro, serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+  --mantine-line-height-xs: 1.25;
+  --mantine-line-height-sm: 1.375;
+  --mantine-line-height-md: 1.5;
+  --mantine-line-height-lg: 1.625;
+  --mantine-line-height-xl: 1.2;
+  --mantine-shadow-xs: 0 calc(0.0625rem * var(--mantine-scale))
+    calc(0.125rem * var(--mantine-scale)) 0 rgba(0, 0, 0, 0.05);
+  --mantine-shadow-sm: 0 calc(0.0625rem * var(--mantine-scale))
+      calc(0.1875rem * var(--mantine-scale)) 0 rgba(0, 0, 0, 0.1),
+    0 calc(0.0625rem * var(--mantine-scale))
+      calc(0.125rem * var(--mantine-scale))
+      calc(-0.0625rem * var(--mantine-scale)) rgba(0, 0, 0, 0.1);
+  --mantine-shadow-md: 0 calc(0.25rem * var(--mantine-scale))
+      calc(0.375rem * var(--mantine-scale))
+      calc(-0.0625rem * var(--mantine-scale)) rgba(0, 0, 0, 0.1),
+    0 calc(0.125rem * var(--mantine-scale)) calc(0.25rem * var(--mantine-scale))
+      calc(-0.125rem * var(--mantine-scale)) rgba(0, 0, 0, 0.1);
+  --mantine-shadow-lg: 0 calc(0.625rem * var(--mantine-scale))
+      calc(0.9375rem * var(--mantine-scale))
+      calc(-0.1875rem * var(--mantine-scale)) rgba(0, 0, 0, 0.1),
+    0 calc(0.25rem * var(--mantine-scale)) calc(0.375rem * var(--mantine-scale))
+      calc(-0.25rem * var(--mantine-scale)) rgba(0, 0, 0, 0.1);
+  --mantine-shadow-xl: 0 calc(1.25rem * var(--mantine-scale))
+      calc(1.5625rem * var(--mantine-scale))
+      calc(-0.3125rem * var(--mantine-scale)) rgba(0, 0, 0, 0.1),
+    0 calc(0.5rem * var(--mantine-scale)) calc(0.625rem * var(--mantine-scale))
+      calc(-0.375rem * var(--mantine-scale)) rgba(0, 0, 0, 0.1);
+  /* NOTE: Theme keys MUST NOT start with number */
+  --mantine-shadow-xl2: 0 calc(1.5625rem * var(--mantine-scale))
+    calc(3.125rem * var(--mantine-scale)) calc(-0.75rem * var(--mantine-scale))
+    rgba(0, 0, 0, 0.25);
+  --mantine-radius-xs: calc(0.125rem * var(--mantine-scale));
+  --mantine-radius-sm: calc(0.25rem * var(--mantine-scale));
+  --mantine-radius-md: calc(0.375rem * var(--mantine-scale));
+  --mantine-radius-lg: calc(0.5rem * var(--mantine-scale));
+  --mantine-radius-xl: calc(0.75rem * var(--mantine-scale));
+  --mantine-h1-font-size: calc(2.25rem * var(--mantine-scale));
+  --mantine-h1-line-height: 2.5rem;
+  --mantine-h1-font-weight: 700;
+  --mantine-h2-font-size: calc(1.875rem * var(--mantine-scale));
+  --mantine-h2-line-height: 2.25rem;
+  --mantine-h2-font-weight: 700;
+  --mantine-h3-font-size: calc(1.5rem * var(--mantine-scale));
+  --mantine-h3-line-height: 2rem;
+  --mantine-h3-font-weight: 700;
+  --mantine-h4-font-size: calc(1.25rem * var(--mantine-scale));
+  --mantine-h4-line-height: 1.75rem;
+  --mantine-h4-font-weight: 700;
+  --mantine-h5-font-size: calc(1.125rem * var(--mantine-scale));
+  --mantine-h5-line-height: 1.75rem;
+  --mantine-h5-font-weight: 700;
+  --mantine-h6-font-size: calc(1rem * var(--mantine-scale));
+  --mantine-h6-line-height: 1.5rem;
+  --mantine-h6-font-weight: 700;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

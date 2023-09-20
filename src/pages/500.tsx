@@ -12,7 +12,7 @@ function ServerError() {
           name="description"
         ></meta>
       </Head>
-      <Stack className="w-3/4 md:w-1/2 lg:w-1/3">
+      <Stack align="center" className="w-3/4 md:w-1/2 lg:w-1/3">
         <Image
           alt="500"
           className="aspect-[5/4]"
@@ -20,14 +20,14 @@ function ServerError() {
           src="https://http.cat/500"
           width={1000}
         />
-        <Title align="center" order={1}>
+        <Title className="text-center" order={1}>
           Something bad just happened...
         </Title>
-        <Text align="center" color="dimmed" size="lg">
+        <Text c="dimmed" className="text-center" size="lg">
           Our servers could not handle your request. Don&apos;t worry, our
           development team was already notified. Try refreshing the page.
         </Text>
-        <Group position="center">
+        <Group justify="center">
           <Button
             onClick={() => {
               window.location.reload();

@@ -30,6 +30,17 @@ export default {
         ...convertColor(mantineDefaultTheme.colors, twDefaultColors),
       },
     },
+    screens: {
+      xs: '30em',
+      sm: '40em',
+      md: '48em',
+      lg: '64em',
+      xl: '80em',
+      '2xl': '96em',
+    },
+  },
+  corePlugins: {
+    preflight: false,
   },
   plugins: [],
 } satisfies Config;
