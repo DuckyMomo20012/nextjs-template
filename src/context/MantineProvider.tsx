@@ -39,6 +39,32 @@ const theme = createTheme({
   } as MantineBreakpointsValues,
   colors: {
     ...convertColor(twDefaultColors),
+    dark: [
+      '#f8fafc',
+      '#f1f5f9',
+      '#e2e8f0',
+      '#cbd5e1',
+      '#94a3b8',
+      '#64748b',
+      '#475569',
+      '#334155',
+      '#1e293b',
+      '#0f172a',
+      '#020617',
+    ],
+    grape: [
+      '#fdf4ff',
+      '#fae8ff',
+      '#f5d0fe',
+      '#f0abfc',
+      '#e879f9',
+      '#d946ef',
+      '#c026d3',
+      '#a21caf',
+      '#86198f',
+      '#701a75',
+      '#4a044e',
+    ],
   },
 });
 
