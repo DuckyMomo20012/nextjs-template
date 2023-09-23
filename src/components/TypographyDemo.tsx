@@ -11,15 +11,15 @@ const TypographyDemo = ({
 }: ControlledDemoProps) => {
   return (
     <>
-      <Feature title="ActionIcon">
+      <Feature group="Typography" title="Blockquote">
         <Blockquote
           cite={description}
           color={color}
           icon={
             <Icon
-              height={24}
+              height="70%"
               icon="material-symbols:info-outline-rounded"
-              width={24}
+              width="70%"
             />
           }
           iconSize={32}
@@ -29,15 +29,19 @@ const TypographyDemo = ({
         </Blockquote>
       </Feature>
 
-      <Feature title="Code">
+      <Feature group="Typography" title="Code">
         <Stack className="w-min">
+          <Code>{label}</Code>
           <Code c="white" color={color}>
             {label}
           </Code>
         </Stack>
       </Feature>
 
-      <Feature title="Highlight">
+      <Feature group="Typography" title="Highlight">
+        <Highlight highlight="this">
+          Highlight This, definitely THIS and also this!
+        </Highlight>
         <Highlight color={color} highlight="this">
           Highlight This, definitely THIS and also this!
         </Highlight>

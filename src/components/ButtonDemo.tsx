@@ -9,107 +9,116 @@ const ButtonDemo = ({
   label,
   radius,
   size,
+  loading,
 }: ControlledDemoProps) => {
   return (
     <>
-      <Feature title="ActionIcon">
+      <Feature group="Buttons" title="ActionIcon">
         <ActionIcon
           color={color}
           disabled={disabled}
+          loading={loading}
           radius={radius}
           size={size}
           variant="default"
         >
           <Icon
-            height={24}
+            height="70%"
             icon="material-symbols:settings-outline-rounded"
-            width={24}
+            width="70%"
           />
         </ActionIcon>
         <ActionIcon
           color={color}
           disabled={disabled}
+          loading={loading}
           radius={radius}
           size={size}
           variant="filled"
         >
           <Icon
-            height={24}
+            height="70%"
             icon="material-symbols:settings-outline-rounded"
-            width={24}
+            width="70%"
           />
         </ActionIcon>
         <ActionIcon
           color={color}
           disabled={disabled}
+          loading={loading}
           radius={radius}
           size={size}
           variant="light"
         >
           <Icon
-            height={24}
+            height="70%"
             icon="material-symbols:settings-outline-rounded"
-            width={24}
+            width="70%"
           />
         </ActionIcon>
         <ActionIcon
           color={color}
           disabled={disabled}
+          loading={loading}
           radius={radius}
           size={size}
           variant="outline"
         >
           <Icon
-            height={24}
+            height="70%"
             icon="material-symbols:settings-outline-rounded"
-            width={24}
+            width="70%"
           />
         </ActionIcon>
         <ActionIcon
           color={color}
           disabled={disabled}
+          loading={loading}
           radius={radius}
           size={size}
           variant="subtle"
         >
           <Icon
-            height={24}
+            height="70%"
             icon="material-symbols:settings-outline-rounded"
-            width={24}
+            width="70%"
           />
         </ActionIcon>
         <ActionIcon
           color={color}
           disabled={disabled}
+          loading={loading}
           radius={radius}
           size={size}
           variant="transparent"
         >
           <Icon
-            height={24}
+            height="70%"
             icon="material-symbols:settings-outline-rounded"
-            width={24}
+            width="70%"
           />
         </ActionIcon>
         <ActionIcon
           color={color}
           disabled={disabled}
+          loading={loading}
           radius={radius}
           size={size}
           variant="white"
         >
           <Icon
-            height={24}
+            height="70%"
             icon="material-symbols:settings-outline-rounded"
-            width={24}
+            width="70%"
           />
         </ActionIcon>
       </Feature>
 
-      <Feature title="Button">
+      <Feature group="Buttons" title="Button">
         <Button
           color={color}
           disabled={disabled}
+          loading={loading}
           radius={radius}
           size={size}
           variant="default"
@@ -119,6 +128,7 @@ const ButtonDemo = ({
         <Button
           color={color}
           disabled={disabled}
+          loading={loading}
           radius={radius}
           size={size}
           variant="filled"
@@ -128,6 +138,7 @@ const ButtonDemo = ({
         <Button
           color={color}
           disabled={disabled}
+          loading={loading}
           radius={radius}
           size={size}
           variant="light"
@@ -137,6 +148,7 @@ const ButtonDemo = ({
         <Button
           color={color}
           disabled={disabled}
+          loading={loading}
           radius={radius}
           size={size}
           variant="outline"
@@ -146,6 +158,7 @@ const ButtonDemo = ({
         <Button
           color={color}
           disabled={disabled}
+          loading={loading}
           radius={radius}
           size={size}
           variant="subtle"
@@ -155,6 +168,7 @@ const ButtonDemo = ({
         <Button
           color={color}
           disabled={disabled}
+          loading={loading}
           radius={radius}
           size={size}
           variant="transparent"
@@ -164,6 +178,7 @@ const ButtonDemo = ({
         <Button
           color={color}
           disabled={disabled}
+          loading={loading}
           radius={radius}
           size={size}
           variant="white"

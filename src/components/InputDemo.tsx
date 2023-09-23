@@ -33,7 +33,7 @@ const InputDemo = ({
 }: ControlledDemoProps) => {
   return (
     <>
-      <Feature title="Checkbox">
+      <Feature group="Inputs" title="Checkbox">
         <Checkbox
           color={color}
           defaultChecked
@@ -68,7 +68,7 @@ const InputDemo = ({
         />
       </Feature>
 
-      <Feature title="Chip">
+      <Feature group="Inputs" title="Chip">
         <Chip
           color={color}
           defaultChecked
@@ -101,7 +101,7 @@ const InputDemo = ({
         </Chip>
       </Feature>
 
-      <Feature title="ColorInput">
+      <Feature group="Inputs" title="ColorInput">
         <ColorInput
           description={description}
           disabled={disabled}
@@ -136,7 +136,7 @@ const InputDemo = ({
         />
       </Feature>
 
-      <Feature title="FileInput">
+      <Feature group="Inputs" title="FileInput">
         <FileInput
           description={description}
           disabled={disabled}
@@ -171,7 +171,7 @@ const InputDemo = ({
         />
       </Feature>
 
-      <Feature title="JsonInput">
+      <Feature group="Inputs" title="JsonInput">
         <JsonInput
           description={description}
           disabled={disabled}
@@ -206,7 +206,7 @@ const InputDemo = ({
         />
       </Feature>
 
-      <Feature title="NumberInput">
+      <Feature group="Inputs" title="NumberInput">
         <NumberInput
           description={description}
           disabled={disabled}
@@ -241,7 +241,7 @@ const InputDemo = ({
         />
       </Feature>
 
-      <Feature title="PasswordInput">
+      <Feature group="Inputs" title="PasswordInput">
         <PasswordInput
           description={description}
           disabled={disabled}
@@ -276,7 +276,7 @@ const InputDemo = ({
         />
       </Feature>
 
-      <Feature title="PinInput">
+      <Feature group="Inputs" title="PinInput">
         <PinInput
           disabled={disabled}
           error={!!error}
@@ -302,7 +302,7 @@ const InputDemo = ({
         />
       </Feature>
 
-      <Feature title="Radio">
+      <Feature group="Inputs" title="Radio">
         <Radio
           color={color}
           disabled={disabled}
@@ -322,13 +322,13 @@ const InputDemo = ({
         />
       </Feature>
 
-      <Feature title="Rating">
+      <Feature group="Inputs" title="Rating">
         <Rating color={color} size={size} />
         <Rating color={color} highlightSelectedOnly size={size} value={2} />
         <Rating color={color} readOnly size={size} value={3} />
       </Feature>
 
-      <Feature title="SegmentedControl">
+      <Feature group="Inputs" title="SegmentedControl">
         <SegmentedControl
           color={color}
           data={['React', 'Vue', 'Angular']}
@@ -362,12 +362,11 @@ const InputDemo = ({
         />
       </Feature>
 
-      <Feature title="Slider">
+      <Feature group="Inputs" title="Slider">
         <Slider
           color={color}
           defaultValue={20}
           disabled={disabled}
-          labelAlwaysOn
           marks={[
             { value: 20, label: '20%' },
             { value: 50, label: '50%' },
@@ -382,6 +381,7 @@ const InputDemo = ({
           defaultValue={80}
           disabled={disabled}
           inverted
+          labelAlwaysOn
           marks={[
             { value: 20, label: '20%' },
             { value: 50, label: '50%' },
@@ -407,7 +407,7 @@ const InputDemo = ({
         <Space h="xs" />
       </Feature>
 
-      <Feature title="Switch">
+      <Feature group="Inputs" title="Switch">
         <Switch
           color={color}
           description={description}
@@ -429,7 +429,7 @@ const InputDemo = ({
         />
       </Feature>
 
-      <Feature title="Textarea">
+      <Feature group="Inputs" title="Textarea">
         <Textarea
           description={description}
           disabled={disabled}
@@ -464,7 +464,7 @@ const InputDemo = ({
         />
       </Feature>
 
-      <Feature title="TextInput">
+      <Feature group="Inputs" title="TextInput">
         <TextInput
           description={description}
           disabled={disabled}

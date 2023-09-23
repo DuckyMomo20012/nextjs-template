@@ -9,10 +9,11 @@ const NavigationDemo = ({
   label,
   radius,
   size,
+  loading,
 }: ControlledDemoProps) => {
   return (
     <>
-      <Feature title="NavLink">
+      <Feature group="Navigation" title="NavLink">
         <NavLink
           color={color}
           description={description}
@@ -45,71 +46,7 @@ const NavigationDemo = ({
         />
       </Feature>
 
-      <Feature title="Pagination">
-        <Pagination
-          color={color}
-          disabled={disabled}
-          radius={radius}
-          size={size}
-          total={10}
-        />
-        <Pagination
-          color={color}
-          disabled={disabled}
-          radius={radius}
-          size={size}
-          total={10}
-          withControls
-        />
-        <Pagination
-          color={color}
-          disabled={disabled}
-          radius={radius}
-          size={size}
-          total={10}
-          withControls
-          withEdges
-        />
-      </Feature>
-
-      <Feature title="Stepper">
-        <Stepper active={1} color={color} radius={radius} size={size}>
-          <Stepper.Step description="Create an account" label="First step">
-            Step 1 content: Create an account
-          </Stepper.Step>
-          <Stepper.Step description="Verify email" label="Second step">
-            Step 2 content: Verify email
-          </Stepper.Step>
-          <Stepper.Step description="Get full access" label="Final step">
-            Step 3 content: Get full access
-          </Stepper.Step>
-          <Stepper.Completed>
-            Completed, click back button to get to previous step
-          </Stepper.Completed>
-        </Stepper>
-        <Stepper
-          active={1}
-          color={color}
-          orientation="vertical"
-          radius={radius}
-          size={size}
-        >
-          <Stepper.Step description="Create an account" label="First step">
-            Step 1 content: Create an account
-          </Stepper.Step>
-          <Stepper.Step description="Verify email" label="Second step">
-            Step 2 content: Verify email
-          </Stepper.Step>
-          <Stepper.Step description="Get full access" label="Final step">
-            Step 3 content: Get full access
-          </Stepper.Step>
-          <Stepper.Completed>
-            Completed, click back button to get to previous step
-          </Stepper.Completed>
-        </Stepper>
-      </Feature>
-
-      <Feature title="Tabs">
+      <Feature group="Navigation" title="Tabs">
         <Tabs color={color} defaultValue="gallery" radius={radius}>
           <Tabs.List>
             <Tabs.Tab value="gallery">Gallery</Tabs.Tab>
@@ -177,6 +114,102 @@ const NavigationDemo = ({
 
           <Tabs.Panel value="settings">Settings tab content</Tabs.Panel>
         </Tabs>
+      </Feature>
+
+      <Feature
+        className="col-span-1 md:col-span-2"
+        group="Navigation"
+        title="Pagination"
+      >
+        <Pagination
+          color={color}
+          disabled={disabled}
+          radius={radius}
+          size={size}
+          total={8}
+        />
+        <Pagination
+          color={color}
+          disabled={disabled}
+          radius={radius}
+          size={size}
+          total={8}
+          withControls
+        />
+        <Pagination
+          color={color}
+          disabled={disabled}
+          radius={radius}
+          size={size}
+          total={8}
+          withControls
+          withEdges
+        />
+      </Feature>
+
+      <Feature
+        className="col-span-1 md:col-span-2"
+        group="Navigation"
+        title="Stepper"
+      >
+        <Stepper active={1} color={color} radius={radius} size={size}>
+          <Stepper.Step
+            description="Create an account"
+            label="First step"
+            loading={loading}
+          >
+            Step 1 content: Create an account
+          </Stepper.Step>
+          <Stepper.Step
+            description="Verify email"
+            label="Second step"
+            loading={loading}
+          >
+            Step 2 content: Verify email
+          </Stepper.Step>
+          <Stepper.Step
+            description="Get full access"
+            label="Final step"
+            loading={loading}
+          >
+            Step 3 content: Get full access
+          </Stepper.Step>
+          <Stepper.Completed>
+            Completed, click back button to get to previous step
+          </Stepper.Completed>
+        </Stepper>
+        <Stepper
+          active={1}
+          color={color}
+          orientation="vertical"
+          radius={radius}
+          size={size}
+        >
+          <Stepper.Step
+            description="Create an account"
+            label="First step"
+            loading={loading}
+          >
+            Step 1 content: Create an account
+          </Stepper.Step>
+          <Stepper.Step
+            description="Verify email"
+            label="Second step"
+            loading={loading}
+          >
+            Step 2 content: Verify email
+          </Stepper.Step>
+          <Stepper.Step
+            description="Get full access"
+            label="Final step"
+            loading={loading}
+          >
+            Step 3 content: Get full access
+          </Stepper.Step>
+          <Stepper.Completed>
+            Completed, click back button to get to previous step
+          </Stepper.Completed>
+        </Stepper>
       </Feature>
     </>
   );

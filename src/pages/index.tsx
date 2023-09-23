@@ -32,6 +32,7 @@ export type ControlledDemoProps = {
   placeholder: string;
   withAsterisk: boolean;
   disabled: boolean;
+  loading: boolean;
 };
 
 const HomePage = () => {
@@ -45,6 +46,20 @@ const HomePage = () => {
   const [placeholder, setPlaceholder] = useState('');
   const [withAsterisk, setWithAsterisk] = useState(false);
   const [disabled, setDisabled] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  const defaultProps: ControlledDemoProps = {
+    color,
+    description,
+    disabled,
+    error,
+    label,
+    placeholder,
+    radius,
+    size,
+    withAsterisk,
+    loading,
+  };
 
   return (
     <>
@@ -87,6 +102,10 @@ const HomePage = () => {
             <Switch
               label="Disabled"
               onChange={(e) => setDisabled(e.currentTarget.checked)}
+            />
+            <Switch
+              label="Loading"
+              onChange={(e) => setLoading(e.currentTarget.checked)}
             />
             <Stack gap="xs">
               <Text component="label" htmlFor="size-slider">
@@ -163,9 +182,9 @@ const HomePage = () => {
                       {color === colorKey && (
                         <Icon
                           className="text-white"
-                          height={24}
+                          height="100%"
                           icon="material-symbols:check-small-rounded"
-                          width={24}
+                          width="100%"
                         />
                       )}
                     </ColorSwatch>
@@ -178,48 +197,15 @@ const HomePage = () => {
 
         <Divider h="lg" />
 
-        <SimpleGrid className="p-8" cols={{ base: 1, md: 2, lg: 4, xl: 8 }}>
-          <InputDemo
-            {...{
-              color,
-              description,
-              disabled,
-              error,
-              label,
-              placeholder,
-              radius,
-              size,
-              withAsterisk,
-            }}
-          />
+        <SimpleGrid
+          className="p-8"
+          cols={{ base: 1, md: 2, lg: 4, xl: 6, '2xl': 8 }}
+        >
+          <InputDemo {...defaultProps} />
 
-          <ComboboxDemo
-            {...{
-              color,
-              description,
-              disabled,
-              error,
-              label,
-              placeholder,
-              radius,
-              size,
-              withAsterisk,
-            }}
-          />
+          <ComboboxDemo {...defaultProps} />
 
-          <ButtonDemo
-            {...{
-              color,
-              description,
-              disabled,
-              error,
-              label,
-              placeholder,
-              radius,
-              size,
-              withAsterisk,
-            }}
-          />
+          <ButtonDemo {...defaultProps} />
 
           <NavigationDemo
             {...{
@@ -232,50 +218,15 @@ const HomePage = () => {
               radius,
               size,
               withAsterisk,
+              loading,
             }}
           />
 
-          <FeedbackDemo
-            {...{
-              color,
-              description,
-              disabled,
-              error,
-              label,
-              placeholder,
-              radius,
-              size,
-              withAsterisk,
-            }}
-          />
+          <FeedbackDemo {...defaultProps} />
 
-          <DataDisplayDemo
-            {...{
-              color,
-              description,
-              disabled,
-              error,
-              label,
-              placeholder,
-              radius,
-              size,
-              withAsterisk,
-            }}
-          />
+          <DataDisplayDemo {...defaultProps} />
 
-          <TypographyDemo
-            {...{
-              color,
-              description,
-              disabled,
-              error,
-              label,
-              placeholder,
-              radius,
-              size,
-              withAsterisk,
-            }}
-          />
+          <TypographyDemo {...defaultProps} />
         </SimpleGrid>
       </Stack>
     </>

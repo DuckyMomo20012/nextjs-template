@@ -10,7 +10,7 @@ const FeedbackDemo = ({
 }: ControlledDemoProps) => {
   return (
     <>
-      <Feature title="Alert">
+      <Feature group="Feedback" title="Alert">
         <Alert
           color={color}
           radius={radius}
@@ -67,7 +67,7 @@ const FeedbackDemo = ({
         </Alert>
       </Feature>
 
-      <Feature title="Notification">
+      <Feature group="Feedback" title="Notification">
         <Notification
           color={color}
           radius={radius}
@@ -78,7 +78,7 @@ const FeedbackDemo = ({
         </Notification>
       </Feature>
 
-      <Feature title="Progress">
+      <Feature group="Feedback" title="Progress">
         <Progress color={color} radius={radius} value={50}>
           {description}
         </Progress>

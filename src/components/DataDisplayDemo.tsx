@@ -19,7 +19,7 @@ const DataDisplayDemo = ({
 }: ControlledDemoProps) => {
   return (
     <>
-      <Feature title="Accordion">
+      <Feature group="Data Display" title="Accordion">
         <Accordion chevronPosition="left" radius={radius} variant="default">
           <Accordion.Item value="photos">
             <Accordion.Control disabled={disabled}>
@@ -82,7 +82,7 @@ const DataDisplayDemo = ({
         </Accordion>
       </Feature>
 
-      <Feature title="Avatar">
+      <Feature group="Data Display" title="Avatar">
         <Avatar color={color} radius={radius} size={size} variant="default" />
 
         <Avatar color={color} radius={radius} size={size} variant="filled">
@@ -91,9 +91,9 @@ const DataDisplayDemo = ({
 
         <Avatar color={color} radius={radius} size={size} variant="light">
           <Icon
-            height={24}
-            icon="material-symbols:check-small-rounded"
-            width={24}
+            height="70%"
+            icon="material-symbols:cookie-outline-rounded"
+            width="70%"
           />
         </Avatar>
         <Avatar color={color} radius={radius} size={size} variant="outline" />
@@ -106,7 +106,7 @@ const DataDisplayDemo = ({
         <Avatar color={color} radius={radius} size={size} variant="white" />
       </Feature>
 
-      <Feature title="Badge">
+      <Feature group="Data Display" title="Badge">
         <Badge color={color} radius={radius} size={size} variant="default">
           {label}
         </Badge>
@@ -130,7 +130,7 @@ const DataDisplayDemo = ({
         </Badge>
       </Feature>
 
-      <Feature title="Indicator">
+      <Feature group="Data Display" title="Indicator">
         <Stack className="w-min">
           <Indicator
             color={color}
@@ -138,6 +138,22 @@ const DataDisplayDemo = ({
             position="top-end"
             radius={radius}
             size={12}
+          >
+            <Avatar
+              color={color}
+              radius={radius}
+              size={size}
+              variant="outline"
+            />
+          </Indicator>
+          <Indicator
+            color={color}
+            disabled={disabled}
+            position="top-end"
+            processing
+            radius={radius}
+            size={12}
+            withBorder
           >
             <Avatar
               color={color}
@@ -180,40 +196,40 @@ const DataDisplayDemo = ({
         </Stack>
       </Feature>
 
-      <Feature title="ThemeIcon">
+      <Feature group="Data Display" title="ThemeIcon">
         <ThemeIcon color={color} radius={radius} size={size} variant="default">
           <Icon
-            height={24}
+            height="70%"
             icon="material-symbols:settings-outline-rounded"
-            width={24}
+            width="70%"
           />
         </ThemeIcon>
         <ThemeIcon color={color} radius={radius} size={size} variant="filled">
           <Icon
-            height={24}
+            height="70%"
             icon="material-symbols:settings-outline-rounded"
-            width={24}
+            width="70%"
           />
         </ThemeIcon>
         <ThemeIcon color={color} radius={radius} size={size} variant="light">
           <Icon
-            height={24}
+            height="70%"
             icon="material-symbols:settings-outline-rounded"
-            width={24}
+            width="70%"
           />
         </ThemeIcon>
         <ThemeIcon color={color} radius={radius} size={size} variant="outline">
           <Icon
-            height={24}
+            height="70%"
             icon="material-symbols:settings-outline-rounded"
-            width={24}
+            width="70%"
           />
         </ThemeIcon>
         <ThemeIcon color={color} radius={radius} size={size} variant="white">
           <Icon
-            height={24}
+            height="70%"
             icon="material-symbols:settings-outline-rounded"
-            width={24}
+            width="70%"
           />
         </ThemeIcon>
       </Feature>

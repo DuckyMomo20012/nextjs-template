@@ -14,7 +14,7 @@ const ComboboxDemo = ({
 }: ControlledDemoProps) => {
   return (
     <>
-      <Feature title="Autocomplete">
+      <Feature group="Combobox" title="Autocomplete">
         <Autocomplete
           data={[
             { group: 'Frontend', items: ['React', 'Angular'] },
@@ -60,7 +60,7 @@ const ComboboxDemo = ({
         />
       </Feature>
 
-      <Feature title="MultiSelect">
+      <Feature group="Combobox" title="MultiSelect">
         <MultiSelect
           data={['React', 'Angular', 'Svelte', 'Vue']}
           description={description}
@@ -120,7 +120,7 @@ const ComboboxDemo = ({
         />
       </Feature>
 
-      <Feature title="Pill">
+      <Feature group="Combobox" title="Pill">
         <Group>
           <Pill disabled={disabled} radius={radius} size={size}>
             {label}
