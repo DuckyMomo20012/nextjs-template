@@ -1,4 +1,4 @@
-import { Alert, Notification, Progress } from '@mantine/core';
+import { Alert, Notification, Progress, Skeleton } from '@mantine/core';
 import { Feature } from '@/components/ui/Feature';
 import { type ControlledDemoProps } from '@/pages';
 
@@ -7,6 +7,7 @@ const FeedbackDemo = ({
   description,
   label,
   radius,
+  loading,
 }: ControlledDemoProps) => {
   return (
     <>
@@ -70,8 +71,19 @@ const FeedbackDemo = ({
       <Feature group="Feedback" title="Notification">
         <Notification
           color={color}
+          loading={loading}
           radius={radius}
           title={label}
+          withCloseButton
+        >
+          {description}
+        </Notification>
+        <Notification
+          color={color}
+          loading={loading}
+          radius={radius}
+          title={label}
+          withBorder
           withCloseButton
         >
           {description}
@@ -88,6 +100,23 @@ const FeedbackDemo = ({
         <Progress animated color={color} radius={radius} value={100}>
           {description}
         </Progress>
+      </Feature>
+
+      <Feature group="Feedback" title="Skeleton">
+        <Skeleton circle height={50} mb="xl" />
+        <Skeleton height={8} radius={radius} />
+        <Skeleton height={8} mt={6} radius={radius} />
+        <Skeleton height={8} mt={6} radius={radius} width="70%" />
+        <Skeleton animate={false} circle height={50} mb="xl" />
+        <Skeleton animate={false} height={8} radius={radius} />
+        <Skeleton animate={false} height={8} mt={6} radius={radius} />
+        <Skeleton
+          animate={false}
+          height={8}
+          mt={6}
+          radius={radius}
+          width="70%"
+        />
       </Feature>
     </>
   );

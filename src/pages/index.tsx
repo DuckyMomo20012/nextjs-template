@@ -20,6 +20,7 @@ import { DataDisplayDemo } from '@/components/DataDisplayDemo';
 import { FeedbackDemo } from '@/components/FeedbackDemo';
 import { InputDemo } from '@/components/InputDemo';
 import { NavigationDemo } from '@/components/NavigationDemo';
+import { OverlayDemo } from '@/components/OverlayDemo';
 import { TypographyDemo } from '@/components/TypographyDemo';
 
 export type ControlledDemoProps = {
@@ -223,6 +224,8 @@ const HomePage = () => {
           />
 
           <FeedbackDemo {...defaultProps} />
+
+          <OverlayDemo {...defaultProps} />
 
           <DataDisplayDemo {...defaultProps} />
 
