@@ -1,7 +1,6 @@
 import { Icon } from '@iconify/react';
 import {
   ColorSwatch,
-  Divider,
   Group,
   type MantineSize,
   SimpleGrid,
@@ -72,7 +71,10 @@ const HomePage = () => {
         ></meta>
       </Head>
       <Stack>
-        <Group className="mx-auto p-8" gap="lg" grow justify="center">
+        <SimpleGrid
+          className="relative inset-0 z-50 bg-white p-8 shadow-sm lg:sticky"
+          cols={{ base: 1, md: 2 }}
+        >
           <Stack>
             <TextInput
               defaultValue={label}
@@ -96,18 +98,20 @@ const HomePage = () => {
             />
           </Stack>
           <Stack>
-            <Switch
-              label="With asterisk"
-              onChange={(e) => setWithAsterisk(e.currentTarget.checked)}
-            />
-            <Switch
-              label="Disabled"
-              onChange={(e) => setDisabled(e.currentTarget.checked)}
-            />
-            <Switch
-              label="Loading"
-              onChange={(e) => setLoading(e.currentTarget.checked)}
-            />
+            <Group>
+              <Switch
+                label="With asterisk"
+                onChange={(e) => setWithAsterisk(e.currentTarget.checked)}
+              />
+              <Switch
+                label="Disabled"
+                onChange={(e) => setDisabled(e.currentTarget.checked)}
+              />
+              <Switch
+                label="Loading"
+                onChange={(e) => setLoading(e.currentTarget.checked)}
+              />
+            </Group>
             <Stack gap="xs">
               <Text component="label" htmlFor="size-slider">
                 Size: {size}
@@ -166,11 +170,14 @@ const HomePage = () => {
                 step={25}
               />
             </Stack>
-          </Stack>
-          <Stack>
             <Stack gap="xs">
               <Text>Color: {color}</Text>
-              <SimpleGrid cols={6} spacing="md" verticalSpacing="xs">
+              <SimpleGrid
+                className="max-w-max"
+                cols={{ base: 6, xs: 8, sm: 12 }}
+                spacing="md"
+                verticalSpacing="xs"
+              >
                 {Object.keys(themes.colors).map((colorKey, index) => {
                   return (
                     <ColorSwatch
@@ -194,13 +201,11 @@ const HomePage = () => {
               </SimpleGrid>
             </Stack>
           </Stack>
-        </Group>
-
-        <Divider h="lg" />
+        </SimpleGrid>
 
         <SimpleGrid
           className="p-8"
-          cols={{ base: 1, md: 2, lg: 4, xl: 6, '2xl': 8 }}
+          cols={{ base: 1, md: 2, lg: 4, xl: 6, '2xl': 6 }}
         >
           <InputDemo {...defaultProps} />
 
@@ -208,20 +213,7 @@ const HomePage = () => {
 
           <ButtonDemo {...defaultProps} />
 
-          <NavigationDemo
-            {...{
-              color,
-              description,
-              disabled,
-              error,
-              label,
-              placeholder,
-              radius,
-              size,
-              withAsterisk,
-              loading,
-            }}
-          />
+          <NavigationDemo {...defaultProps} />
 
           <FeedbackDemo {...defaultProps} />
 
