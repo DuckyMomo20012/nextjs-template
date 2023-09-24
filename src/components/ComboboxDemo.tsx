@@ -1,4 +1,10 @@
-import { Autocomplete, Group, MultiSelect, Pill } from '@mantine/core';
+import {
+  Autocomplete,
+  Group,
+  MultiSelect,
+  Pill,
+  TagsInput,
+} from '@mantine/core';
 import { Feature } from '@/components/ui/Feature';
 import { type ControlledDemoProps } from '@/pages';
 
@@ -134,6 +140,42 @@ const ComboboxDemo = ({
             {label}
           </Pill>
         </Group>
+      </Feature>
+
+      <Feature group="Combobox" title="TagsInput">
+        <TagsInput
+          description={description}
+          disabled={disabled}
+          error={error}
+          label={label}
+          placeholder={placeholder}
+          radius={radius}
+          size={size}
+          variant="default"
+          withAsterisk={withAsterisk}
+        />
+        <TagsInput
+          description={description}
+          disabled={disabled}
+          error={error}
+          label={label}
+          placeholder={placeholder}
+          radius={radius}
+          size={size}
+          variant="filled"
+          withAsterisk={withAsterisk}
+        />
+        <TagsInput
+          description={description}
+          disabled={disabled}
+          error={error}
+          label={label}
+          placeholder={placeholder}
+          radius={radius}
+          size={size}
+          variant="unstyled"
+          withAsterisk={withAsterisk}
+        />
       </Feature>
     </>
   );
