@@ -7,16 +7,17 @@ import {
   Stack,
   ThemeIcon,
 } from '@mantine/core';
+import { memo } from 'react';
 import { Feature } from '@/components/ui/Feature';
 import { type ControlledDemoProps } from '@/pages';
 
-const DataDisplayDemo = ({
+const DataDisplayDemo = memo(function DataDisplayDemo({
   color,
   radius,
   disabled,
   size,
   label,
-}: ControlledDemoProps) => {
+}: ControlledDemoProps) {
   return (
     <>
       <Feature group="Data Display" title="Accordion">
@@ -235,6 +236,6 @@ const DataDisplayDemo = ({
       </Feature>
     </>
   );
-};
+});
 
 export { DataDisplayDemo };

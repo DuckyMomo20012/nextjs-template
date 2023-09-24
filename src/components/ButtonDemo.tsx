@@ -1,16 +1,17 @@
 import { Icon } from '@iconify/react';
 import { ActionIcon, Button } from '@mantine/core';
+import { memo } from 'react';
 import { Feature } from '@/components/ui/Feature';
 import { type ControlledDemoProps } from '@/pages';
 
-const ButtonDemo = ({
+const ButtonDemo = memo(function ButtonDemo({
   color,
   disabled,
   label,
   radius,
   size,
   loading,
-}: ControlledDemoProps) => {
+}: ControlledDemoProps) {
   return (
     <>
       <Feature group="Buttons" title="ActionIcon">
@@ -188,6 +189,6 @@ const ButtonDemo = ({
       </Feature>
     </>
   );
-};
+});
 
 export { ButtonDemo };

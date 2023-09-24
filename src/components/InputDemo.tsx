@@ -17,10 +17,11 @@ import {
   TextInput,
   Textarea,
 } from '@mantine/core';
+import { memo } from 'react';
 import { Feature } from '@/components/ui/Feature';
 import { type ControlledDemoProps } from '@/pages';
 
-const InputDemo = ({
+const InputDemo = memo(function InputDemo({
   color,
   description,
   disabled,
@@ -30,7 +31,7 @@ const InputDemo = ({
   radius,
   size,
   withAsterisk,
-}: ControlledDemoProps) => {
+}: ControlledDemoProps) {
   return (
     <>
       <Feature group="Inputs" title="Checkbox">
@@ -508,6 +509,6 @@ const InputDemo = ({
       </Feature>
     </>
   );
-};
+});
 
 export { InputDemo };

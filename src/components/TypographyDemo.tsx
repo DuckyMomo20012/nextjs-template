@@ -1,14 +1,15 @@
 import { Icon } from '@iconify/react';
 import { Blockquote, Code, Highlight, Stack } from '@mantine/core';
+import { memo } from 'react';
 import { Feature } from '@/components/ui/Feature';
 import { type ControlledDemoProps } from '@/pages';
 
-const TypographyDemo = ({
+const TypographyDemo = memo(function TypographyDemo({
   color,
   description,
   label,
   radius,
-}: ControlledDemoProps) => {
+}: ControlledDemoProps) {
   return (
     <>
       <Feature group="Typography" title="Blockquote">
@@ -48,6 +49,6 @@ const TypographyDemo = ({
       </Feature>
     </>
   );
-};
+});
 
 export { TypographyDemo };

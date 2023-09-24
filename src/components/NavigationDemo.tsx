@@ -1,8 +1,9 @@
 import { NavLink, Pagination, Stepper, Tabs } from '@mantine/core';
+import { memo } from 'react';
 import { Feature } from '@/components/ui/Feature';
 import { type ControlledDemoProps } from '@/pages';
 
-const NavigationDemo = ({
+const NavigationDemo = memo(function NavigationDemo({
   color,
   description,
   disabled,
@@ -10,7 +11,7 @@ const NavigationDemo = ({
   radius,
   size,
   loading,
-}: ControlledDemoProps) => {
+}: ControlledDemoProps) {
   return (
     <>
       <Feature group="Navigation" title="NavLink">
@@ -214,6 +215,6 @@ const NavigationDemo = ({
       </Feature>
     </>
   );
-};
+});
 
 export { NavigationDemo };

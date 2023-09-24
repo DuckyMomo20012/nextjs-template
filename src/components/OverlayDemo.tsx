@@ -1,13 +1,14 @@
 import { Button, Tooltip } from '@mantine/core';
+import { memo } from 'react';
 import { Feature } from '@/components/ui/Feature';
 import { type ControlledDemoProps } from '@/pages';
 
-const OverlayDemo = ({
+const OverlayDemo = memo(function OverlayDemo({
   color,
   disabled,
   label,
   radius,
-}: ControlledDemoProps) => {
+}: ControlledDemoProps) {
   return (
     <>
       <Feature group="Overlays" title="Tooltip">
@@ -64,6 +65,6 @@ const OverlayDemo = ({
       </Feature>
     </>
   );
-};
+});
 
 export { OverlayDemo };

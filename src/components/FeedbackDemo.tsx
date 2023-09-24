@@ -1,14 +1,15 @@
 import { Alert, Notification, Progress, Skeleton } from '@mantine/core';
+import { memo } from 'react';
 import { Feature } from '@/components/ui/Feature';
 import { type ControlledDemoProps } from '@/pages';
 
-const FeedbackDemo = ({
+const FeedbackDemo = memo(function FeedbackDemo({
   color,
   description,
   label,
   radius,
   loading,
-}: ControlledDemoProps) => {
+}: ControlledDemoProps) {
   return (
     <>
       <Feature group="Feedback" title="Alert">
@@ -120,6 +121,6 @@ const FeedbackDemo = ({
       </Feature>
     </>
   );
-};
+});
 
 export { FeedbackDemo };

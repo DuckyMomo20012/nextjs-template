@@ -12,7 +12,7 @@ import {
   useMantineTheme,
 } from '@mantine/core';
 import Head from 'next/head';
-import { useState } from 'react';
+import { useDeferredValue, useState } from 'react';
 import { ButtonDemo } from '@/components/ButtonDemo';
 import { ComboboxDemo } from '@/components/ComboboxDemo';
 import { DataDisplayDemo } from '@/components/DataDisplayDemo';
@@ -48,13 +48,18 @@ const HomePage = () => {
   const [disabled, setDisabled] = useState(false);
   const [loading, setLoading] = useState(false);
 
+  const deferredLabel = useDeferredValue(label);
+  const deferredDescription = useDeferredValue(description);
+  const deferredError = useDeferredValue(error);
+  const deferredPlaceholder = useDeferredValue(placeholder);
+
   const defaultProps: ControlledDemoProps = {
     color,
-    description,
+    description: deferredDescription,
     disabled,
-    error,
-    label,
-    placeholder,
+    error: deferredError,
+    label: deferredLabel,
+    placeholder: deferredPlaceholder,
     radius,
     size,
     withAsterisk,

@@ -5,10 +5,11 @@ import {
   Pill,
   TagsInput,
 } from '@mantine/core';
+import { memo } from 'react';
 import { Feature } from '@/components/ui/Feature';
 import { type ControlledDemoProps } from '@/pages';
 
-const ComboboxDemo = ({
+const ComboboxDemo = memo(function ComboboxDemo({
   description,
   disabled,
   error,
@@ -17,7 +18,7 @@ const ComboboxDemo = ({
   radius,
   size,
   withAsterisk,
-}: ControlledDemoProps) => {
+}: ControlledDemoProps) {
   return (
     <>
       <Feature group="Combobox" title="Autocomplete">
@@ -181,6 +182,6 @@ const ComboboxDemo = ({
       </Feature>
     </>
   );
-};
+});
 
 export { ComboboxDemo };
