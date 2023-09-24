@@ -19,6 +19,7 @@ const NavigationDemo = ({
           description={description}
           disabled={disabled}
           label={label}
+          variant="default"
         />
         <NavLink
           active

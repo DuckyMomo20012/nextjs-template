@@ -33,6 +33,7 @@ const ComboboxDemo = ({
           placeholder={placeholder}
           radius={radius}
           size={size}
+          variant="default"
           withAsterisk={withAsterisk}
         />
         <Autocomplete
@@ -77,6 +78,7 @@ const ComboboxDemo = ({
           radius={radius}
           searchable
           size={size}
+          variant="default"
           withAsterisk={withAsterisk}
           withCheckIcon
         />

@@ -110,6 +110,7 @@ const InputDemo = ({
           placeholder={placeholder}
           radius={radius}
           size={size}
+          variant="default"
           withAsterisk={withAsterisk}
         />
         <ColorInput
@@ -145,6 +146,7 @@ const InputDemo = ({
           placeholder={placeholder}
           radius={radius}
           size={size}
+          variant="default"
           withAsterisk={withAsterisk}
         />
         <FileInput
@@ -180,6 +182,7 @@ const InputDemo = ({
           placeholder={placeholder}
           radius={radius}
           size={size}
+          variant="default"
           withAsterisk={withAsterisk}
         />
         <JsonInput
@@ -215,6 +218,7 @@ const InputDemo = ({
           placeholder={placeholder}
           radius={radius}
           size={size}
+          variant="default"
           withAsterisk={withAsterisk}
         />
         <NumberInput
@@ -250,6 +254,7 @@ const InputDemo = ({
           placeholder={placeholder}
           radius={radius}
           size={size}
+          variant="default"
           withAsterisk={withAsterisk}
         />
         <PasswordInput
@@ -283,6 +288,7 @@ const InputDemo = ({
           placeholder={placeholder || '○'}
           radius={radius}
           size={size}
+          variant="default"
         />
         <PinInput
           disabled={disabled}
@@ -438,6 +444,7 @@ const InputDemo = ({
           placeholder={placeholder}
           radius={radius}
           size={size}
+          variant="default"
           withAsterisk={withAsterisk}
         />
         <Textarea
@@ -473,6 +480,7 @@ const InputDemo = ({
           placeholder={placeholder}
           radius={radius}
           size={size}
+          variant="default"
           withAsterisk={withAsterisk}
         />
         <TextInput
