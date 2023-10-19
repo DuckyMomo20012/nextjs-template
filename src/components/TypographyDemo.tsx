@@ -1,5 +1,5 @@
 import { Icon } from '@iconify/react';
-import { Blockquote, Code, Highlight, Stack } from '@mantine/core';
+import { Blockquote, Code, Highlight, Stack, Title } from '@mantine/core';
 import { memo } from 'react';
 import { Feature } from '@/components/ui/Feature';
 import { type ControlledDemoProps } from '@/pages';
@@ -46,6 +46,19 @@ const TypographyDemo = memo(function TypographyDemo({
         <Highlight color={color} highlight="this">
           Highlight This, definitely THIS and also this!
         </Highlight>
+      </Feature>
+
+      <Feature
+        className="col-span-1 md:col-span-2"
+        group="Typography"
+        title="Title"
+      >
+        <Title order={1}>{label}</Title>
+        <Title order={2}>{label}</Title>
+        <Title order={3}>{label}</Title>
+        <Title order={4}>{label}</Title>
+        <Title order={5}>{label}</Title>
+        <Title order={6}>{label}</Title>
       </Feature>
     </>
   );
