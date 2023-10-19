@@ -2,8 +2,12 @@ import type { Config } from 'tailwindcss';
 import twDefaultColors from 'tailwindcss/colors';
 
 export default {
-  content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
-  darkMode: 'class',
+  content: [
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
+  darkMode: ['class', '[data-mantine-color-scheme="dark"]'],
   theme: {
     extend: {
       colors: {
