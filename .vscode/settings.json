@@ -24,7 +24,7 @@
   },
   "[python]": {
     "editor.codeActionsOnSave": {
-      "source.organizeImports": true
+      "source.organizeImports": "explicit"
     },
     "editor.defaultFormatter": "ms-python.black-formatter",
     "editor.formatOnSave": true,
@@ -40,6 +40,14 @@
   "[xml]": {
     "editor.defaultFormatter": null
   },
+  "[go]": {
+    "editor.defaultFormatter": "golang.go",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4
+  },
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  },
   "C_Cpp.clang_format_style": "LLVM",
   // Code Spell Checker Extension
   "cSpell.enableFiletypes": ["!dockercompose"],
@@ -47,17 +55,16 @@
   //
   "diffEditor.diffAlgorithm": "advanced",
   "diffEditor.experimental.showMoves": true,
-  "diffEditor.ignoreTrimWhitespace": false,
   "editor.bracketPairColorization.enabled": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true,
-    "source.sortImports": false
+    "source.fixAll.eslint": "explicit",
+    "source.sortImports": "never"
   },
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.detectIndentation": false,
-  "editor.fontFamily": "JetBrains Mono",
-  "editor.fontLigatures": "JetBrains Mono",
+  "editor.fontFamily": "'Monaspace Neon', 'JetBrains Mono', monospace",
+  "editor.fontLigatures": "'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'calt', 'dlig'",
   "editor.formatOnSave": true,
   "editor.guides.bracketPairs": "active",
   "editor.inlineSuggest.enabled": true,
@@ -89,8 +96,9 @@
   "git.autofetch": true,
   "github.copilot.enable": {
     "*": true,
-    "markdown": true,
     "plaintext": true,
+    "markdown": true,
+    "scminput": false,
     "yaml": true
   },
   // Highlight Matching Tag
@@ -116,11 +124,6 @@
   },
   "notebook.lineNumbers": "on",
   "prettier.proseWrap": "always",
-  "python.analysis.autoImportCompletions": true,
-  "python.analysis.fixAll": ["source.unusedImports"],
-  "python.formatting.provider": "none",
-  "python.linting.flake8Enabled": true,
-  "python.linting.mypyEnabled": true,
   "redhat.telemetry.enabled": false,
   // Rewrap Extension
   "rewrap.autoWrap.enabled": true,
@@ -145,7 +148,7 @@
       "command": "workbench.action.openSettingsJson",
       "id": "open-settings",
       "name": "Open settings.json",
-      "priority": -2,
+      "priority": -3,
       "text": "$(gear)",
       "tooltip": "Open settings.json"
     },
@@ -155,7 +158,7 @@
       "command": "workbench.action.toggleSplitEditorInGroup",
       "id": "split-group",
       "name": "Split (Group)",
-      "priority": -3,
+      "priority": -4,
       "text": "$(split-horizontal)",
       "tooltip": "Split an editor without creating a new group"
     },
@@ -292,5 +295,7 @@
   "workbench.iconTheme": "vscode-icons",
   "workbench.list.smoothScrolling": true,
   "workbench.localHistory.maxFileEntries": 50,
-  "workbench.localHistory.mergeWindow": 60
+  "workbench.localHistory.mergeWindow": 60,
+  "workbench.activityBar.location": "top",
+  "errorLens.fontFamily": "'Monaspace Xenon', 'JetBrains Mono', monospace"
 }

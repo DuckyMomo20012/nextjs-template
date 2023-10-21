@@ -1,27 +1,31 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
-    "useDefineForClassFields": true,
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "allowJs": true,
-    "skipLibCheck": true,
+    /* Base Options: */
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
-    "module": "ESNext",
-    "moduleResolution": "Node",
+    "skipLibCheck": true,
+    "target": "ESNext",
+    "allowJs": true,
     "resolveJsonModule": true,
+    "moduleDetection": "force",
+    "isolatedModules": true,
+    /* Strictness */
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    /* If NOT transpiling with TypeScript: */
+    "moduleResolution": "Bundler",
+    "module": "ESNext",
     "noEmit": true,
+    /* If your code runs in the DOM: */
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    /* React */
     "jsx": "preserve",
-    "outDir": "./dist/out-tsc",
+    /* Path Aliases */
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
     },
-    "noErrorTruncation": true,
-    "strict": false,
-    "incremental": true,
-    "isolatedModules": true
+    /* NextJS */
+    "incremental": true
   },
   "include": ["src", "tests", "next-env.d.ts"],
   "references": [

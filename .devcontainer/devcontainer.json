@@ -21,6 +21,7 @@
         "formulahendry.auto-rename-tag",
         "chunsen.bracket-select",
         "pustelto.bracketeer",
+        "Catppuccin.catppuccin-vsc",
         "streetsidesoftware.code-spell-checker",
         "naumovs.color-highlight",
         "mikestead.dotenv",
@@ -38,7 +39,6 @@
         "albert.TabOut",
         "bradlc.vscode-tailwindcss",
         "wayou.vscode-todo-highlight",
-        "Orta.vscode-twoslash-queries",
         "pflannery.vscode-versionlens",
         "vscode-icons-team.vscode-icons"
       ]
