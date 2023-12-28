@@ -26,9 +26,14 @@
       "@/*": ["./src/*"]
     },
     /* NextJS */
-    "incremental": true
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
-  "include": ["src", "tests", "next-env.d.ts"],
+  "include": ["src", "tests", "next-env.d.ts", ".next/types/**/*.ts"],
   "references": [
     {
       "path": "./tsconfig.node.json"
