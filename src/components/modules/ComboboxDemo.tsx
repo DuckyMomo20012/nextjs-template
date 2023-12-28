@@ -6,7 +6,7 @@ import {
   TagsInput,
 } from '@mantine/core';
 import { memo } from 'react';
-import { Feature } from '@/components/ui/Feature';
+import { Feature } from '@/components/elements/Feature';
 import { type ControlledDemoProps } from '@/pages';
 
 const ComboboxDemo = memo(function ComboboxDemo({
