@@ -1,67 +1,57 @@
-import { Icon } from '@iconify/react';
-import {
-  Center,
-  Group,
-  Loader,
-  Modal,
-  Stack,
-  Text,
-  ThemeIcon,
-} from '@mantine/core';
-import { useRouter } from 'next/router';
+import { notifications } from '@mantine/notifications';
+import { useRouter } from 'next/navigation';
 import { useSession } from 'next-auth/react';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
 const AuthGuard = ({ children }: { children?: React.ReactNode }) => {
-  const [opened, setOpened] = useState(false);
   const router = useRouter();
   const { status } = useSession();
-  // Set this to true will redirect directly
-  // required: true,
-  // onUnauthenticated() {
-  //   router.push('/auth/login');
-  // },
 
+  // eslint-disable-next-line consistent-return
   useEffect(() => {
-    if (status !== 'loading') {
-      setOpened(true);
+    if (status === 'loading') {
+      const id = setTimeout(() => {
+        notifications.show({
+          title: 'Loading user...',
+          message: 'Please wait while we are loading your user data',
+          color: 'cyan',
+          loading: true,
+        });
+      }, 0);
+
+      return () => {
+        clearTimeout(id);
+      };
     }
-  }, [status]);
+
+    if (status === 'unauthenticated') {
+      // NOTE: A little trick to make to notification show up after the page is
+      // loaded, because if we don't do this, the notification will not show up
+      const id = setTimeout(() => {
+        notifications.show({
+          title: 'Not authenticated',
+          message: 'You are not authenticated, redirecting to sign in page...',
+          color: 'red',
+          autoClose: 5000,
+        });
+      }, 0);
+
+      router.push('/auth/sign-in');
+
+      return () => {
+        clearTimeout(id);
+      };
+    }
+  }, [status, router]);
 
   if (status === 'loading') {
-    return (
-      <Center className="h-screen w-screen">
-        <Stack>
-          <Text>Checking user...</Text>
-          <Center>
-            <Loader className="h-12 w-12" />
-          </Center>
-        </Stack>
-      </Center>
-    );
+    return null;
   }
 
   if (status === 'unauthenticated') {
-    return (
-      <>
-        <Modal
-          onClose={() => {
-            setOpened(false);
-            router.push('/auth/login');
-          }}
-          opened={opened}
-          withCloseButton={false}
-        >
-          <Group>
-            <ThemeIcon color="red" radius="xl" size="xl" variant="light">
-              <Icon icon="ic:baseline-error-outline" width="24" />
-            </ThemeIcon>
-            <Text>You are not logged in</Text>
-          </Group>
-        </Modal>
-      </>
-    );
+    return null;
   }
+
   if (status === 'authenticated') {
     return <>{children}</>;
   }
