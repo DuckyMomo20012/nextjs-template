@@ -12,6 +12,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@hookform/resolvers": "3.3.3",
     "@iconify/react": "4.1.1",
     "@mantine/core": "7.1.5",
     "@mantine/hooks": "7.1.5",
