@@ -1,3 +1,5 @@
+'use client';
+
 import { Icon } from '@iconify/react';
 import { Blockquote, Code, Highlight, Stack, Title } from '@mantine/core';
 import { memo } from 'react';

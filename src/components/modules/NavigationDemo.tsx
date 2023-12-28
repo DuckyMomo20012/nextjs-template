@@ -1,3 +1,5 @@
+'use client';
+
 import { NavLink, Pagination, Stepper, Tabs } from '@mantine/core';
 import { memo } from 'react';
 import { Feature } from '@/components/elements/Feature';

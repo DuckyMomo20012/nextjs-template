@@ -1,3 +1,5 @@
+'use client';
+
 import { Alert, Notification, Progress, Skeleton } from '@mantine/core';
 import { memo } from 'react';
 import { Feature } from '@/components/elements/Feature';
