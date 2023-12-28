@@ -1,16 +1,19 @@
-import { Button, Center, Group, Stack, Text, Title } from '@mantine/core';
-import Head from 'next/head';
-import Image from 'next/image';
+import {
+  Button,
+  Center,
+  Group,
+  Image,
+  Stack,
+  Text,
+  Title,
+} from '@mantine/core';
+
 import Link from 'next/link';
 
 const NotFound = () => {
   return (
-    <Center className="h-screen">
-      <Head>
-        <title>404 - Not Found</title>
-        <meta content="404 - Not Found" name="description"></meta>
-      </Head>
-      <Stack align="center" className="w-3/4 md:w-1/2 lg:w-1/3">
+    <Center className="@container h-full w-full flex-1">
+      <Stack align="center" className="min-w-4/5 @lg:w-full w-4/5 max-w-xl">
         <Image
           alt="404"
           className="aspect-[5/4]"
@@ -26,11 +29,9 @@ const NotFound = () => {
           address, or the page has been moved to another URL.
         </Text>
         <Group justify="center">
-          <Link href="/">
-            <Button size="md" variant="light">
-              Take me back to home page
-            </Button>
-          </Link>
+          <Button component={Link} href="/" size="md" variant="light">
+            Take me back to home page
+          </Button>
         </Group>
       </Stack>
     </Center>
