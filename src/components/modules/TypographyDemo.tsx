@@ -3,8 +3,8 @@
 import { Icon } from '@iconify/react';
 import { Blockquote, Code, Highlight, Stack, Title } from '@mantine/core';
 import { memo } from 'react';
+import { type ControlledDemoProps } from '@/app/page';
 import { Feature } from '@/components/elements/Feature';
-import { type ControlledDemoProps } from '@/pages';
 
 const TypographyDemo = memo(function TypographyDemo({
   color,
