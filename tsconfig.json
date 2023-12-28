@@ -15,6 +15,7 @@
     "moduleResolution": "Bundler",
     "module": "ESNext",
     "noEmit": true,
+    "outDir": "dist",
     /* If your code runs in the DOM: */
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     /* React */
