@@ -1,16 +1,3 @@
 {
-  "extends": ["config:base", "schedule:monthly"],
-  "groupName": "all dependencies",
-  "separateMajorMinor": false,
-  "groupSlug": "all",
-  "packageRules": [
-    {
-      "matchPackagePatterns": ["*"],
-      "groupName": "all dependencies",
-      "groupSlug": "all"
-    }
-  ],
-  "lockFileMaintenance": {
-    "enabled": false
-  }
+  "extends": ["config:semverAllMonthly"]
 }
