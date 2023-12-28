@@ -13,14 +13,14 @@ import {
 } from '@mantine/core';
 import Head from 'next/head';
 import { useDeferredValue, useState } from 'react';
-import { ButtonDemo } from '@/components/ButtonDemo';
-import { ComboboxDemo } from '@/components/ComboboxDemo';
-import { DataDisplayDemo } from '@/components/DataDisplayDemo';
-import { FeedbackDemo } from '@/components/FeedbackDemo';
-import { InputDemo } from '@/components/InputDemo';
-import { NavigationDemo } from '@/components/NavigationDemo';
-import { OverlayDemo } from '@/components/OverlayDemo';
-import { TypographyDemo } from '@/components/TypographyDemo';
+import { ButtonDemo } from '@/components/modules/ButtonDemo';
+import { ComboboxDemo } from '@/components/modules/ComboboxDemo';
+import { DataDisplayDemo } from '@/components/modules/DataDisplayDemo';
+import { FeedbackDemo } from '@/components/modules/FeedbackDemo';
+import { InputDemo } from '@/components/modules/InputDemo';
+import { NavigationDemo } from '@/components/modules/NavigationDemo';
+import { OverlayDemo } from '@/components/modules/OverlayDemo';
+import { TypographyDemo } from '@/components/modules/TypographyDemo';
 
 export type ControlledDemoProps = {
   color: string;
