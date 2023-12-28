@@ -1,7 +1,9 @@
+'use client';
+
 import { Alert, Notification, Progress, Skeleton } from '@mantine/core';
 import { memo } from 'react';
+import { type ControlledDemoProps } from '@/app/page';
 import { Feature } from '@/components/elements/Feature';
-import { type ControlledDemoProps } from '@/pages';
 
 const FeedbackDemo = memo(function FeedbackDemo({
   color,

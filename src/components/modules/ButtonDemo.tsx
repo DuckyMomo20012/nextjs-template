@@ -1,8 +1,10 @@
+'use client';
+
 import { Icon } from '@iconify/react';
 import { ActionIcon, Button } from '@mantine/core';
 import { memo } from 'react';
+import { type ControlledDemoProps } from '@/app/page';
 import { Feature } from '@/components/elements/Feature';
-import { type ControlledDemoProps } from '@/pages';
 
 const ButtonDemo = memo(function ButtonDemo({
   color,
