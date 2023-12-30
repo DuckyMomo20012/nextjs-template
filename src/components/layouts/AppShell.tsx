@@ -9,6 +9,7 @@ import {
   Text,
   useMantineColorScheme,
 } from '@mantine/core';
+import Link from 'next/link';
 
 const AppShell = ({ children }: { children?: React.ReactNode }) => {
   const { colorScheme } = useMantineColorScheme();
@@ -18,6 +19,8 @@ const AppShell = ({ children }: { children?: React.ReactNode }) => {
     <MantineAppShell footer={{ height: 20 }} header={{ height: 60 }}>
       <MantineAppShell.Header>
         <Group className="h-full w-full items-center px-4" justify="flex-end">
+          <Link href="/dashboard">Protected page</Link>
+
           <Anchor
             data-test-id="github-link"
             href="https://github.com/DuckyMomo20012/nextjs-template"

@@ -9,13 +9,13 @@ import CredentialsProvider from 'next-auth/providers/credentials';
 
 function getOneUser(email: string) {
   const user = {
-    id: '1',
+    id: '5ceb9c14-fa32-4120-a249-c87eed0e9c27',
     email,
     name: 'Dương Tiến Vinh',
     password: '$2a$10$vOJLhI.jeFrIB0imYb8OMu5yyhGxHyjsElagxR2ESMX5nKsHW0rxO', // password is 'password'
   };
 
-  return Promise.resolve({ ...user, password: user.password });
+  return Promise.resolve(user);
 }
 
 // You'll need to import and pass this
