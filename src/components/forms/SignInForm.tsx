@@ -9,7 +9,7 @@ import {
   Stack,
   TextInput,
 } from '@mantine/core';
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { signIn } from 'next-auth/react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
@@ -23,6 +23,9 @@ export type TSignInForm = z.infer<typeof signInSchema>;
 
 const SignInForm = () => {
   const router = useRouter();
+  const searchParams = useSearchParams();
+
+  const from = searchParams.get('from');
 
   const {
     setError,
@@ -55,7 +58,7 @@ const SignInForm = () => {
         message: 'Invalid credentials',
       });
     } else if (res?.status === 200) {
-      router.push('/');
+      router.push(from || '/');
     }
   };
 

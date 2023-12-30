@@ -1,12 +1,13 @@
 'use client';
 
 import { notifications } from '@mantine/notifications';
-import { useRouter } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { useSession } from 'next-auth/react';
 import { useEffect } from 'react';
 
 const AuthGuard = ({ children }: { children?: React.ReactNode }) => {
   const router = useRouter();
+  const pathname = usePathname();
   const { status } = useSession();
 
   // eslint-disable-next-line consistent-return
@@ -38,13 +39,16 @@ const AuthGuard = ({ children }: { children?: React.ReactNode }) => {
         });
       }, 0);
 
-      router.push('/auth/sign-in');
+      const newURL = new URL('/auth/sign-in', window.location.origin);
+      newURL.searchParams.set('from', pathname);
+
+      router.push(newURL.toString());
 
       return () => {
         clearTimeout(id);
       };
     }
-  }, [status, router]);
+  }, [status, router, pathname]);
 
   if (status === 'loading') {
     return null;
