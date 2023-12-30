@@ -2,7 +2,7 @@
 
 import { Button, Tooltip } from '@mantine/core';
 import { memo } from 'react';
-import { type ControlledDemoProps } from '@/app/page';
+import { type ControlledDemoProps } from '@/app/(home)/page';
 import { Feature } from '@/components/elements/Feature';
 
 const OverlayDemo = memo(function OverlayDemo({

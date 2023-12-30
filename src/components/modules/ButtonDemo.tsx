@@ -3,7 +3,7 @@
 import { Icon } from '@iconify/react';
 import { ActionIcon, Button } from '@mantine/core';
 import { memo } from 'react';
-import { type ControlledDemoProps } from '@/app/page';
+import { type ControlledDemoProps } from '@/app/(home)/page';
 import { Feature } from '@/components/elements/Feature';
 
 const ButtonDemo = memo(function ButtonDemo({
