@@ -16,7 +16,11 @@ const NavigationDemo = memo(function NavigationDemo({
 }: ControlledDemoProps) {
   return (
     <>
-      <Feature group="Navigation" title="NavLink">
+      <Feature
+        group="Navigation"
+        title="NavLink"
+        url="https://mantine.dev/core/nav-link/"
+      >
         <NavLink
           color={color}
           description={description}
@@ -54,6 +58,7 @@ const NavigationDemo = memo(function NavigationDemo({
         className="col-span-1 md:col-span-2"
         group="Navigation"
         title="Pagination"
+        url="https://mantine.dev/core/pagination/"
       >
         <Pagination
           color={color}
@@ -85,6 +90,7 @@ const NavigationDemo = memo(function NavigationDemo({
         className="col-span-1 md:col-span-2"
         group="Navigation"
         title="Stepper"
+        url="https://mantine.dev/core/stepper/"
       >
         <Stepper active={1} color={color} radius={radius} size={size}>
           <Stepper.Step
@@ -146,7 +152,11 @@ const NavigationDemo = memo(function NavigationDemo({
         </Stepper>
       </Feature>
 
-      <Feature group="Navigation" title="Tabs">
+      <Feature
+        group="Navigation"
+        title="Tabs"
+        url="https://mantine.dev/core/tabs/"
+      >
         <Tabs color={color} defaultValue="gallery" radius={radius}>
           <Tabs.List>
             <Tabs.Tab value="gallery">Gallery</Tabs.Tab>

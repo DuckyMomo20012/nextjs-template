@@ -13,7 +13,11 @@ const OverlayDemo = memo(function OverlayDemo({
 }: ControlledDemoProps) {
   return (
     <>
-      <Feature group="Overlays" title="Tooltip">
+      <Feature
+        group="Overlays"
+        title="Tooltip"
+        url="https://mantine.dev/core/tooltip/"
+      >
         <Tooltip
           disabled={disabled}
           label={label}
