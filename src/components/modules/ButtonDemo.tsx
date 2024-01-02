@@ -16,7 +16,11 @@ const ButtonDemo = memo(function ButtonDemo({
 }: ControlledDemoProps) {
   return (
     <>
-      <Feature group="Buttons" title="ActionIcon">
+      <Feature
+        group="Buttons"
+        title="ActionIcon"
+        url="https://mantine.dev/core/action-icon/"
+      >
         <ActionIcon
           color={color}
           disabled={disabled}
@@ -117,7 +121,11 @@ const ButtonDemo = memo(function ButtonDemo({
         </ActionIcon>
       </Feature>
 
-      <Feature group="Buttons" title="Button">
+      <Feature
+        group="Buttons"
+        title="Button"
+        url="https://mantine.dev/core/button/"
+      >
         <Button
           color={color}
           disabled={disabled}

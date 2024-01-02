@@ -14,7 +14,11 @@ const FeedbackDemo = memo(function FeedbackDemo({
 }: ControlledDemoProps) {
   return (
     <>
-      <Feature group="Feedback" title="Alert">
+      <Feature
+        group="Feedback"
+        title="Alert"
+        url="https://mantine.dev/core/alert/"
+      >
         <Alert
           color={color}
           radius={radius}
@@ -71,7 +75,11 @@ const FeedbackDemo = memo(function FeedbackDemo({
         </Alert>
       </Feature>
 
-      <Feature group="Feedback" title="Notification">
+      <Feature
+        group="Feedback"
+        title="Notification"
+        url="https://mantine.dev/core/notification/"
+      >
         <Notification
           color={color}
           loading={loading}
@@ -93,7 +101,11 @@ const FeedbackDemo = memo(function FeedbackDemo({
         </Notification>
       </Feature>
 
-      <Feature group="Feedback" title="Progress">
+      <Feature
+        group="Feedback"
+        title="Progress"
+        url="https://mantine.dev/core/progress/"
+      >
         <Progress color={color} radius={radius} value={50}>
           {description}
         </Progress>
@@ -105,7 +117,11 @@ const FeedbackDemo = memo(function FeedbackDemo({
         </Progress>
       </Feature>
 
-      <Feature group="Feedback" title="Skeleton">
+      <Feature
+        group="Feedback"
+        title="Skeleton"
+        url="https://mantine.dev/core/skeleton/"
+      >
         <Skeleton circle height={50} mb="xl" />
         <Skeleton height={8} radius={radius} />
         <Skeleton height={8} mt={6} radius={radius} />

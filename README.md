@@ -78,7 +78,7 @@
 ### :camera: Screenshots
 
 <div align="center">
-  <img src="https://github.com/DuckyMomo20012/nextjs-template/assets/64480713/7da7177c-84b4-4f03-b9d4-da8b07e4a654" alt="screenshot" />
+  <img src="https://github.com/DuckyMomo20012/nextjs-template/assets/64480713/4854d68c-930d-4238-ab8a-4a02cd27e81b" alt="screenshot" />
 </div>
 
 <!-- TechStack -->

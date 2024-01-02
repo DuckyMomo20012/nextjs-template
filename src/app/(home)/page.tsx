@@ -15,7 +15,6 @@ import {
 } from '@mantine/core';
 import Head from 'next/head';
 import { useDeferredValue, useState } from 'react';
-import { AppShell } from '@/components/layouts/AppShell';
 import { ButtonDemo } from '@/components/modules/ButtonDemo';
 import { ComboboxDemo } from '@/components/modules/ComboboxDemo';
 import { DataDisplayDemo } from '@/components/modules/DataDisplayDemo';
@@ -56,7 +55,7 @@ const HomePage = () => {
   const deferredError = useDeferredValue(error);
   const deferredPlaceholder = useDeferredValue(placeholder);
 
-  const defaultProps: ControlledDemoProps = {
+  const defaultProps = {
     color,
     description: deferredDescription,
     disabled,
@@ -67,7 +66,7 @@ const HomePage = () => {
     size,
     withAsterisk,
     loading,
-  };
+  } satisfies ControlledDemoProps;
 
   return (
     <>
@@ -241,10 +240,6 @@ const HomePage = () => {
       </Stack>
     </>
   );
-};
-
-HomePage.getLayout = (page: React.ReactNode) => {
-  return <AppShell>{page}</AppShell>;
 };
 
 export default HomePage;

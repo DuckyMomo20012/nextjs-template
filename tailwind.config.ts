@@ -1,3 +1,4 @@
+import twContainerQueries from '@tailwindcss/container-queries';
 import type { Config } from 'tailwindcss';
 
 export default {
@@ -50,5 +51,5 @@ export default {
   corePlugins: {
     preflight: false,
   },
-  plugins: [],
+  plugins: [twContainerQueries],
 } satisfies Config;

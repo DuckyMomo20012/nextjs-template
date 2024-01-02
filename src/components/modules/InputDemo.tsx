@@ -36,7 +36,11 @@ const InputDemo = memo(function InputDemo({
 }: ControlledDemoProps) {
   return (
     <>
-      <Feature group="Inputs" title="Checkbox">
+      <Feature
+        group="Inputs"
+        title="Checkbox"
+        url="https://mantine.dev/core/checkbox/"
+      >
         <Checkbox
           color={color}
           defaultChecked
@@ -71,7 +75,7 @@ const InputDemo = memo(function InputDemo({
         />
       </Feature>
 
-      <Feature group="Inputs" title="Chip">
+      <Feature group="Inputs" title="Chip" url="https://mantine.dev/core/chip/">
         <Chip
           color={color}
           defaultChecked
@@ -104,7 +108,11 @@ const InputDemo = memo(function InputDemo({
         </Chip>
       </Feature>
 
-      <Feature group="Inputs" title="ColorInput">
+      <Feature
+        group="Inputs"
+        title="ColorInput"
+        url="https://mantine.dev/core/color-input/"
+      >
         <ColorInput
           description={description}
           disabled={disabled}
@@ -140,7 +148,11 @@ const InputDemo = memo(function InputDemo({
         />
       </Feature>
 
-      <Feature group="Inputs" title="FileInput">
+      <Feature
+        group="Inputs"
+        title="FileInput"
+        url="https://mantine.dev/core/file-input/"
+      >
         <FileInput
           description={description}
           disabled={disabled}
@@ -176,7 +188,11 @@ const InputDemo = memo(function InputDemo({
         />
       </Feature>
 
-      <Feature group="Inputs" title="JsonInput">
+      <Feature
+        group="Inputs"
+        title="JsonInput"
+        url="https://mantine.dev/core/json-input/"
+      >
         <JsonInput
           description={description}
           disabled={disabled}
@@ -212,7 +228,11 @@ const InputDemo = memo(function InputDemo({
         />
       </Feature>
 
-      <Feature group="Inputs" title="NumberInput">
+      <Feature
+        group="Inputs"
+        title="NumberInput"
+        url="https://mantine.dev/core/number-input/"
+      >
         <NumberInput
           description={description}
           disabled={disabled}
@@ -248,7 +268,11 @@ const InputDemo = memo(function InputDemo({
         />
       </Feature>
 
-      <Feature group="Inputs" title="PasswordInput">
+      <Feature
+        group="Inputs"
+        title="PasswordInput"
+        url="https://mantine.dev/core/password-input/"
+      >
         <PasswordInput
           description={description}
           disabled={disabled}
@@ -284,7 +308,11 @@ const InputDemo = memo(function InputDemo({
         />
       </Feature>
 
-      <Feature group="Inputs" title="PinInput">
+      <Feature
+        group="Inputs"
+        title="PinInput"
+        url="https://mantine.dev/core/pin-input/"
+      >
         <PinInput
           disabled={disabled}
           error={!!error}
@@ -311,7 +339,11 @@ const InputDemo = memo(function InputDemo({
         />
       </Feature>
 
-      <Feature group="Inputs" title="Radio">
+      <Feature
+        group="Inputs"
+        title="Radio"
+        url="https://mantine.dev/core/radio/"
+      >
         <Radio
           color={color}
           disabled={disabled}
@@ -331,13 +363,21 @@ const InputDemo = memo(function InputDemo({
         />
       </Feature>
 
-      <Feature group="Inputs" title="Rating">
+      <Feature
+        group="Inputs"
+        title="Rating"
+        url="https://mantine.dev/core/rating/"
+      >
         <Rating color={color} size={size} />
-        <Rating color={color} highlightSelectedOnly size={size} value={2} />
+        <Rating color={color} highlightSelectedOnly size={size} />
         <Rating color={color} readOnly size={size} value={3} />
       </Feature>
 
-      <Feature group="Inputs" title="SegmentedControl">
+      <Feature
+        group="Inputs"
+        title="SegmentedControl"
+        url="https://mantine.dev/core/segmented-control/"
+      >
         <SegmentedControl
           color={color}
           data={['React', 'Vue', 'Angular']}
@@ -371,7 +411,11 @@ const InputDemo = memo(function InputDemo({
         />
       </Feature>
 
-      <Feature group="Inputs" title="Slider">
+      <Feature
+        group="Inputs"
+        title="Slider"
+        url="https://mantine.dev/core/slider/"
+      >
         <Slider
           color={color}
           defaultValue={20}
@@ -416,7 +460,11 @@ const InputDemo = memo(function InputDemo({
         <Space h="xs" />
       </Feature>
 
-      <Feature group="Inputs" title="Switch">
+      <Feature
+        group="Inputs"
+        title="Switch"
+        url="https://mantine.dev/core/switch/"
+      >
         <Switch
           color={color}
           description={description}
@@ -438,7 +486,11 @@ const InputDemo = memo(function InputDemo({
         />
       </Feature>
 
-      <Feature group="Inputs" title="Textarea">
+      <Feature
+        group="Inputs"
+        title="Textarea"
+        url="https://mantine.dev/core/textarea/"
+      >
         <Textarea
           description={description}
           disabled={disabled}
@@ -474,7 +526,11 @@ const InputDemo = memo(function InputDemo({
         />
       </Feature>
 
-      <Feature group="Inputs" title="TextInput">
+      <Feature
+        group="Inputs"
+        title="TextInput"
+        url="https://mantine.dev/core/text-input/"
+      >
         <TextInput
           description={description}
           disabled={disabled}

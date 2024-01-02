@@ -23,7 +23,11 @@ const ComboboxDemo = memo(function ComboboxDemo({
 }: ControlledDemoProps) {
   return (
     <>
-      <Feature group="Combobox" title="Autocomplete">
+      <Feature
+        group="Combobox"
+        title="Autocomplete"
+        url="https://mantine.dev/core/autocomplete/"
+      >
         <Autocomplete
           data={[
             { group: 'Frontend', items: ['React', 'Angular'] },
@@ -70,7 +74,11 @@ const ComboboxDemo = memo(function ComboboxDemo({
         />
       </Feature>
 
-      <Feature group="Combobox" title="MultiSelect">
+      <Feature
+        group="Combobox"
+        title="MultiSelect"
+        url="https://mantine.dev/core/multi-select/"
+      >
         <MultiSelect
           data={['React', 'Angular', 'Svelte', 'Vue']}
           description={description}
@@ -131,7 +139,11 @@ const ComboboxDemo = memo(function ComboboxDemo({
         />
       </Feature>
 
-      <Feature group="Combobox" title="Pill">
+      <Feature
+        group="Combobox"
+        title="Pill"
+        url="https://mantine.dev/core/pill/"
+      >
         <Group>
           <Pill disabled={disabled} radius={radius} size={size}>
             {label}
@@ -147,7 +159,11 @@ const ComboboxDemo = memo(function ComboboxDemo({
         </Group>
       </Feature>
 
-      <Feature group="Combobox" title="TagsInput">
+      <Feature
+        group="Combobox"
+        title="TagsInput"
+        url="https://mantine.dev/core/tags-input/"
+      >
         <TagsInput
           description={description}
           disabled={disabled}

@@ -22,7 +22,11 @@ const DataDisplayDemo = memo(function DataDisplayDemo({
 }: ControlledDemoProps) {
   return (
     <>
-      <Feature group="Data Display" title="Accordion">
+      <Feature
+        group="Data Display"
+        title="Accordion"
+        url="https://mantine.dev/core/accordion/"
+      >
         <Accordion chevronPosition="left" radius={radius} variant="default">
           <Accordion.Item value="photos">
             <Accordion.Control disabled={disabled}>
@@ -85,7 +89,11 @@ const DataDisplayDemo = memo(function DataDisplayDemo({
         </Accordion>
       </Feature>
 
-      <Feature group="Data Display" title="Avatar">
+      <Feature
+        group="Data Display"
+        title="Avatar"
+        url="https://mantine.dev/core/avatar/"
+      >
         <Avatar color={color} radius={radius} size={size} variant="default" />
 
         <Avatar color={color} radius={radius} size={size} variant="filled">
@@ -109,7 +117,11 @@ const DataDisplayDemo = memo(function DataDisplayDemo({
         <Avatar color={color} radius={radius} size={size} variant="white" />
       </Feature>
 
-      <Feature group="Data Display" title="Badge">
+      <Feature
+        group="Data Display"
+        title="Badge"
+        url="https://mantine.dev/core/badge/"
+      >
         <Badge color={color} radius={radius} size={size} variant="default">
           {label}
         </Badge>
@@ -133,7 +145,11 @@ const DataDisplayDemo = memo(function DataDisplayDemo({
         </Badge>
       </Feature>
 
-      <Feature group="Data Display" title="Indicator">
+      <Feature
+        group="Data Display"
+        title="Indicator"
+        url="https://mantine.dev/core/indicator/"
+      >
         <Stack className="w-min">
           <Indicator
             color={color}
@@ -199,7 +215,11 @@ const DataDisplayDemo = memo(function DataDisplayDemo({
         </Stack>
       </Feature>
 
-      <Feature group="Data Display" title="ThemeIcon">
+      <Feature
+        group="Data Display"
+        title="ThemeIcon"
+        url="https://mantine.dev/core/theme-icon/"
+      >
         <ThemeIcon color={color} radius={radius} size={size} variant="default">
           <Icon
             height="70%"
