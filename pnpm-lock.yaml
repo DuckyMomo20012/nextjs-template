@@ -79,6 +79,9 @@ devDependencies:
   '@commitlint/config-conventional':
     specifier: 18.4.3
     version: 18.4.3
+  '@tailwindcss/container-queries':
+    specifier: 0.1.1
+    version: 0.1.1(tailwindcss@3.4.0)
   '@types/node':
     specifier: 20.10.5
     version: 20.10.5
@@ -890,6 +893,14 @@ packages:
     dependencies:
       tslib: 2.5.0
     dev: false
+
+  /@tailwindcss/container-queries@0.1.1(tailwindcss@3.4.0):
+    resolution: {integrity: sha512-p18dswChx6WnTSaJCSGx6lTmrGzNNvm2FtXmiO6AuA1V4U5REyoqwmT6kgAsIMdjo07QdAfYXHJ4hnMtfHzWgA==}
+    peerDependencies:
+      tailwindcss: '>=3.2.0'
+    dependencies:
+      tailwindcss: 3.4.0
+    dev: true
 
   /@tanstack/query-core@5.14.2:
     resolution: {integrity: sha512-QmoJvC72sSWs3hgGis8JdmlDvqLfYGWUK4UG6OR9Q6t28JMN9m2FDwKPqoSJ9YVocELCSjMt/FGjEiLfk8000Q==}
