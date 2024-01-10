@@ -81,7 +81,7 @@ const HomePage = () => {
       <Stack className="relative">
         <Stack
           align="center"
-          className="top-[calc(var(--app-shell-header-offset,_0px)_+_var(--app-shell-padding))] z-50 w-full bg-white py-4 shadow-sm lg:sticky"
+          className="top-[calc(var(--app-shell-header-offset,_0px)_+_var(--app-shell-padding))] z-50 w-full bg-white p-6 shadow-sm lg:sticky"
         >
           <SimpleGrid
             className="max-w-4xl"
@@ -186,7 +186,7 @@ const HomePage = () => {
               <Stack gap="xs">
                 <Text>Color: {color}</Text>
                 <SimpleGrid
-                  className="max-w-max"
+                  className="w-full justify-items-center"
                   cols={{ base: 6, xs: 8, sm: 12 }}
                   spacing="md"
                   verticalSpacing="xs"
