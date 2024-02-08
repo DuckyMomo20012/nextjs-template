@@ -34,7 +34,7 @@ const Feature = ({
         </Text>
       )}
       <Space h="lg" />
-      <Stack className="">{children}</Stack>
+      <Stack>{children}</Stack>
     </Card>
   );
 };

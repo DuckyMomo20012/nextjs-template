@@ -1,4 +1,4 @@
-import { Card, Center, Stack, Text } from '@mantine/core';
+import { Alert, Card, Center, Code, Stack, Text } from '@mantine/core';
 import Link from 'next/link';
 import { Suspense } from 'react';
 import { SignInForm } from '@/components/forms/SignInForm';
@@ -12,6 +12,11 @@ const SignIn = () => {
             <Text fw="700" fz="xl">
               Sign in
             </Text>
+
+            <Alert title="Note">
+              Demo account: <Code>example@gmail.com</Code> and{' '}
+              <Code>password</Code>
+            </Alert>
 
             <Suspense>
               <SignInForm />

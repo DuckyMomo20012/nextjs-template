@@ -68,12 +68,12 @@ const TypographyDemo = memo(function TypographyDemo({
         title="Title"
         url="https://mantine.dev/core/title/"
       >
-        <Title order={1}>{label}</Title>
-        <Title order={2}>{label}</Title>
-        <Title order={3}>{label}</Title>
-        <Title order={4}>{label}</Title>
-        <Title order={5}>{label}</Title>
-        <Title order={6}>{label}</Title>
+        <Title order={1}>H1: {label}</Title>
+        <Title order={2}>H2: {label}</Title>
+        <Title order={3}>H3: {label}</Title>
+        <Title order={4}>H4: {label}</Title>
+        <Title order={5}>H5: {label}</Title>
+        <Title order={6}>H6: {label}</Title>
       </Feature>
     </>
   );
