@@ -1,5 +1,6 @@
 import { Card, Center, Stack, Text } from '@mantine/core';
 import Link from 'next/link';
+import { Suspense } from 'react';
 import { SignInForm } from '@/components/forms/SignInForm';
 
 const SignIn = () => {
@@ -12,7 +13,9 @@ const SignIn = () => {
               Sign in
             </Text>
 
-            <SignInForm />
+            <Suspense>
+              <SignInForm />
+            </Suspense>
 
             <Text>
               Do not have an account?{' '}
