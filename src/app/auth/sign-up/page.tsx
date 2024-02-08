@@ -1,4 +1,4 @@
-import { Card, Center, Stack, Text } from '@mantine/core';
+import { Alert, Card, Center, Stack, Text } from '@mantine/core';
 import Link from 'next/link';
 import { SignUpForm } from '@/components/forms/SignUpForm';
 
@@ -11,6 +11,11 @@ const SignUp = () => {
             <Text fw="700" fz="xl">
               Sign up
             </Text>
+
+            <Alert title="Note">
+              This is just a demo page, please go to sign in page and sign in
+              with mock account
+            </Alert>
 
             <SignUpForm />
 

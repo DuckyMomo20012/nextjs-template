@@ -8,10 +8,11 @@ import { type NextAuthOptions, getServerSession } from 'next-auth';
 import CredentialsProvider from 'next-auth/providers/credentials';
 
 function getOneUser(email: string) {
+  // This is a mock function to simulate a database query
   const user = {
     id: '5ceb9c14-fa32-4120-a249-c87eed0e9c27',
     email,
-    name: 'Dương Tiến Vinh',
+    name: 'Duckymomo20012',
     password: '$2a$10$vOJLhI.jeFrIB0imYb8OMu5yyhGxHyjsElagxR2ESMX5nKsHW0rxO', // password is 'password'
   };
 
