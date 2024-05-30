@@ -9,7 +9,7 @@
     "build": "tsc && next build",
     "preview": "next start -p 4000",
     "lint": "next lint",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "dependencies": {
     "@hookform/resolvers": "3.3.4",
