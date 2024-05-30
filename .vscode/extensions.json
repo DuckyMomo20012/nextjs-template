@@ -7,6 +7,8 @@
     "Catppuccin.catppuccin-vsc",
     "streetsidesoftware.code-spell-checker",
     "naumovs.color-highlight",
+    "ms-vscode-remote.remote-containers",
+    "ms-azuretools.vscode-docker",
     "mikestead.dotenv",
     "EditorConfig.EditorConfig",
     "usernamehw.errorlens",
@@ -16,6 +18,7 @@
     "vincaslt.highlight-matching-tag",
     "kisstkondoros.vscode-gutter-preview",
     "esbenp.prettier-vscode",
+    "YoavBls.pretty-ts-errors",
     "bmalehorn.print-it",
     "stkb.rewrap",
     "zengxingxin.sort-js-object-keys",
@@ -23,6 +26,7 @@
     "bradlc.vscode-tailwindcss",
     "wayou.vscode-todo-highlight",
     "pflannery.vscode-versionlens",
-    "vscode-icons-team.vscode-icons"
+    "vscode-icons-team.vscode-icons",
+    "redhat.vscode-yaml"
   ]
 }
