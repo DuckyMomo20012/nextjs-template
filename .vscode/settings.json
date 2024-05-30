@@ -3,6 +3,11 @@
     "editor.defaultFormatter": "ms-vscode.cpptools",
     "editor.tabSize": 2
   },
+  "[go]": {
+    "editor.defaultFormatter": "golang.go",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4
+  },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.tabSize": 2
@@ -20,7 +25,14 @@
     "editor.tabSize": 2
   },
   "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.tabSize": 2
+  },
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  },
+  "[proto]": {
+    "editor.defaultFormatter": "bufbuild.vscode-buf"
   },
   "[python]": {
     "editor.codeActionsOnSave": {
@@ -29,6 +41,10 @@
     "editor.defaultFormatter": "ms-python.black-formatter",
     "editor.formatOnSave": true,
     "editor.tabSize": 4
+  },
+  "[sql]": {
+    "editor.defaultFormatter": "dorzey.vscode-sqlfluff",
+    "editor.tabSize": 2
   },
   "[terraform-vars]": {
     "editor.tabSize": 2
@@ -40,17 +56,8 @@
   "[xml]": {
     "editor.defaultFormatter": null
   },
-  "[go]": {
-    "editor.defaultFormatter": "golang.go",
-    "editor.formatOnSave": true,
-    "editor.tabSize": 4
-  },
-  "[prisma]": {
-    "editor.defaultFormatter": "Prisma.prisma"
-  },
   "C_Cpp.clang_format_style": "LLVM",
   // Code Spell Checker Extension
-  "cSpell.enableFiletypes": ["!dockercompose"],
   "cSpell.language": "en",
   //
   "diffEditor.diffAlgorithm": "advanced",
@@ -64,10 +71,11 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.detectIndentation": false,
   "editor.fontFamily": "'Monaspace Neon', 'JetBrains Mono', monospace",
-  "editor.fontLigatures": "'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'calt', 'dlig'",
+  "editor.fontLigatures": "'calt', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08', 'liga'",
   "editor.formatOnSave": true,
   "editor.guides.bracketPairs": "active",
   "editor.inlineSuggest.enabled": true,
+  "editor.inlineSuggest.fontFamily": "'Monaspace Argon'",
   "editor.insertSpaces": true,
   "editor.linkedEditing": true,
   "editor.mouseWheelZoom": true,
@@ -76,6 +84,7 @@
   },
   "editor.renderLineHighlight": "gutter",
   "editor.renderWhitespace": "none",
+  "editor.scrollbar.vertical": "hidden",
   "editor.smoothScrolling": true,
   "editor.stickyScroll.enabled": true,
   "editor.suggest.insertMode": "insert",
@@ -85,6 +94,12 @@
   "editor.unicodeHighlight.invisibleCharacters": false,
   "editor.unicodeHighlight.nonBasicASCII": false,
   "editor.wordWrap": "on",
+  "errorLens.fontFamily": "'Monaspace Xenon', 'JetBrains Mono', 'Roboto Mono'",
+  "eslint.workingDirectories": [
+    {
+      "mode": "auto"
+    }
+  ],
   "explorer.fileNesting.enabled": true,
   "explorer.fileNesting.expand": true,
   "extensions.ignoreRecommendations": true,
@@ -94,18 +109,29 @@
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   "git.autofetch": true,
+  "github.copilot.editor.enableAutoCompletions": false,
   "github.copilot.enable": {
     "*": true,
-    "plaintext": true,
+    "go": true,
     "markdown": true,
+    "plaintext": true,
     "scminput": false,
     "yaml": true
+  },
+  "go.alternateTools": {
+    "go": "/home/vinh/.asdf/shims/go"
+  },
+  "go.lintTool": "golangci-lint",
+  "go.toolsManagement.autoUpdate": true,
+  "gopls": {
+    "formatting.gofumpt": true
   },
   // Highlight Matching Tag
   "highlight-matching-tag.highlightSelfClosing": true,
   "highlight-matching-tag.showPath": false,
   //
   "html.autoClosingTags": true,
+  "iconify.inplace": false,
   "isort.args": ["--profile", "black"],
   "javascript.autoClosingTags": true,
   "javascript.preferences.importModuleSpecifier": "relative",
@@ -124,6 +150,7 @@
   },
   "notebook.lineNumbers": "on",
   "prettier.proseWrap": "always",
+  "prisma.showPrismaDataPlatformNotification": false,
   "redhat.telemetry.enabled": false,
   // Rewrap Extension
   "rewrap.autoWrap.enabled": true,
@@ -154,16 +181,6 @@
     },
     {
       "alignment": "left",
-      "color": "#FE640B",
-      "command": "workbench.action.toggleSplitEditorInGroup",
-      "id": "split-group",
-      "name": "Split (Group)",
-      "priority": -4,
-      "text": "$(split-horizontal)",
-      "tooltip": "Split an editor without creating a new group"
-    },
-    {
-      "alignment": "left",
       "color": "#DF8E1D",
       "command": "sortJsObjectKeys.sortJsObjectKeys",
       "id": "sort-object-keys",
@@ -171,27 +188,6 @@
       "priority": -5,
       "text": "$(arrow-down)$(json)",
       "tooltip": "Sort JS object keys (ascending)"
-    },
-    {
-      "alignment": "left",
-      "color": "#179299",
-      "command": "editor.action.sortLinesAscending",
-      "id": "sort-line-ascending",
-      "name": "Sort Lines Ascending",
-      "priority": -6,
-      "text": "$(arrow-down)$(list-selection)",
-      "tooltip": "Sort Lines Ascending"
-    },
-    {
-      "alignment": "left",
-      "color": "#04A5E5",
-      "command": "editor.emmet.action.removeTag",
-      "filterLanguageId": "html|javascriptreact|typescriptreact|markdown",
-      "id": "remove-tag",
-      "name": "Remove HTML Tag (Emmet)",
-      "priority": -8,
-      "text": "$(trash)$(code)",
-      "tooltip": "Remove HTML tag"
     },
     {
       "alignment": "left",
@@ -216,8 +212,6 @@
       "tooltip": "Split/Join HTML tag"
     }
   ],
-  //
-  "terminal.integrated.copyOnSelection": true,
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.defaultProfile.windows": "Command Prompt",
   "terminal.integrated.shellIntegration.decorationsEnabled": "both",
@@ -286,16 +280,24 @@
   //
   "typescript.autoClosingTags": true,
   "vsicons.dontShowNewVersionMessage": true,
+  "window.commandCenter": false,
+  "window.customTitleBarVisibility": "auto",
   "window.dialogStyle": "custom",
   "window.menuBarVisibility": "compact",
   "window.titleBarStyle": "custom",
+  "workbench.activityBar.location": "top",
+  "workbench.colorCustomizations": {
+    "[Catppuccin Frappé]": {
+      "sideBar.border": "#e78284"
+    }
+  },
   "workbench.colorTheme": "Catppuccin Frappé",
   "workbench.editor.historyBasedLanguageDetection": true,
   "workbench.editor.scrollToSwitchTabs": true,
   "workbench.iconTheme": "vscode-icons",
   "workbench.list.smoothScrolling": true,
-  "workbench.localHistory.maxFileEntries": 50,
+  "workbench.localHistory.maxFileEntries": 100,
   "workbench.localHistory.mergeWindow": 60,
-  "workbench.activityBar.location": "top",
-  "errorLens.fontFamily": "'Monaspace Xenon', 'JetBrains Mono', monospace"
+  "workbench.sideBar.location": "right",
+  "workbench.tree.enableStickyScroll": true
 }
