@@ -84,7 +84,7 @@ const HomePage = () => {
       <Stack className="relative">
         <Stack
           align="center"
-          className="top-[calc(var(--app-shell-header-offset,_0px)_+_var(--app-shell-padding))] z-50 w-full bg-white p-6 shadow-sm dark:bg-dark-800 lg:sticky"
+          className="dark:bg-dark-800 top-[calc(var(--app-shell-header-offset,_0px)_+_var(--app-shell-padding))] z-50 w-full bg-white p-6 shadow-xs lg:sticky"
         >
           <SimpleGrid
             className="max-w-4xl"
