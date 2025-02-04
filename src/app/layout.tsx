@@ -1,4 +1,4 @@
-import { ColorSchemeScript } from '@mantine/core';
+import { ColorSchemeScript, mantineHtmlProps } from '@mantine/core';
 import Providers from '@/app/providers';
 
 export const metadata = {
@@ -8,7 +8,7 @@ export const metadata = {
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <html lang="en">
+    <html lang="en" {...mantineHtmlProps}>
       <head>
         <ColorSchemeScript />
         <link href="/favicon.svg" rel="shortcut icon" />
