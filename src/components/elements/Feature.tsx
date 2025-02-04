@@ -16,7 +16,7 @@ const Feature = ({
   children: React.ReactNode;
 }) => {
   return (
-    <Card className={`${className}`} radius="md" shadow="sm" withBorder>
+    <Card className={`${className}`} radius="md" shadow-sm="sm" withBorder>
       {url ? (
         <Anchor
           className="text-xl font-bold text-inherit"

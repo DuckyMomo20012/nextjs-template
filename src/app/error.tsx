@@ -12,11 +12,11 @@ import {
 
 function Error() {
   return (
-    <Center className="h-full w-full flex-1 @container">
-      <Stack align="center" className="min-w-4/5 w-4/5 max-w-xl @lg:w-full">
+    <Center className="@container h-full w-full flex-1">
+      <Stack align="center" className="w-4/5 max-w-xl min-w-4/5 @lg:w-full">
         <Image
           alt="500"
-          className="aspect-[5/4]"
+          className="aspect-5/4"
           height={800}
           src="https://http.cat/500"
           width={1000}
