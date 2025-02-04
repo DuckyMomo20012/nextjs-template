@@ -63,8 +63,8 @@ importers:
         specifier: 9.2.0
         version: 9.2.0(@types/react@19.0.8)(react@18.3.1)(redux@5.0.1)
       tailwind-merge:
-        specifier: 2.6.0
-        version: 2.6.0
+        specifier: 3.0.1
+        version: 3.0.1
       type-fest:
         specifier: 4.33.0
         version: 4.33.0
@@ -2813,8 +2813,8 @@ packages:
   tabbable@6.0.1:
     resolution: {integrity: sha512-SYJSIgeyXW7EuX1ytdneO5e8jip42oHWg9xl/o3oTYhmXusZVgiA+VlPvjIN+kHii9v90AmzTZEBcsEvuAY+TA==}
 
-  tailwind-merge@2.6.0:
-    resolution: {integrity: sha512-P+Vu1qXfzediirmHOC3xKGAYeZtPcV9g76X+xg2FD4tYgR71ewMA35Y3sCz3zhiN/dwefRpJX0yBcgwi1fXNQA==}
+  tailwind-merge@3.0.1:
+    resolution: {integrity: sha512-AvzE8FmSoXC7nC+oU5GlQJbip2UO7tmOhOfQyOmPhrStOGXHU08j8mZEHZ4BmCqY5dWTCo4ClWkNyRNx1wpT0g==}
 
   tailwindcss@4.0.3:
     resolution: {integrity: sha512-ImmZF0Lon5RrQpsEAKGxRvHwCvMgSC4XVlFRqmbzTEDb/3wvin9zfEZrMwgsa3yqBbPqahYcVI6lulM2S7IZAA==}
@@ -6024,7 +6024,7 @@ snapshots:
 
   tabbable@6.0.1: {}
 
-  tailwind-merge@2.6.0: {}
+  tailwind-merge@3.0.1: {}
 
   tailwindcss@4.0.3: {}
 
